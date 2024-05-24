@@ -5,13 +5,13 @@ $(document).ready(function () {
         const myChart = new Chart(ctx1, {
             type: 'bar',
             data: {
-                labels: ['النفط والغاز', 'الصناعة', 'الزراعة', 'التعليم', 'الصحة', 'السياحة', 'العقارات'].reverse(), // Right-to-left labels
+                labels: ['قسم القانون', 'عنوان', 'عنوان', 'عنوان', 'عنوان'].reverse(), // Right-to-left labels
                 datasets: [{
                     yAxisID: 'first',
                     label: 'مكتملة',
                     barThickness: 25,
-                    data: [85, 90, 54, 33, 29, 12, 18].reverse(),
-                    backgroundColor: '#8DC63F',
+                    data: [70000, 60000, 25000, 10000, 10000].reverse(),
+                    backgroundColor: '#949191',
                     borderRadius: 8,
                     stack: 'Stack 0'
                 },
@@ -19,8 +19,8 @@ $(document).ready(function () {
                     yAxisID: 'first',
                     barThickness: 25,
                     label: 'غير مكتملة',
-                    data: [63, 72, 38, 56, 28, 16, 14].reverse(),
-                    backgroundColor: '#133C8B',
+                    data: [40000, 30000, 14000, 10000, 5000].reverse(),
+                    backgroundColor: '#E2211C',
                     borderRadius: 8,
                     stack: 'Stack 0'
                 }]
@@ -38,18 +38,21 @@ $(document).ready(function () {
                         grid: { display: true },
                         title: {
                             display: true,
-                            text: 'السنوات'
+                            text: 'العدد'
                         }
                     },
                 },
                 plugins: {
                     legend: {
                         position: 'bottom',
+                        align: 'center',
+                        rtl: true,
                         labels: {
                             useBorderRadius: true,
                             borderRadius: 5,
                             boxWidth: 10,
                             boxHeight: 10,
+                            padding: 40,
                         }
                     }
                 }
@@ -62,13 +65,13 @@ $(document).ready(function () {
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['النفط والغاز', 'الصناعة', 'الزراعة', 'التعليم', 'الصحة', 'السياحة', 'العقارات'].reverse(), // Right-to-left labels
+                labels: ['قسم القانون', 'عنوان', 'عنوان', 'عنوان', 'عنوان'].reverse(), // Right-to-left labels
                 datasets: [{
                     yAxisID: 'first',
-                    barThickness: 25,
                     label: 'مكتملة',
-                    data: [85, 90, 54, 33, 29, 12, 18].reverse(),
-                    backgroundColor: '#8DC63F',
+                    barThickness: 25,
+                    data: [70000, 60000, 25000, 10000, 10000].reverse(),
+                    backgroundColor: '#E2211C',
                     borderRadius: 8,
                     stack: 'Stack 0'
                 },
@@ -76,8 +79,8 @@ $(document).ready(function () {
                     yAxisID: 'first',
                     barThickness: 25,
                     label: 'غير مكتملة',
-                    data: [63, 72, 38, 56, 28, 16, 14].reverse(),
-                    backgroundColor: '#F57F20',
+                    data: [40000, 30000, 14000, 10000, 5000].reverse(),
+                    backgroundColor: '#949191',
                     borderRadius: 8,
                     stack: 'Stack 0'
                 }]
@@ -95,42 +98,130 @@ $(document).ready(function () {
                         grid: { display: true },
                         title: {
                             display: true,
-                            text: 'السنوات'
+                            text: 'العدد'
                         }
                     },
                 },
                 plugins: {
                     legend: {
                         position: 'bottom',
+                        align: 'center',
+                        rtl: true,
                         labels: {
                             useBorderRadius: true,
                             borderRadius: 5,
                             boxWidth: 10,
                             boxHeight: 10,
+                            padding: 40,
                         }
                     }
                 }
             }
         });
     }
+
     function chart3() {
-        let refrenceId = $('#myChart3')
-        var xValues = ['النفط والغاز', 'الصناعة', 'التعليم', 'الصحة'].reverse();
+        var myChart3Colors = [
+            "#E2211C",
+            "#949191",
+        ];
+        const ctx = document.getElementById('myChart3').getContext('2d');
+        var mychart = new Chart(ctx, {
+            type: "doughnut",
+            data: {
+                labels: ["غير المنجزة", "المنجزة"],
+                datasets: [{
+                    data: [40, 60],
+                    fill: false,
+                    backgroundColor: myChart3Colors,
+                }]
+            },
+            options: {
+                // cutoutPercentage: 65,
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    outerLabels: {
+                        fontNormalSize: 12,
+                        fontNormalFamily: 'sans-serif',
+                    },
+                    legend: {
+                        position: 'bottom',
+                        align: 'center',
+                        rtl: true,
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 8,
+                            boxHeight: 8,
+                            padding: 40,
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+
+    function chart4() {
+        var myChart4Colors = [
+            '#687777',
+            '#E2211C',
+            '#E85A56',
+            '#CC8683',
+            '#C1636C',
+            '#2C2B2B',
+        ]
+        const ctx = document.getElementById('myChart4').getContext('2d');
+        var mychart = new Chart(ctx, {
+            type: "doughnut",
+            data: {
+                labels: ['القانون', 'العلوم', 'الاعلام', 'عنوان', 'عنوان', 'عنوان'],
+                datasets: [{
+                    data: [15, 10, 20, 15, 20, 20],
+                    fill: false,
+                    backgroundColor: myChart4Colors,
+                }]
+            },
+            options: {
+                // cutoutPercentage: 65,
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        align: 'center',
+                        rtl: true,
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 8,
+                            boxHeight: 8,
+                            padding: 20,
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+
+    function chart5() {
+        let refrenceId = $('#myChart5')
+        var xValues = ['يناير 2024', 'فبراير 2024', 'مارس 2024', 'إبريل 2024'].reverse()
         new Chart(refrenceId, {
             type: 'line',
             data: {
                 labels: xValues,
                 datasets: [{
                     yAxisID: 'first',
-                    data: [150000, 125000, 100000, 75000, 175000].reverse(),
-                    borderColor: "#00AF9D",
+                    data: [150000, 125000, 75000, 175000].reverse(),
+                    borderColor: "#E2211C",
                     borderWidth: 1,
                     label: 'شهر',
                     pointRadius: 5,
-                    pointBorderColor: '#00AF9D',
-                    pointBackgroundColor: '#00AF9D',
+                    pointBorderColor: '#E2211C',
+                    pointBackgroundColor: '#E2211C',
                     fill: true,
-                    backgroundColor: '#F2FBFAb2'
+                    backgroundColor: '#E2211C1a'
                 }
                 ]
             },
@@ -144,11 +235,11 @@ $(document).ready(function () {
                 },
                 scales: {
                     first: {
+                        beginAtZero: true,
                         position: 'right',
                         ticks:
                         {
-                            beginAtZero: true,
-                            min: 25000,
+                            min: 0,
                             max: 175000,
                             stepSize: 25000,
                         },
@@ -161,138 +252,23 @@ $(document).ready(function () {
                 },
                 plugins: {
                     legend: {
-                        display: true,
                         position: 'bottom',
-                        labels: {
-                            useBorderRadius: true,
-                            boxWidth: 0,
-                            boxHeight: 0,
-                        }
-
-                    },
-
-                },
-
-
-            }
-
-        });
-    }
-    function chart4() {
-
-        const ctx = document.getElementById('myChart4').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['النفط', 'الصناعة', 'الزراعة', 'التعليم', 'الصحة'].reverse(), // Right-to-left labels
-                datasets: [{
-                    yAxisID: 'first',
-                    barThickness: 15,
-                    label: 'مكتملة',
-                    data: [85, 90, 54, 33, 29].reverse(),
-                    backgroundColor: '#F3C84E',
-                    borderRadius: 8,
-                    fill: true,
-                    stack: 'Stack 0'
-                },
-                {
-                    yAxisID: 'first',
-                    barThickness: 15,
-                    label: 'غير مكتملة',
-                    data: [63, 72, 38, 56, 28].reverse(),
-                    backgroundColor: '#133C8B',
-                    borderRadius: 8,
-                    fill: true,
-                    stack: 'Stack 0'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    first: {
-                        position: 'right',
-                        ticks:
-                        {
-                            beginAtZero: true,
-                            stepSize: 20,
-                        },
-                        grid: { display: true },
-                        title: {
-                            display: true,
-                            text: 'السنوات'
-                        }
-                    },
-                },
-                plugins: {
-                    legend: {
-                        position: 'bottom',
+                        align: 'center',
+                        rtl: true,
                         labels: {
                             useBorderRadius: true,
                             borderRadius: 5,
                             boxWidth: 10,
                             boxHeight: 10,
+                            padding: 40,
                         }
                     }
-                }
-            }
-        });
-    }
-    function chart5() {
 
-        const ctx = document.getElementById('myChart5').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['النفط والغاز', 'الصناعة', 'الزراعة', 'التعليم', 'الصحة', 'السياحة', 'العقارات'].reverse(), // Right-to-left labels
-                datasets: [{
-                    yAxisID: 'first',
-                    barThickness: 25,
-                    label: 'مكتملة',
-                    data: [85, 90, 54, 33, 29, 12, 18].reverse(),
-                    backgroundColor: '#7F3F98',
-                    borderRadius: 8,
-                    stack: 'Stack 0'
                 },
-                {
-                    yAxisID: 'first',
-                    barThickness: 25,
-                    label: 'غير مكتملة',
-                    data: [63, 72, 38, 56, 28, 16, 14].reverse(),
-                    backgroundColor: '#C9CDD0',
-                    borderRadius: 8,
-                    stack: 'Stack 0'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    first: {
-                        position: 'right',
-                        ticks:
-                        {
-                            beginAtZero: true,
-                        },
-                        grid: { display: true },
-                        title: {
-                            display: true,
-                            text: 'السنوات'
-                        }
-                    },
-                },
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            useBorderRadius: true,
-                            borderRadius: 5,
-                            boxWidth: 10,
-                            boxHeight: 10,
-                        }
-                    }
-                }
+
+
             }
+
         });
     }
 

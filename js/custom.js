@@ -54,7 +54,7 @@ $(document).ready(function () {
         const isSmallScreen = window.innerWidth <= 769
         if (isSmallScreen && !isReloaded) {
             document.querySelector("#sidebar").classList.add("expand");
-            window.location.reload()
+            // window.location.reload()
             isReloaded = true;
         }
     }));

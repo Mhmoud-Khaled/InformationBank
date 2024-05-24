@@ -56,7 +56,7 @@ body {
     height: 100%;
     background: var(--background-color);
     overflow-x: hidden !important;
-    font-family: "main font";
+    font-family: "second font";
 }
 
 
@@ -242,6 +242,7 @@ select {
 .loader-hidden {
     visibility: hidden;
     opacity: 0;
+    display: none;
 }
 
 
@@ -371,7 +372,6 @@ select {
 
 
 .btn {
-    min-width: 100px;
     font-weight: 500;
     font-size: 12px;
     text-wrap: nowrap;
@@ -395,6 +395,12 @@ select {
     filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 0.16));
 }
 
+.white-btn:hover {
+    color: var(--dark-gray-color);
+    background-color: white;
+    filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 0.16));
+}
+
 .gray-btn {
     background-color: var(--gray-color);
     color: white;
@@ -409,7 +415,7 @@ select {
 
 .main-content.card {
     background-color: #F8F8F8 !important;
-    height: 100vb;
+    min-height: 100vb;
     border-radius: 0;
 }
 
@@ -871,6 +877,164 @@ svg.active {
     width: 30px;
     height: 30px;
     border-radius: var(--border-radius);
+}
+
+
+.sub-header .manager-btn {
+    min-width: 80px;
+}
+
+.sub-header .manager-btn::after {
+    margin-right: 10px;
+}
+
+
+.sub-header .date-nightMood .date {
+    position: relative;
+    color: var(--gray-color);
+}
+
+.sub-header .date-nightMood .date .icon {
+    position: absolute;
+    top: 10px;
+}
+
+.sub-header .date-nightMood .date select {
+    font-size: 12px;
+    padding-right: 25px !important;
+    padding-top: 9px !important;
+    border-radius: 8px;
+}
+
+.charts .card-chart {
+    height: 300px;
+}
+
+.doungut1 {
+    position: relative;
+}
+
+.doungut1.dataOne {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    font-size: 20px;
+    width: 5px;
+    height: 5px;
+    background: var(--red-color);
+    outline: 3px solid #F5E8E7;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: block;
+}
+
+.doungut1.dataOne:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 0px;
+    border: 1px dashed var(--red-color);
+    top: 5px;
+    position: absolute;
+    right: 15px;
+}
+
+.doungut1.dataOne:before {
+    content: "";
+    width: 54px;
+    height: 0px;
+    border: 1px dashed var(--red-color);
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 17px;
+    right: 38px;
+}
+
+@media(max-width:1000px) {
+    .doungut1.dataOne {
+        right: 25%;
+    }
+}
+
+@media(max-width:500px) {
+    .doungut1.dataOne {
+        right: 8%;
+    }
+}
+
+
+span.dataOne.addTwo {
+    left: 0;
+    right: auto;
+    bottom: 3rem;
+    top: auto;
+}
+
+.doungut1.addTwo:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #000;
+    display: inline-block;
+    outline: 3px solid #dedede;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.doungut1.addTwo:after {
+    content: none;
+}
+
+span.percentage-2:before,
+span.percentage-2:after {
+    content: "";
+    width: 30px;
+    height: 0px;
+    border: 1px dashed #000;
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 12px;
+    left: 52px;
+}
+
+span.percentage-2:after {
+    left: 5rem;
+    transform: rotate(-24deg);
+    bottom: 2rem;
+    top: auto;
+    width: 5rem;
+}
+
+span.dataOne.addThree {
+    left: 0;
+    right: auto;
+    bottom: auto;
+    top: 0;
+}
+
+.addThree span.percentage-2:before,
+.addThree span.percentage-2:after {
+    border-color: var(--main)
+}
+
+.addThree:before {
+    background: var(--main) !important;
+    outline-color: #D8A7A3 !important;
+}
+
+span.percentage-3:before,
+span.percentage-3:after {
+    transform: rotate(-22deg);
+    top: 9px;
+    left: 49px;
+}
+
+span.percentage-3:after {
+    left: 5rem;
+    transform: rotate(10deg);
+    bottom: 1rem;
 }
 
 
