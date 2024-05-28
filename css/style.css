@@ -1412,7 +1412,7 @@ span.percentage-3:after {
 /* end notification */
 
 
-
+/* ........................Responsive.........................  */
 /*small screen*/
 @media (max-width: 768px) {
     .home {
@@ -1470,5 +1470,12 @@ span.percentage-3:after {
 
     .notification-search .sort-by .sort-menu {
         right: -100% !important;
+    }
+    .login{
+        flex-direction: column;
+    }
+    .login button{
+        width: 100%;
+        display: block;
     }
 }
