@@ -32,7 +32,6 @@
 
 
 /* global setting */
-
 :root {
   --background-color: #F8F8F8;
   --bg-menu-color: #EFEEEE;
@@ -1695,7 +1694,6 @@ span.percentage-3:after {
     flex: 1 !important;
   }
 
-<<<<<<< HEAD
     .notification-search .sort-by .sort-menu {
         right: -100% !important;
     }
@@ -1706,9 +1704,7 @@ span.percentage-3:after {
         width: 100%;
         display: block;
     }
-=======
   .notification-search .sort-by .sort-menu {
     right: -100% !important;
   }
->>>>>>> eacaada8e9ddd8d21c3401d3e65fbbae417c8c08
 }
