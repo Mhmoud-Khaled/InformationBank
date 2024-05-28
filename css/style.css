@@ -1849,25 +1849,6 @@ span.percentage-3:after {
     flex: 1 !important;
   }
 
-<<<<<<< HEAD
-    .notification-search .sort-by .sort-menu {
-        right: -100% !important;
-    }
-    .login{
-        flex-direction: column;
-    }
-    .login button{
-        width: 100%;
-        display: block;
-    }
-  .notification-search .sort-by .sort-menu {
-    right: -100% !important;
-  }
-=======
-  .notification-search .sort-by .sort-menu {
-    right: -100% !important;
-  }
-
   .login {
     flex-direction: column;
   }
@@ -1877,6 +1858,10 @@ span.percentage-3:after {
     display: block;
   }
 
+  .notification-search .sort-by .sort-menu {
+    right: -100% !important;
+  }
+
   .search-field {
     flex: 1;
   }
@@ -1884,5 +1869,5 @@ span.percentage-3:after {
   .btns {
     flex: 1;
   }
->>>>>>> 81013e7ff6e97d17f77052dff1cab86162cb088e
+
 }
