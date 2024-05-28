@@ -32,7 +32,6 @@
 
 
 /* global setting */
-
 :root {
   --background-color: #F8F8F8;
   --bg-menu-color: #EFEEEE;
@@ -1850,6 +1849,21 @@ span.percentage-3:after {
     flex: 1 !important;
   }
 
+<<<<<<< HEAD
+    .notification-search .sort-by .sort-menu {
+        right: -100% !important;
+    }
+    .login{
+        flex-direction: column;
+    }
+    .login button{
+        width: 100%;
+        display: block;
+    }
+  .notification-search .sort-by .sort-menu {
+    right: -100% !important;
+  }
+=======
   .notification-search .sort-by .sort-menu {
     right: -100% !important;
   }
@@ -1870,4 +1884,5 @@ span.percentage-3:after {
   .btns {
     flex: 1;
   }
+>>>>>>> 81013e7ff6e97d17f77052dff1cab86162cb088e
 }
