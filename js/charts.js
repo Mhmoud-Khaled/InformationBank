@@ -177,7 +177,7 @@ $(document).ready(function () {
             data: {
                 labels: ['القانون', 'العلوم', 'الاعلام', 'عنوان', 'عنوان', 'عنوان'],
                 datasets: [{
-                    data: [15, 10, 20, 15, 20, 20],
+                    data: [20, 15, 10, 20, 15, 20],
                     fill: false,
                     backgroundColor: myChart4Colors,
                 }]
