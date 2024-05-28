@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <title>بنك المعلومات</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#FFB636">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#FFB636">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/indexLogo.png" />
+
+</head>
+
+
+<body>
+
+    <div class="d-flex flex-nowrap home">
+
+        <!-- menu -->
+        <aside id="sidebar" class="expand">
+            <!-- logo -->
+            <div class="sidebar-logo" id="logo">
+                <img src="./images/menu-logo.png" class="img-fluid" alt="">
+            </div>
+            <div class="flex-between">
+                <div class="menu-title flex-center">
+                    <i class="fa-solid fa-city"></i>
+                    <h3>بنك المعلومات</h3>
+                </div>
+                <button class="toggle-btn">
+                    <svg id="hamburger" class="Header__toggle-svg active" viewbox="0 0 60 40">
+                        <g stroke="#7583A0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                            <path id="top-line" d="M10,10 L50,10 Z"></path>
+                            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+                            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- menu list -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-item mb-3" id="searchList">
+                    <div class="d-flex justify-content-between align-items-center flex-nowrap">
+                        <div class="sidebar-link d-flex justify-content-between" id="navSearch">
+                            <input class="form-control" type="text" placeholder="البحث">
+                            <i class="fa-solid fa-magnifying-glass icon" id="search-icon"></i>
+                        </div>
+                        <button class="filter text-center">
+                            <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="./home.html" class="sidebar-link ">
+                        <i class="fa-solid fa-home icon"></i>
+                        <span class="">الصفحة الرئيسية</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="./Companies-stat.html" class="sidebar-link">
+                        <i class="fa-solid fa-building icon"></i>
+                        <span>احصائيات الشركات</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="./companies.html" class="sidebar-link">
+                        <i class="fa-solid fa-book icon"></i>
+                        <span>مكتبة الوثائق</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#kpis"
+                        aria-expanded="false" aria-controls="kpis">
+                        <a class="sidebar-link " id="kpis-icon">
+                            <i class="fa-solid fa-gear icon"></i>
+                            <span class="">مؤشرات الاداء</span>
+                        </a>
+                        <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#kpis" aria-expanded="false" aria-controls="kpis"></i>
+                    </div>
+                    <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link ">
+                                <i class="fa-solid fa-users icon"></i>
+                                <span>الموظفين</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link ">
+                                <i class="fa-solid fa-calculator icon"></i>
+                                <span>المعاملات</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-clipboard-list icon"></i>
+                        <span>التقارير</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting"
+                        aria-expanded="false" aria-controls="setting">
+                        <a class="sidebar-link " id="set-icon">
+                            <i class="fa-solid fa-gear icon"></i>
+                            <span class="">الإعدادات</span>
+                        </a>
+
+                        <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#setting" aria-expanded="false" aria-controls="setting"></i>
+                    </div>
+                    <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="./settings-messages.html" class="sidebar-link ">
+                                <i class="fa-solid fa-envelope icon"></i>
+                                <span>الرسائل</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="./settings-requesting.html" class="sidebar-link ">
+                                <i class="fa-solid fa-file-lines icon"></i>
+                                <span>اعدادات التقارير</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="./settings-auth.html" class="sidebar-link ">
+                                <i class="fa-solid fa-file-pen icon"></i>
+                                <span>اعدادات الصلاحيات</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="./settings-auth.html" class="sidebar-link ">
+                                <i class="fa-regular fa-pen-to-square icon"></i>
+                                <span>اعدادات مكتبة الوثائق</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="./settings-auth.html" class="sidebar-link ">
+                                <i class="fa-solid fa-circle-notch icon"></i>
+                                <span>اعدادات مؤشرات الإداء</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </aside>
+        <!-- end-menu -->
+
+        <!-- main content -->
+        <div class="main-content p-4 main card notifications" style="flex: 1;">
+
+            <!-- header -->
+            <div class="header d-flex flex-wrap justify-content-between align-items-center">
+                <h1 class="title">
+                    الاشعارات
+                </h1>
+                <div class="user d-flex justify-content-between align-items-center">
+                    <div class="lang">عربى</div>
+                    <div>
+                        <i class="fa-solid fa-chevron-down" id="dropdownlang" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
+                        <ul class="dropdown-menu collapse" id="collapseExample">
+                            <li><a class="dropdown-item" href="#">En</a></li>
+                        </ul>
+                    </div>
+                    <a href="./notification.html" class="notification  active">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                    <div class="user-img">
+                        <img src="./images/avatar.PNG" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- end-header -->
+
+            <!-- start content -->
+            <div class="companies-details ">
+                <div class="header-nav">
+                    <div class="card-box mb-3">
+                        <ul class="template-kinds d-flex gap-4">
+                            <li class="active noti-nav all">
+                                الكل
+                            </li>
+                            <li class="noti-nav activeUsers">
+                                تم قرائتها
+                            </li>
+                            <li class="noti-nav deactiveUsers">
+                                لم يتم قرائتها
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="notification-search mb-3">
+                    <div class="search">
+                        <input type="text" class="form-control" placeholder="بحث">
+                        <i class="icon fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="filter filter-by">
+                        تصفية
+                        <i class="icon fa-solid fa-sliders"></i>
+                        <!-- Start filter by menu -->
+                        <div class="filter-menu">
+                            <ul>
+                                <a href="#">
+                                    <li>مضاف حديثا</li>
+                                </a>
+                                <a href="#">
+                                    <li>الاسم</li>
+                                </a>
+                                <a href="#">
+                                    <li>تاريخ الاضافة (الاقدم - للأحدث)</li>
+                                </a>
+                                <a href="#">
+                                    <li>تاريخ الاضافة (الأحدث - للأقدم)</li>
+                                </a>
+                                <a href="#">
+                                    <li>اخر تحديث (الاقدم - للأحدث)</li>
+                                </a>
+                                <a href="#">
+                                    <li>اخر تحديث (الأحدث - للأقدم)</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <!-- End filter by menu -->
+                    </div>
+                    <div class="filter sort-by">
+                        ترتيب
+                        <i class="fa-solid fa-arrow-up-wide-short"></i>
+                        <!-- Start Sort by menu -->
+                        <div class="sort-menu">
+                            <ul>
+                                <a href="#">
+                                    <li>الاسم</li>
+                                </a>
+                                <a href="#">
+                                    <li>تاريخ الاضافة (الاقدم - للأحدث)</li>
+                                </a>
+                                <a href="#">
+                                    <li>تاريخ الاضافة (الأحدث - للأقدم)</li>
+                                </a>
+                                <a href="#">
+                                    <li>اخر تحديث (الاقدم - للأحدث)</li>
+                                </a>
+                                <a href="#">
+                                    <li>اخر تحديث (الأحدث - للأقدم)</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                        <!-- End Sort by menu -->
+                    </div>
+                </div>
+
+
+
+                <!-- start table -->
+                <div class="card card-box notification-table">
+                    <div class="table-responsive company-table not">
+                        <table class="table">
+                            <thead>
+                                <th scope="col"><img src="./images/check.png" alt="">
+                                </th>
+                                <th scope="col"><img src="./images/category.png" alt="">
+                                    التاريخ</th>
+                                <th scope="col"><img src="./images/category.png" alt="">
+                                    اسم العضو
+                                </th>
+                                <th scope="col"><img src="./images/category.png" alt="">
+                                    المحتوى</th>
+                                <th scope="col"><img src="./images/category.png" alt="">
+                                    الحالة
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td style="direction: ltr; text-align: end;">20 feb-2022</td>
+                                    <td class="text-center d-flex" data-bs-toggle="modal" data-bs-target="#viewUser">
+                                        <img class="rounded-circle" src="./images/avatar.PNG" width="35" height="35"
+                                            alt="">
+                                        <p class="m-0 p-0 me-2">محمد إبراهيم</p>
+                                    </td>
+                                    <td>هذا فيما يتعلق بالتسجيل</td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        <span class="status rounded-pill readed">
+                                            تم قرائتها
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2
+                                    </td>
+                                    <td style="direction: ltr; text-align: end;">20 feb-2022</td>
+                                    <td class="text-center d-flex" data-bs-toggle="modal" data-bs-target="#viewUser">
+                                        <img class="rounded-circle" src="./images/avatar.PNG" width="35" height="35"
+                                            alt="">
+                                        <p class="m-0 p-0 me-2">محمد إبراهيم</p>
+                                    </td>
+                                    <td>هذا فيما يتعلق بالتسجيل</td>
+                                    <td>
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        <span class="status rounded-pill not-readed">
+                                            لم يتم قرائتها
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- end table -->
+                <!-- end content -->
+
+            </div>
+        </div>
+    </div>
+
+    <!--start modal -->
+    <div class="company-modal modal fade  profile-modal" id="viewUser" tabindex="-1" aria-labelledby="viewUserLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="viewUserLabel">تفاصيل الملف الشخصي</h4>
+
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="user-info">
+                        <div class="user-pp">
+                            <img src="./images/avatar.PNG" class="rounded-circle" width="50" height="50" alt="">
+
+                        </div>
+                        <div>
+                            <h5>محمد إبراهيم</h5>
+                            <span>مسقط, عمان</span>
+                        </div>
+                    </div>
+                    <!-- contact -->
+                    <h5>تفاصيل الاتصال</h5>
+                    <div class="contact-details mb-3">
+                        <div class="contact-box mb-2">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <p><span>الايميل:</span> <a href="mailto:salman.khan@gmail.com">salman.khan@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p><span>الموبايل:</span><a href="tel:+9681234567890">+968 123 4567 890</a></p>
+                        </div>
+
+                    </div>
+                    <!-- Subscription History -->
+                    <h5 class="mb-2 mt-4">تاريخ الاشتراك</h5>
+                    <!-- Start table -->
+                    <table class="table responsive-table mx-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">نوع الاشتراك </th>
+                                <th scope="col">
+                                    تاريخ البدأ </th>
+                                <th scope="col">
+                                    تاريخ الانتهاء
+                                </th>
+                                <th scope="col">
+                                    التكلفة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    اشتراك سنوى
+                                </td>
+                                <td style="direction: ltr; text-align: end;">20 feb-2022</td>
+                                <td>19 feb-2023</td>
+                                <td>50$</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- End table -->
+
+
+                </div>
+                <div class="modal-footer p-0">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End View Category Modal -->
+
+    <!--end modal -->
+
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.min.js">
+    </script>
+    <!-- font-awesome -->
+    <script src="js/all.min.js"></script>
+    <!-- own js -->
+    <script src="js/custom.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $(".main-loading").fadeOut().css("display", "none")
+        });
+    </script>
+</body>
+
+</html>
