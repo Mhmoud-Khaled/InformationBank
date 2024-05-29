@@ -5,24 +5,13 @@ $(document).ready(function () {
         const myChart = new Chart(ctx1, {
             type: 'bar',
             data: {
-                labels: ['قسم القانون', 'عنوان', 'عنوان', 'عنوان', 'عنوان'].reverse(), // Right-to-left labels
+                labels: ['باكستان', 'إيران', 'تونس', 'اثيوبيا', 'مصر'], // Right-to-left labels
                 datasets: [{
                     yAxisID: 'first',
-                    label: 'مكتملة',
                     barThickness: 25,
                     data: [70000, 60000, 25000, 10000, 10000].reverse(),
-                    backgroundColor: '#949191',
-                    borderRadius: 8,
-                    stack: 'Stack 0'
-                },
-                {
-                    yAxisID: 'first',
-                    barThickness: 25,
-                    label: 'غير مكتملة',
-                    data: [40000, 30000, 14000, 10000, 5000].reverse(),
                     backgroundColor: '#E2211C',
                     borderRadius: 8,
-                    stack: 'Stack 0'
                 }]
             },
             options: {
@@ -38,22 +27,13 @@ $(document).ready(function () {
                         grid: { display: true },
                         title: {
                             display: true,
-                            text: 'العدد'
+                            text: 'رأس المال'
                         }
                     },
                 },
                 plugins: {
                     legend: {
-                        position: 'bottom',
-                        align: 'center',
-                        rtl: true,
-                        labels: {
-                            useBorderRadius: true,
-                            borderRadius: 5,
-                            boxWidth: 10,
-                            boxHeight: 10,
-                            padding: 40,
-                        }
+                        display: false
                     }
                 }
             }
@@ -65,24 +45,13 @@ $(document).ready(function () {
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['قسم القانون', 'عنوان', 'عنوان', 'عنوان', 'عنوان'].reverse(), // Right-to-left labels
+                labels: ['باكستان', 'إيران', 'تونس', 'اثيوبيا', 'مصر'], // Right-to-left labels
                 datasets: [{
                     yAxisID: 'first',
-                    label: 'مكتملة',
                     barThickness: 25,
                     data: [70000, 60000, 25000, 10000, 10000].reverse(),
-                    backgroundColor: '#E2211C',
-                    borderRadius: 8,
-                    stack: 'Stack 0'
-                },
-                {
-                    yAxisID: 'first',
-                    barThickness: 25,
-                    label: 'غير مكتملة',
-                    data: [40000, 30000, 14000, 10000, 5000].reverse(),
                     backgroundColor: '#949191',
                     borderRadius: 8,
-                    stack: 'Stack 0'
                 }]
             },
             options: {
@@ -104,16 +73,7 @@ $(document).ready(function () {
                 },
                 plugins: {
                     legend: {
-                        position: 'bottom',
-                        align: 'center',
-                        rtl: true,
-                        labels: {
-                            useBorderRadius: true,
-                            borderRadius: 5,
-                            boxWidth: 10,
-                            boxHeight: 10,
-                            padding: 40,
-                        }
+                        display: false
                     }
                 }
             }

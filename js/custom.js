@@ -13,6 +13,8 @@ window.addEventListener('load', () => {
 
 $(document).ready(function () {
 
+  // $('.form-select').select2();
+
   function toggleManuPanal() {
     const menuToggle = document.querySelector(".toggle-btn");
     const search = document.querySelector("#search-icon");

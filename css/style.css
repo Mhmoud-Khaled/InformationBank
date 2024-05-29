@@ -43,6 +43,7 @@
   --gray-color: #666464;
   --gray-color-hover: #949191;
   --dark-gray-color: #2C2B2B;
+  --green-color: ;
   --black-color: #000;
   --menu-bg: #EFEEEE;
   --border-radius: 8px
@@ -101,7 +102,8 @@ a:focus {
 }
 
 input:focus,
-button:focus {
+button:focus,
+select:focus {
   outline: none;
   box-shadow: none !important;
   border: 1px solid var(--light-gray) !important;
@@ -320,18 +322,18 @@ select {
   width: 100%;
 }
 
-.input-floating-label input {
+.input-floating-label input,
+.input-floating-label select {
   font-family: inherit;
   width: 100%;
   display: block;
-  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   outline: 0;
-  font-size: 1rem;
-  color: var(--color-input-text);
+  font-size: 14px;
+  color: var(--gray-color);
   padding: 7px 12px;
-  background: transparent;
-  transition: border-color 0.2s;
+  /* background: transparent; */
+  transition: 0.2s;
 }
 
 .input-floating-label input:required,
@@ -360,7 +362,7 @@ select {
 }
 
 .input-floating-label input:placeholder-shown {
-  border-color: var(--color-border);
+  border-color: var(--light-gray);
 
 }
 
@@ -369,7 +371,7 @@ select {
   cursor: text;
   /* transform: translatey(19px); */
   padding: 0px 0px;
-  color: var(--label-color);
+  color: var(--gray-color);
 }
 
 
@@ -381,8 +383,8 @@ select {
   transition: 0.3s;
   font-size: 0.75rem;
   padding: 0px 0px;
-  color: var(--label-color);
-  background: var(--form-bg);
+  color: var(--gray-color);
+  background: white;
   top: 0;
 }
 
@@ -400,6 +402,7 @@ select {
   font-weight: 500;
   font-size: 12px;
   text-wrap: nowrap;
+  flex: 1;
 }
 
 .btn .icon {
@@ -417,6 +420,10 @@ select {
 .red-btn:hover {
   background: var(--red-color-hover);
   color: white;
+}
+
+.transparent-btn {
+  background-color: transparent;
 }
 
 .white-btn {
@@ -1608,7 +1615,34 @@ span.percentage-3:after {
   cursor: pointer;
 }
 
+.report-inactive {
+  color: white !important;
+  background-color: #E85A56 !important;
+  padding: 5px 10px !important;
+}
+
+.report-active {
+  color: white !important;
+  background-color: #2CCB36 !important;
+  padding: 5px 20px !important;
+}
+
 /* end report */
+
+/* start report parts */
+#create-part .form-check-label {
+  font-size: 14px;
+  padding-right: 30px;
+}
+
+#next-part .box {
+  background: gainsboro;
+  padding: 10px;
+  border-radius: 15px;
+  gap: 2px !important;
+}
+
+/* end report parts */
 
 
 /* start notification */

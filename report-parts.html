@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <title>بنك المعلومات</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#FFB636">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#FFB636">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- google icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- select-2 -->
+  <link href="./css/select2.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- own css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/indexLogo.png" />
+
+</head>
+
+<body>
+  <!-- <div class="spinner-border text-primary loader" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
+
+  <div class="d-flex flex-nowrap home main">
+
+    <!-- menu -->
+
+    <aside id="sidebar" class="expand">
+      <!-- logo -->
+      <div class="sidebar-logo" id="logo">
+        <img src="./images/menu-logo.png" class="img-fluid" alt="">
+      </div>
+      <div class="flex-between">
+        <div class="menu-title flex-center">
+          <i class="fa-solid fa-city"></i>
+          <h3>بنك المعلومات</h3>
+        </div>
+        <button class="toggle-btn">
+          <svg id="hamburger" class="Header__toggle-svg active" viewbox="0 0 60 40">
+            <g stroke="#7583A0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <path id="top-line" d="M10,10 L50,10 Z"></path>
+              <path id="middle-line" d="M10,20 L50,20 Z"></path>
+              <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <!-- menu list -->
+      <ul class="sidebar-nav">
+        <li class="sidebar-item mb-3" id="searchList">
+          <div class="d-flex justify-content-between align-items-center flex-nowrap">
+            <div class="sidebar-link d-flex justify-content-between" id="navSearch">
+              <input class="form-control" type="text" placeholder="البحث">
+              <i class="fa-solid fa-magnifying-glass icon" id="search-icon"></i>
+            </div>
+            <button class="filter text-center">
+              <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
+            </button>
+          </div>
+        </li>
+
+        <li class="sidebar-item ">
+          <a href="./home.html" class="sidebar-link ">
+            <i class="fa-solid fa-home icon"></i>
+            <span class="">الصفحة الرئيسية</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item ">
+          <a href="./Companies-stat.html" class="sidebar-link">
+            <i class="fa-solid fa-building icon"></i>
+            <span>احصائيات الشركات</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./documentsLibrary.html" class="sidebar-link">
+            <i class="fa-solid fa-book icon"></i>
+            <span>مكتبة الوثائق</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#kpis" aria-expanded="false"
+            aria-controls="kpis">
+            <a class="sidebar-link " id="kpis-icon">
+              <i class="fa-solid fa-gear icon"></i>
+              <span class="">مؤشرات الاداء</span>
+            </a>
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse" data-bs-target="#kpis"
+              aria-expanded="false" aria-controls="kpis"></i>
+          </div>
+          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link ">
+                <i class="fa-solid fa-users icon"></i>
+                <span>الموظفين</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link ">
+                <i class="fa-solid fa-calculator icon"></i>
+                <span><a href="#">المعاملات</a></span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="sidebar-item active">
+          <a href="reports.html" class="sidebar-link">
+            <i class="fa-solid fa-clipboard-list icon"></i>
+            <span>التقارير</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
+            aria-controls="setting">
+            <a class="sidebar-link " id="set-icon">
+              <i class="fa-solid fa-gear icon"></i>
+              <span class="">الإعدادات</span>
+            </a>
+
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
+              data-bs-target="#setting" aria-expanded="false" aria-controls="setting"></i>
+          </div>
+          <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="./settings-messages.html" class="sidebar-link ">
+                <i class="fa-solid fa-envelope icon"></i>
+                <span>الرسائل</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="./settings-requesting.html" class="sidebar-link ">
+                <i class="fa-solid fa-file-lines icon"></i>
+                <span>اعدادات التقارير</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="./settings-auth.html" class="sidebar-link ">
+                <i class="fa-solid fa-file-pen icon"></i>
+                <span>اعدادات الصلاحيات</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./documentsLibrary.html" class="sidebar-link ">
+                <i class="fa-regular fa-pen-to-square icon"></i>
+                <span>اعدادات مكتبة الوثائق</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-auth.html" class="sidebar-link ">
+                <i class="fa-solid fa-circle-notch icon"></i>
+                <span>اعدادات مؤشرات الإداء</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </aside>
+
+
+    <!-- end-menu -->
+
+    <!-- main content -->
+    <div class="main-content p-4 card flex-fill" id="report-parts">
+
+      <!-- header -->
+      <div class="header flex-between flex-wrap mb-5">
+        <h2>
+          التقارير > أجزاء التقارير
+        </h2>
+        <div class="user d-flex justify-content-between align-items-center">
+          <div class="user-img">
+            <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
+          </div>
+
+          <div class="lang">عربى</div>
+          <div class="dropdown">
+            <i class="fa-solid fa-chevron-down dropdown-toggle" id="dropdownlang" data-bs-toggle="dropdown"
+              aria-expanded="false"></i>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">EN</a></li>
+            </ul>
+          </div>
+          <a href="./notification.html" class="notification">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+          <i class="fa-solid fa-right-from-bracket active"></i>
+        </div>
+      </div>
+      <!-- start sub header table one -->
+      <div class="sub-header flex-between flex-wrap mb-3" id="header-tabel-one">
+        <h3>جدول 1</h3>
+        <div class="flex-between">
+          <div class="btns d-flex flex-wrap gap-1">
+            <button type="button" class="btn white-btn mb-2">
+              حذف
+              <i class="fa-regular fa-trash-can icon"></i>
+            </button>
+            <button type="button" class="btn red-btn text-center mb-2" data-bs-toggle="modal"
+              data-bs-target="#create-part">
+              إنشاء محتوى التقرير
+              <i class="fa-solid fa-plus icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end sub header table one-->
+
+      <!-- start table one -->
+      <div class="table-responsive card-box p-0 mb-3" id="tabel-one">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+              <th class="text-center t-header" scope="col">تفاصيل الشكل القانونى</th>
+              <th class="text-center t-header" scope="col">الجنسية</th>
+              <th class="text-center t-header" scope="col">رأس المال
+              </th>
+              <th class="text-center t-header" scope="col">الموقع</th>
+              <th class="text-center t-header" scope="col">الأنشطة</th>
+              <th class="text-center t-header" scope="col">المعاملات</th>
+              <th class="text-center t-header" scope="col">الرهن</th>
+              <th class="text-center t-header" scope="col">بيانات السجل</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">2</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- end table one-->
+
+      <!-- start sub header table two -->
+      <div class="sub-header flex-between flex-wrap mb-3" id="header-tabel-two">
+        <h3>جدول 2</h3>
+        <div class="flex-between">
+          <div class="btns d-flex flex-wrap gap-1">
+            <button type="button" class="btn white-btn mb-2">
+              حذف
+              <i class="fa-regular fa-trash-can icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end sub header table two-->
+      <!-- start table two -->
+      <div class="table-responsive  card-box p-0 mb-3" id="tabel-two">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+              <th class="text-center t-header" scope="col">تفاصيل الشكل القانونى</th>
+              <th class="text-center t-header" scope="col">الجنسية</th>
+              <th class="text-center t-header" scope="col">رأس المال
+              </th>
+              <th class="text-center t-header" scope="col">الموقع</th>
+              <th class="text-center t-header" scope="col">الأنشطة</th>
+              <th class="text-center t-header" scope="col">المعاملات</th>
+              <th class="text-center t-header" scope="col">الرهن</th>
+              <th class="text-center t-header" scope="col">بيانات السجل</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">2</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- end table two-->
+
+
+      <!-- start sub header table three -->
+      <div class="sub-header flex-between flex-wrap mb-3" id="header-tabel-three">
+        <h3>جدول 3</h3>
+        <div class="flex-between">
+          <div class="btns d-flex flex-wrap gap-1">
+            <button type="button" class="btn white-btn mb-2">
+              حذف
+              <i class="fa-regular fa-trash-can icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end sub header table three-->
+      <!-- start table three -->
+      <div class="table-responsive  card-box p-0 mb-3" id="tabel-three">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+              <th class="text-center t-header" scope="col">تفاصيل الشكل القانونى</th>
+              <th class="text-center t-header" scope="col">الجنسية</th>
+              <th class="text-center t-header" scope="col">رأس المال
+              </th>
+              <th class="text-center t-header" scope="col">الموقع</th>
+              <th class="text-center t-header" scope="col">الأنشطة</th>
+              <th class="text-center t-header" scope="col">المعاملات</th>
+              <th class="text-center t-header" scope="col">الرهن</th>
+              <th class="text-center t-header" scope="col">بيانات السجل</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">2</td>
+              <td class="text-center">تفاصيل الشكل القانونى</td>
+              <td class="text-center">الجنسية</td>
+              <td class="text-center">رأس المال</td>
+              <td class="text-center">الموقع</td>
+              <td class="text-center">الأنشطة</td>
+              <td class="text-center">المعاملات</td>
+              <td class="text-center">الرهن</td>
+              <td class="text-center">بيانات السجل</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- end table three-->
+
+
+    </div>
+  </div>
+
+  <!-- start Modal -->
+
+  <div class="modal fade" id="create-part" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-center" style="border-bottom: none;">
+          <h2 class="modal-title">إنشاء جزء تقرير</h2>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control mb-3" placeholder="اسم الجزء">
+            <div class=" input-floating-label mb-3">
+              <select class="form-select" name="state">
+                <option selected value="0">
+                  الطلبات</option>
+                <option value="1">جدول 2</option>
+              </select>
+              <label for="user">الجدول</label>
+            </div>
+            <div class=" input-floating-label mb-3">
+              <select class="form-select" name="state">
+                <option selected value="0">
+                  اختر القالب</option>
+                <option value="1">قالب 1</option>
+              </select>
+            </div>
+            <h4 class="mb-2">نوع التقرير</h4>
+            <div class="flex-between">
+              <div class="form-check ps-0 d-flex">
+                <input class="form-check-input" type="radio" name="chart" id="haveChart">
+                <label class="form-check-label" for="haveChart">
+                  يشمل رسم بيانى
+                </label>
+              </div>
+              <div class="form-check ps-0 d-flex">
+                <input class="form-check-input" type="radio" name="chart" id="notHaveChart" checked>
+                <label class="form-check-label" for="notHaveChart">
+                  لا يشمل رسم بيانى
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+          <button type="button" class="btn red-btn d-none" id="save-report-part">حفظ</button>
+          <button type="button" class="btn red-btn " id="next-report-part" data-bs-toggle="modal"
+            data-bs-target="#next-part">التالى</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="next-part" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header flex-center" style="border-bottom: none;">
+          <h2 class="modal-title">شكل الرسم البيانى</h2>
+        </div>
+        <div class="modal-body">
+          <div class="  d-flex flex-column align-items-start">
+
+            <button class="btn transparent-btn" type="button" data-bs-toggle="collapse" data-bs-target="#column"
+              aria-expanded="false" aria-controls="column">
+              <i class="fa-solid fa-chart-column icon"></i>
+              عمود
+            </button>
+            <div class="collapse mb-3 me-3" id="column">
+              <div class="flex-center mt-3">
+                <button style="border: none;" class="box flex-center-column">
+                  <i class="fa-solid fa-chart-column"></i>
+                  متجمعة
+                </button>
+                <button style="border: none;" class="box flex-center-column">
+                  <i class="fa-solid fa-chart-column"></i>
+                  مرصوصه
+                </button>
+                <button style="border: none;" class="box flex-center-column">
+                  <i class="fa-solid fa-chart-column"></i>
+                  % من 100
+                </button>
+              </div>
+            </div>
+            <button class="btn transparent-btn" type="button" id="line">
+              <i class="fa-solid fa-chart-line icon"></i>
+              خط
+            </button>
+            <button class="btn transparent-btn" type="button" id="pie">
+              <i class="fa-solid fa-chart-pie icon"></i>
+              دائرة
+            </button>
+            <button class="btn transparent-btn" type="button" id="bar">
+              <i class="fa-solid fa-chart-bar icon"></i>
+              شريط
+            </button>
+          </div>
+          <div class="modal-footer" style="border-top: none;">
+            <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+            <button type="button" class="btn red-btn"><a href="./report-part-details.html"
+                style="color: white; width: 100%; display: block;">حفظ</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end Modal -->
+
+
+    <!-- charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+
+    <!-- select-2 -->
+    <script src="./js/select2.min.js"></script>
+
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- font-awesome -->
+    <script src="js/all.min.js"></script>
+    <!-- own js -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
