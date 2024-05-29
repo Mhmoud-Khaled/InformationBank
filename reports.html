@@ -84,14 +84,14 @@
           </div>
         </li>
 
-        <li class="sidebar-item active">
+        <li class="sidebar-item ">
           <a href="./home.html" class="sidebar-link ">
             <i class="fa-solid fa-home icon"></i>
             <span class="">الصفحة الرئيسية</span>
           </a>
         </li>
 
-        <li class="sidebar-item">
+        <li class="sidebar-item ">
           <a href="./Companies-stat.html" class="sidebar-link">
             <i class="fa-solid fa-building icon"></i>
             <span>احصائيات الشركات</span>
@@ -125,14 +125,14 @@
             <li class="sidebar-item">
               <a href="#" class="sidebar-link ">
                 <i class="fa-solid fa-calculator icon"></i>
-                <span>المعاملات</span>
+                <span><a href="#">المعاملات</a></span>
               </a>
             </li>
 
           </ul>
         </li>
 
-        <li class="sidebar-item">
+        <li class="sidebar-item active">
           <a href="reports.html" class="sidebar-link">
             <i class="fa-solid fa-clipboard-list icon"></i>
             <span>التقارير</span>
@@ -171,7 +171,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-auth.html" class="sidebar-link ">
+              <a href="./documentsLibrary.html" class="sidebar-link ">
                 <i class="fa-regular fa-pen-to-square icon"></i>
                 <span>اعدادات مكتبة الوثائق</span>
               </a>
@@ -193,12 +193,12 @@
     <!-- end-menu -->
 
     <!-- main content -->
-    <div class="main-content p-4 card flex-fill">
+    <div class="main-content p-4 card flex-fill" id="report">
 
       <!-- header -->
-      <div class="header flex-between flex-wrap">
+      <div class="header flex-between flex-wrap mb-5">
         <h1>
-          لوحة المعلومات
+          التقارير
         </h1>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
@@ -219,147 +219,65 @@
           <i class="fa-solid fa-right-from-bracket active"></i>
         </div>
       </div>
-
-      <div class="sub-header flex-between mb-3">
-        <div class="btn-group">
-          <button type="button" class="btn white-btn dropdown-toggle manager-btn" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            الإدارة
-          </button>
-          <ul class="dropdown-menu text-end">
-            <li><a class="dropdown-item" href="#">الادارة 1</a></li>
-            <li><a class="dropdown-item" href="#">الادارة 2</a></li>
-            <li><a class="dropdown-item" href="#">الادارة 3</a></li>
-          </ul>
+      <!-- start sub header -->
+      <div class="sub-header flex-between flex-wrap mb-3">
+        <div class="search-field">
+          <input type="search" class="form-control" placeholder="بحث">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
         </div>
-
-        <div class="date-nightMood flex-between">
+        <div class="btns flex-between">
           <button type="button" class="btn white-btn">
-            <!-- <img class="ps-2" src="./images/image-filter-black-w.png" alt=""> -->
-            <i class="ps-2 fa-solid fa-circle-half-stroke"></i>
-            الوضع الليلي
+            تنزيل Word
+            <i class="fa-solid fa-file-word icon"></i>
           </button>
-          <div class="date">
-            <i class="fa-regular fa-calendar icon"></i>
-            <select class="form-select form-select-sm" aria-label="Small select example">
-              <option selected>Jul 2023 - Aug 2023</option>
-              <option>Jul 2023 - Aug 2023</option>
-              <option>Jul 2023 - Aug 2023</option>
-            </select>
-          </div>
+          <button type="button" class="btn white-btn">
+            تنزيل Excel
+            <i class="fa-solid fa-file-excel icon"></i>
+          </button>
+          <button type="button" class="btn white-btn">
+            طباعه PDF
+            <i class="fa-solid fa-file-pdf icon"></i>
+          </button>
+          <button type="button" class="btn red-btn text-center">
+            إنشاء تقرير
+            <i class="fa-solid fa-plus icon"></i>
+          </button>
         </div>
       </div>
+      <!-- end sub header -->
 
-
-      <!-- charts -->
-      <div class="charts">
-        <div class="row">
-          <div class="col-lg-6 col-sm-12 mb-3">
-            <div class="card card-box">
-              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 pt-2">
-                <h4 class="title">
-                  الطلبات
-                </h4>
-                <div class="icon">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </div>
-              </div>
-              <hr class="m-0 p-0">
-              <div class="card-chart p-2">
-                <canvas id="myChart1"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 mb-3">
-            <div class="card  card-box">
-              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 pt-2">
-                <h4 class="title">
-                  التقارير
-                </h4>
-                <div class="icon">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </div>
-              </div>
-              <hr class="m-0 p-0">
-              <div class="card-chart p-2">
-                <canvas id="myChart2"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-3">
-            <div class="card card-box">
-              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 pt-2">
-                <h4 class="title">
-                  المهام
-                </h4>
-                <div class="icon">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </div>
-              </div>
-              <hr class="m-0 p-0">
-              <div class="card-chart doungut1 flex-center p-2">
-                <canvas id="myChart3"></canvas>
-                <span class="dataOne">
-                  <div class="data">40</div>
-                </span>
-                <span class="dataTwo">
-                  <div class="data">60</div>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-3">
-            <div class="card card-box">
-              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 pt-2">
-                <h4 class="title">
-                  المكتبة
-                </h4>
-                <div class="icon">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </div>
-              </div>
-              <hr class="m-0 p-0">
-              <div class="card-chart doungut2 flex-center p-2">
-                <canvas id="myChart4"></canvas>
-                <span class="dataOne">
-                  <div class="data">20%</div>
-                </span>
-                <span class="dataTwo">
-                  <div class="data">20%</div>
-                </span>
-                <span class="dataThree">
-                  <div class="data">15%</div>
-                </span>
-                <span class="dataFour">
-                  <div class="data">15%</div>
-                </span>
-                <span class="dataFive">
-                  <div class="data">10%</div>
-                </span>
-                <span class="dataSix">
-                  <div class="data">20%</div>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 mb-3">
-            <div class="card card-box">
-              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 pt-2">
-                <h4 class="title">
-                  المستخدمين
-                </h4>
-                <div class="icon">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </div>
-              </div>
-              <hr class="m-0 p-0">
-              <div class="card-chart p-2">
-                <canvas id="myChart5"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- start table -->
+      <div class="table-responsive  card-box p-0">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+              <th class="text-end t-header" scope="col">اسم التقرير</th>
+              <th class="text-center t-header" scope="col">حالة التقرير</th>
+              <th class="text-center t-header" scope="col">التاريخ
+              </th>
+              <th class="text-center t-header" style="min-width: 150px;" scope="col">الحالة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-end">اسم التقرير</td>
+              <td class="text-center">غير فعال</td>
+              <td class="text-center">20/04/2024</td>
+              <td class="text-center">
+                <a href="#" class="fa-solid fa-eye icon">
+                </a>
+                <i class="fa-solid fa-pen icon"></i>
+                <i class="fa-regular fa-trash-can icon"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <!-- end table -->
+
+
     </div>
   </div>
 
@@ -380,12 +298,6 @@
   <script src="js/all.min.js"></script>
   <!-- own js -->
   <script src="js/custom.js"></script>
-  <script src="js/charts.js"></script>
-  <script>
-    $(window).on('load', function () {
-      $(".main-loading").fadeOut().css("display", "none")
-    });
-  </script>
 </body>
 
 </html>
