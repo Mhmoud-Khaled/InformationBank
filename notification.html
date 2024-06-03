@@ -150,7 +150,7 @@
                         <li class="sidebar-item">
                             <a href="./settings-messages.html" class="sidebar-link ">
                                 <i class="fa-solid fa-envelope icon"></i>
-                                <span>الرسائل</span>
+                                <span>إعدادات الرسائل</span>
                             </a>
                         </li>
 
@@ -192,24 +192,28 @@
 
             <!-- header -->
             <div class="header d-flex flex-wrap justify-content-between align-items-center">
-                <h1 class="title">
+                <h2 class="title">
                     الاشعارات
-                </h1>
+                </h2>
                 <div class="user d-flex justify-content-between align-items-center">
-                    <div class="lang">عربى</div>
-                    <div>
-                        <i class="fa-solid fa-chevron-down" id="dropdownlang" data-bs-toggle="collapse"
-                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></i>
-                        <ul class="dropdown-menu collapse" id="collapseExample">
+                    <div class="user-img">
+                        <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn lang" id="dropdownlang" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            عربي
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownlang">
                             <li><a class="dropdown-item" href="#">En</a></li>
                         </ul>
                     </div>
-                    <a href="./notification.html" class="notification  active">
-                        <i class="fa-solid fa-bell"></i>
+                    <a href="./notification.html" class="notification">
+                        <i class="fa-regular fa-bell"></i>
                     </a>
-                    <div class="user-img">
-                        <img src="./images/avatar.PNG" class="img-fluid">
-                    </div>
+                    <i class="fa-solid fa-right-from-bracket active"></i>
                 </div>
             </div>
             <!-- end-header -->

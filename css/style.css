@@ -1,14 +1,14 @@
 /* Main Rules */
 /* Font */
 
-@font-face {
+/* @font-face {
   font-family: "main font";
   src: url("../fonts/BahijTheSansArabic.ttf");
 
-}
+} */
 
 @font-face {
-  font-family: "second font";
+  font-family: "main font";
   src: url("../fonts/pfdintextuniversal.otf");
 
 }
@@ -36,7 +36,7 @@
   --background-color: #F8F8F8;
   --bg-menu-color: #EFEEEE;
   --red-color: #E2211C;
-  --red-color-hover: #b63e3a;
+  --red-color-hover: #830f0b;
   --very-light-gray: #EFEEEE;
   --light-gray: #9EA8A9;
   --light-gray-hover: #c5d1d3;
@@ -56,7 +56,7 @@ body {
   height: 100%;
   background: var(--background-color);
   overflow-x: hidden !important;
-  font-family: "second font";
+  font-family: "main font";
 }
 
 
@@ -111,31 +111,31 @@ select:focus {
 
 input::-webkit-input-placeholder {
   color: var(--light-gray) !important;
-  font-family: 'second font', sans-serif;
+  font-family: 'main font', sans-serif;
   font-size: 12px;
 }
 
 input::-moz-placeholder {
   color: var(--light-gray) !important;
-  font-family: 'second font', sans-serif;
+  font-family: 'main font', sans-serif;
   font-size: 12px;
 }
 
 input:-ms-input-placeholder {
   color: var(--light-gray) !important;
-  font-family: 'second font', sans-serif;
+  font-family: 'main font', sans-serif;
   font-size: 12px;
 }
 
 input::-ms-input-placeholder {
   color: var(--light-gray) !important;
-  font-family: 'second font', sans-serif;
+  font-family: 'main font', sans-serif;
   font-size: 12px;
 }
 
 input::placeholder {
   color: var(--light-gray) !important;
-  font-family: 'second font', sans-serif;
+  font-family: 'main font', sans-serif;
   font-size: 12px;
 }
 
@@ -159,6 +159,19 @@ input::placeholder {
   position: relative;
   height: 100%;
 
+}
+
+.modal-footer {
+  padding-top: 0px;
+}
+
+.modal-header {
+  padding-bottom: 0px;
+}
+
+.label {
+  color: var(--gray-color);
+  font-size: 12px;
 }
 
 ul {
@@ -207,6 +220,14 @@ h4 {
 p {
   font-size: 16px;
   line-height: 30px;
+}
+
+.table {
+  font-size: 14px;
+}
+
+.tbody {
+  font-size: 12px;
 }
 
 
@@ -278,11 +299,24 @@ select {
   color: var(--red-color) !important;
 }
 
+.border-active {
+  border: 2px solid var(--red-color) !important;
+
+}
+
+textarea {
+  font-size: 12px !important;
+}
+
+textarea::placeholder {
+  color: gray;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .flex-between-column {
@@ -290,7 +324,6 @@ select {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
 }
 
 .flex-center-column {
@@ -298,20 +331,22 @@ select {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
 }
 
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .flex {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.table-responsive .icon {
+  color: var(--gray-color);
 }
 
 /*label float*/
@@ -406,7 +441,7 @@ select {
 }
 
 .btn .icon {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 
@@ -467,8 +502,8 @@ select {
 }
 
 .search-field {
-  min-width: 180px;
   position: relative;
+  width: 115px;
 }
 
 .search-field input {
@@ -513,7 +548,7 @@ tbody tr td {
 .background .title {
   color: white;
   font-size: 28px !important;
-  font-family: "second font, sans-serif" !important;
+  font-family: "main font, sans-serif" !important;
   font-stretch: extra-expanded;
   text-align: center;
 }
@@ -538,6 +573,25 @@ tbody tr td {
 .background .content .smart-login .click {
   font-size: 16px;
   color: var(--red-color);
+  text-decoration: underline;
+}
+
+.login-box {
+  padding: 10px 25px;
+}
+
+.login-box .login-icon {
+  font-size: 25px !important;
+}
+
+#phone-num {
+  padding: 7px 10px;
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+#login-btn {
+  font-size: 14px
 }
 
 /* end index */
@@ -991,7 +1045,7 @@ svg.active {
 }
 
 .home .header .user {
-  gap: 6px;
+  gap: 2px;
 }
 
 .home .header .user .lang {
@@ -1001,6 +1055,7 @@ svg.active {
 
 .home .header .user #dropdownlang {
   cursor: pointer;
+  width: 70px;
 }
 
 .home .header .user .dropdown-menu {
@@ -1441,36 +1496,80 @@ svg.active {
   }
 }
 
-@media(max-width:1000px) {
+@media(max-width:1200px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
-    right: 30%;
+    right: 0%;
   }
 
   .doungut1 .dataTwo,
   .doungut2 .dataTwo {
-    left: 30%;
+    left: 0%;
   }
 
   .doungut2 .dataThree {
-    right: 20%;
+    right: -18px;
   }
 
   .doungut2 .dataFour {
-    left: 21%;
+    left: 1%;
   }
 
   .doungut2 .dataFive {
-    right: 27%;
+    right: 5%;
+  }
+
+  .doungut2 .dataFive:before {
+    width: 39px;
+    top: -2px;
+    right: 33px;
   }
 
   .doungut2 .dataSix {
-    left: 29%;
+    left: 12%;
+  }
+}
+
+@media(max-width:1180px) {
+
+  .doungut1 .dataTwo {
+    left: 2%;
+    bottom: 41%;
+  }
+
+  .doungut1 .dataTwo,
+  .doungut2 .dataTwo {
+    left: 0%;
+  }
+
+  .doungut2 .dataThree {
+    right: -18px;
+  }
+
+  .doungut2 .dataFour {
+    left: 1%;
+  }
+
+  .doungut2 .dataFive {
+    right: 5%;
+  }
+
+  .doungut2 .dataFive:before {
+    width: 39px;
+    top: -2px;
+    right: 33px;
+  }
+
+  .doungut2 .dataSix {
+    left: 12%;
   }
 }
 
 @media(max-width:500px) {
+  #report-parts .btns {
+    flex: none;
+  }
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -1619,12 +1718,14 @@ span.percentage-3:after {
   color: white !important;
   background-color: #E85A56 !important;
   padding: 5px 10px !important;
+  font-size: 12px !important;
 }
 
 .report-active {
   color: white !important;
   background-color: #2CCB36 !important;
   padding: 5px 20px !important;
+  font-size: 12px !important;
 }
 
 /* end report */
@@ -1636,10 +1737,14 @@ span.percentage-3:after {
 }
 
 #next-part .box {
-  background: gainsboro;
-  padding: 10px;
-  border-radius: 15px;
-  gap: 2px !important;
+  background: #EFEEEE;
+  padding: 5px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+#next-part .box:focus {
+  border-color: var(--red-color) !important;
 }
 
 /* end report parts */
@@ -1770,7 +1875,7 @@ span.percentage-3:after {
 
 .notification-table table tbody tr {
   cursor: pointer;
-  font-family: "second font";
+  font-family: "main font";
   font-weight: 300;
 }
 
@@ -1838,7 +1943,7 @@ span.percentage-3:after {
 #viewUser table tbody tr {
   color: #7B7890;
   font-size: 15px;
-  font-family: 'second font';
+  font-family: 'main font';
 }
 
 /* end notification */
@@ -1847,6 +1952,14 @@ span.percentage-3:after {
 /* ........................Responsive.........................  */
 /*small screen*/
 @media (max-width: 768px) {
+  #logo img {
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7px;
+  }
+
   .home {
     flex-direction: column;
   }
@@ -1877,7 +1990,41 @@ span.percentage-3:after {
   }
 }
 
+@media (max-width: 600px) {
+  .login-logo {
+    width: 70%;
+  }
+
+  .table tbody tr td a {
+    font-size: 12px;
+  }
+
+  #company-money .table tbody tr td a {
+    font-size: 12px;
+  }
+
+}
+
 @media (max-width: 500px) {
+  h3 {
+    font-size: 13px !important;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  .menu-title .icon {
+    font-size: 13px !important;
+  }
+
+  .home a.sidebar-link {
+    font-size: 12px !important;
+  }
+
+  .home a.sidebar-link .icon {
+    font-size: 12px;
+  }
 
   .filter-section .first-section,
   .filter-section .last-section {
@@ -1900,10 +2047,6 @@ span.percentage-3:after {
     flex: 1 !important;
   }
 
-  .login {
-    flex-direction: column;
-  }
-
   .login button {
     width: 100%;
     display: block;
@@ -1921,4 +2064,68 @@ span.percentage-3:after {
     flex: 1;
   }
 
+}
+
+@media(max-width:499px) {
+  .background .title {
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  h1 {
+    font-size: 20px !important;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .smart-login {
+    display: flex;
+  }
+
+  .login-logo {
+    width: 65%;
+  }
+
+  .background .content .smart-login .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .login-box .login-icon {
+    font-size: 18px !important;
+  }
+
+  .background .content .smart-login .click {
+    font-size: 14px;
+  }
+
+  #login-btn {
+    font-size: 12px;
+  }
+
+}
+
+@media(max-width:400px) {
+  #logo img {
+    left: 46%;
+    top: 13px;
+  }
+
+  .background .title {
+    font-size: 16px !important;
+    margin-bottom: 13px !important;
+  }
+}
+
+@media(max-width:350px) {
+  #logo img {
+    left: 40%;
+    top: 15px;
+  }
 }

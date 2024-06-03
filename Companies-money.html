@@ -30,6 +30,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
     rel="stylesheet">
 
+  <!-- aweet alert CSS -->
+  <link href="css/sweetalert2.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- font-awesome -->
@@ -153,7 +156,7 @@
             <li class="sidebar-item">
               <a href="./settings-messages.html" class="sidebar-link ">
                 <i class="fa-solid fa-envelope icon"></i>
-                <span>الرسائل</span>
+                <span>إعدادات الرسائل</span>
               </a>
             </li>
 
@@ -197,20 +200,21 @@
 
       <!-- header -->
       <div class="header flex-between flex-wrap mb-5">
-        <h1>
+        <h2>
           احصائيات الشركات
-        </h1>
+        </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
             <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
           </div>
 
-          <div class="lang">عربى</div>
           <div class="dropdown">
-            <i class="fa-solid fa-chevron-down dropdown-toggle" id="dropdownlang" data-bs-toggle="dropdown"
-              aria-expanded="false"></i>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">EN</a></li>
+            <button type="button" class="btn lang" id="dropdownlang" data-bs-toggle="dropdown" aria-expanded="false">
+              عربي
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownlang">
+              <li><a class="dropdown-item" href="#">En</a></li>
             </ul>
           </div>
           <a href="./notification.html" class="notification">
@@ -399,15 +403,16 @@
 
 
   <!-- charts -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/chart.min.js"></script>
+
+  <!-- sweet alert -->
+  <script src="js/sweetalert2@9.js"></script>
 
   <!-- jquery -->
   <script src="js/jquery-3.7.0.min.js"></script>
 
   <!--  Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
   <!-- font-awesome -->

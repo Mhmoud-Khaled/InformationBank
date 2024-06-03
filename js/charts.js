@@ -9,7 +9,7 @@ $(document).ready(function () {
                 datasets: [{
                     yAxisID: 'first',
                     label: 'مكتملة',
-                    barThickness: 25,
+                    barThickness: 20,
                     data: [70000, 60000, 25000, 10000, 10000].reverse(),
                     backgroundColor: '#949191',
                     borderRadius: 8,
@@ -17,7 +17,7 @@ $(document).ready(function () {
                 },
                 {
                     yAxisID: 'first',
-                    barThickness: 25,
+                    barThickness: 20,
                     label: 'غير مكتملة',
                     data: [40000, 30000, 14000, 10000, 5000].reverse(),
                     backgroundColor: '#E2211C',
@@ -69,7 +69,7 @@ $(document).ready(function () {
                 datasets: [{
                     yAxisID: 'first',
                     label: 'مكتملة',
-                    barThickness: 25,
+                    barThickness: 20,
                     data: [70000, 60000, 25000, 10000, 10000].reverse(),
                     backgroundColor: '#E2211C',
                     borderRadius: 8,
@@ -77,7 +77,7 @@ $(document).ready(function () {
                 },
                 {
                     yAxisID: 'first',
-                    barThickness: 25,
+                    barThickness: 20,
                     label: 'غير مكتملة',
                     data: [40000, 30000, 14000, 10000, 5000].reverse(),
                     backgroundColor: '#949191',
