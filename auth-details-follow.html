@@ -181,15 +181,16 @@
     </aside>
 
 
+
     <!-- end-menu -->
 
     <!-- main content -->
-    <div class="main-content p-4 card flex-fill" id="message">
+    <div class="main-content p-4 card flex-fill" id="auth-details-table">
 
       <!-- header -->
-      <div class="header flex-between flex-wrap mb-4">
+      <div class="header flex-between flex-wrap mb-5">
         <h2>
-          الإعدادات > إعدادات الصلاحيات
+          الإعدادات > إعدادات الصلاحيات > التفويضات
         </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
@@ -211,244 +212,148 @@
           <i class="fa-solid fa-right-from-bracket active"></i>
         </div>
       </div>
-      <!-- start sub header -->
-      <div class="sub-header d-flex align-items-center justify-content-end gap-2 mb-3">
 
-        <div class="search-field flex-grow-0" style="width: 115px; flex: unset;">
-          <input type="search" class="form-control" placeholder="بحث">
-          <i class="fa-solid fa-magnifying-glass icon"></i>
+      <div class="taf text-start mb-3">
+        <button type="button" class="btn gray-btn" data-bs-toggle="modal" data-bs-target="#add-auth">تفويض
+          الشخص</button>
+      </div>
+
+      <!-- start user header -->
+      <div class="card-box d-flex align-items-center mb-3 p-4 user-details">
+        <div class="image-box" style="width:80px;">
+          <img class="researcher-image " src="./images/avatar.PNG" alt="">
         </div>
-        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal"
-          data-bs-target="#add-auth">
-          أضف صلاحية
-          <i class="fa-solid fa-plus icon"></i>
-        </button>
-
+        <div class="researcher-info">
+          <h6 class="user">محمد إبراهيم</h6>
+          <div class="details d-flex flex-wrap">
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الرقم المدنى :</p>
+              <p class="data m-0">65656565</p>
+            </div>
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الهاتف :</p>
+              <p class="data m-0">65645464</p>
+            </div>
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الصلاحية :</p>
+              <p class="data m-0">مدير</p>
+            </div>
+          </div>
+        </div>
+        <div class="auth-number">
+          <p>عدد مرات دخول النظام : <strong>14</strong></p>
+        </div>
       </div>
-      <!-- end sub header -->
+      <!-- end user header -->
 
-      <!-- start table -->
-      <div class="table-responsive  card-box p-0">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
-              <th class="text-center t-header" scope="col" style="min-width: 150px;">المستخدم</th>
-              <th class="text-center t-header" scope="col" style="min-width: 150px;">رقم الهاتف</th>
-              <th class="text-center t-header" scope="col" style="min-width: 150px;">الصلاحية
-              </th>
-              <th class="text-center t-header" scope="col" style="min-width: 150px;">التاريخ</th>
-              <th class="text-center t-header" scope="col" style="min-width: 150px;">الحالة</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;">1</td>
-              <td class="text-center">المستخدم</td>
-              <td class="text-center">95463278</td>
-              <td class="text-center">الصلاحية</td>
-              <td class="text-center">24-04-2024</td>
-              <td class="text-center">
-                <a href="auth-details.html"><i class="fa-solid fa-eye icon"></i>
-                </a>
-                <i class="fa-solid fa-pen icon"></i>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
+      <div class="card-box pb-0">
+        <!-- start sub header -->
+        <div class="sub-header flex-between flex-wrap mb-3">
+          <h2>قائمة التفوضات السابقة
+          </h2>
+          <div class="d-flex gap-1 flex-wrap">
+            <button type="button" class="btn white-btn">
+              تنزيل Word
+              <i class="fa-solid fa-file-word icon"></i>
+            </button>
+            <button type="button" class="btn white-btn">
+              تنزيل Excel
+              <i class="fa-solid fa-file-excel icon"></i>
+            </button>
+            <button type="button" class="btn white-btn">
+              طباعه PDF
+              <i class="fa-solid fa-file-pdf icon"></i>
+            </button>
+            <div class="search-field">
+              <input type="search" class="form-control" placeholder="بحث متقدم">
+              <i class="fa-solid fa-magnifying-glass icon"></i>
+            </div>
+          </div>
+        </div>
+        <!-- end sub header -->
 
-          </tbody>
-        </table>
+        <!-- start table -->
+        <div class="table-responsive card-box p-0">
+          <table class="table border-less">
+            <thead>
+              <tr>
+                <th class="p-3 t-header" scope="col">مفوض إلى
+                </th>
+                <th class="p-3 t-header" scope="col">الوقت من
+                </th>
+                <th class="p-3 t-header" scope="col">الوقت إلى
+                </th>
+                <th class="p-3 t-header" scope="col">الصلاحيات</th>
+                <th class="p-3 t-header" scope="col">الحالة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="">احمد النبهانى</td>
+                <td class="">10:30</td>
+                <td class=""> 11:30
+                </td>
+                <td class="">مكتبة الوثائق
+                </td>
+                <td class=" complete">سارى
+                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="">احمد النبهانى</td>
+                <td class="">10:30</td>
+                <td class=""> 11:30
+                </td>
+                <td class="">مكتبة الوثائق
+                </td>
+                <td class=" complete">سارى
+                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="">احمد النبهانى</td>
+                <td class="">10:30</td>
+                <td class=""> 11:30
+                </td>
+                <td class="">التقارير</td>
+                <td class=" complete">سارى
+                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="">احمد النبهانى</td>
+                <td class="">10:30</td>
+                <td class=""> 11:30
+                </td>
+                <td class="">التقارير</td>
+                <td class=" active">تم الالغاء</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- end table -->
       </div>
-      <!-- end table -->
-
-
 
 
     </div>
   </div>
-
 
   <!-- Modal -->
   <div class="modal fade" id="add-auth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header" style="border-bottom: none;">
-          <h3 class="modal-title">أضف صلاحية</h3>
+          <h3 class="modal-title">تفويض الشخض
+          </h3>
         </div>
         <div class="modal-body">
           <input type="text" class="form-control mb-1" placeholder="الرقم المدنى">
-          <input type="text" class="form-control mb-3" placeholder="اسم الموظف">
+          <input type="text" class="form-control mb-3" placeholder="اسم الموظف" disabled>
           <h3 class="mb-2">
-            الصلاحيات
+            الصلاحيات المفوض عليها
+
           </h3>
-          <div class="auth p-2">
+          <div class="auth p-2 mb-2">
             <div class="row mb-2 w-100">
               <div class="col-4 auth-checkbox">
                 <label for="library">مكتبة الوثائق</label>
@@ -561,19 +466,35 @@
               </div>
             </div>
           </div>
+
+          <h3 class="mb-3">الوقت</h3>
+          <div class="row">
+            <div class="col-6">
+              <select class="form-select">
+                <option selected>من</option>
+                <option>Jul 2023 - Aug 2023</option>
+                <option>Jul 2023 - Aug 2023</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <select class="form-select">
+                <option selected>الى</option>
+                <option>Jul 2023 - Aug 2023</option>
+                <option>Jul 2023 - Aug 2023</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn gray-btn" data-bs-dismiss="modal"
             style="flex: unset; width: 65px;">إلغاء</button>
-          <button type="button" class="btn red-btn" style="flex: unset; width: 65px;">حفظ</button>
+          <button type="button" class="btn red-btn" style="flex: unset; width: 65px;">تفويض</button>
         </div>
       </div>
     </div>
   </div>
 
 
-  <!-- charts -->
-  <script src="js/chart.min.js"></script>
 
   <!-- sweet alert -->
   <script src="js/sweetalert2@9.js"></script>

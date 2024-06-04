@@ -1485,6 +1485,7 @@ svg.active {
   background-color: #e9e9e9 !important;
 }
 
+.auth-links a,
 .report-links a {
   padding: 5px;
   font-size: 15px;
@@ -1493,11 +1494,15 @@ svg.active {
   transition: 0.3s;
 }
 
+.auth-links a.active,
+.auth-links a:hover,
 .report-links a.active,
 .report-links a:hover {
   color: var(--red-color);
 }
 
+.auth-links a.active::after,
+.auth-links a:hover::after,
 .report-links a.active::after,
 .report-links a:hover::after {
   content: "";
@@ -1511,8 +1516,62 @@ svg.active {
   right: 4px;
 }
 
+.auth-links a {
+  font-size: 14px !important;
+  font-weight: 100 !important;
+}
+
 #add-template .attached {
   position: relative;
+}
+
+.researcher-image {
+  height: 70px;
+  width: 70px;
+  margin-left: 10px;
+}
+
+.researcher-info .user {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.researcher-info .detail-box {
+  margin-left: 10px;
+}
+
+.researcher-info .name {
+  font-size: 14px;
+  font-weight: normal;
+  color: #7b7890;
+  text-wrap: nowrap;
+}
+
+.researcher-info .data {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--red-color);
+}
+
+.user-details {
+  position: relative;
+}
+
+.user-details .auth-number {
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  background: var(--red-color);
+  padding: 6px;
+  color: white;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-left: 10px;
+}
+
+.user-details .auth-number p {
+  font-size: 13px;
 }
 
 #add-template .attached .icon {
@@ -1540,6 +1599,54 @@ svg.active {
 .auth hr {
   margin: 10px 0px;
   color: gray;
+}
+
+#auth-details .sub-header {
+  gap: 5px;
+}
+
+#auth-details .sub-header .btn {
+  flex: unset;
+}
+
+.complete {
+  color: #2CCB36 !important;
+}
+
+.taf button {
+  background-color: var(--gray-color);
+  color: white;
+}
+
+.taf button a {
+  color: white;
+}
+
+#cancel:hover {
+  color: black !important;
+}
+
+#user-notification .image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#user-notification p {
+  font-size: 14px;
+}
+
+#user-notification .card-box {
+  transition: 0.3s;
+}
+
+#user-notification .card-box:hover {
+  transform: scale(1.01);
+}
+
+#user-notification button:focus {
+  border: none !important;
 }
 
 @media(max-width:1200px) {
