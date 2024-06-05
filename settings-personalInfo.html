@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <title>بنك المعلومات</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#FFB636">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#FFB636">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  <!-- aweet alert CSS -->
+  <link href="css/sweetalert2.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- own css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/indexLogo.png" />
+
+</head>
+
+<body>
+  <!-- <div class="spinner-border text-primary loader" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
+
+  <div class="d-flex flex-nowrap home main">
+
+    <!-- menu -->
+
+    <aside id="sidebar" class="expand">
+      <!-- logo -->
+      <div class="sidebar-logo" id="logo">
+        <img src="./images/menu-logo.png" class="img-fluid" alt="">
+      </div>
+      <div class="flex-between">
+        <div class="menu-title flex-center">
+          <i class="fa-solid fa-city"></i>
+          <h3>بنك المعلومات</h3>
+        </div>
+        <button class="toggle-btn">
+          <svg id="hamburger" class="Header__toggle-svg active" viewbox="0 0 60 40">
+            <g stroke="#7583A0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <path id="top-line" d="M10,10 L50,10 Z"></path>
+              <path id="middle-line" d="M10,20 L50,20 Z"></path>
+              <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <!-- menu list -->
+      <ul class="sidebar-nav">
+        <li class="sidebar-item mb-3" id="searchList">
+          <div class="d-flex justify-content-between align-items-center flex-nowrap">
+            <div class="sidebar-link d-flex justify-content-between" id="navSearch">
+              <input class="form-control" type="text" placeholder="البحث">
+              <i class="fa-solid fa-magnifying-glass icon" id="search-icon"></i>
+            </div>
+            <button class="filter text-center">
+              <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
+            </button>
+          </div>
+        </li>
+
+        <li class="sidebar-item ">
+          <a href="./home.html" class="sidebar-link ">
+            <i class="fa-solid fa-home icon"></i>
+            <span class="">الصفحة الرئيسية</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./Companies-stat.html" class="sidebar-link">
+            <i class="fa-solid fa-building icon"></i>
+            <span>احصائيات الشركات</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="./documentsLibrary.html" class="sidebar-link">
+            <i class="fa-solid fa-book icon"></i>
+            <span>مكتبة الوثائق</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#kpis" aria-expanded="false"
+            aria-controls="kpis">
+            <a class="sidebar-link " id="kpis-icon">
+              <i class="fa-solid fa-gear icon"></i>
+              <span class="">مؤشرات الاداء</span>
+            </a>
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse" data-bs-target="#kpis"
+              aria-expanded="false" aria-controls="kpis"></i>
+          </div>
+          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link ">
+                <i class="fa-solid fa-users icon"></i>
+                <span>الموظفين</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link ">
+                <i class="fa-solid fa-calculator icon"></i>
+                <span><a href="#">المعاملات</a></span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="sidebar-item">
+          <a href="reports.html" class="sidebar-link">
+            <i class="fa-solid fa-clipboard-list icon"></i>
+            <span>التقارير</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <div class="has-dropdown collapsed " data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
+            aria-controls="setting">
+            <a class="sidebar-link" id="set-icon">
+              <i class="fa-solid fa-gear icon"></i>
+              <span class="">الإعدادات</span>
+            </a>
+
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
+              data-bs-target="#setting" aria-expanded="false" aria-controls="setting"></i>
+          </div>
+          <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a href="./settings-messages.html" class="sidebar-link ">
+                <i class="fa-solid fa-envelope icon"></i>
+                <span>إعدادات الرسائل</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="./settings-reports.html" class="sidebar-link ">
+                <i class="fa-solid fa-file-lines icon"></i>
+                <span>اعدادات التقارير</span>
+              </a>
+            </li>
+
+            <li class="sidebar-item">
+              <a href="./settings-auth.html" class="sidebar-link">
+                <i class="fa-solid fa-file-pen icon"></i>
+                <span>اعدادات الصلاحيات</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-library.html" class="sidebar-link ">
+                <i class="fa-regular fa-pen-to-square icon"></i>
+                <span>اعدادات مكتبة الوثائق</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-kpi.html" class="sidebar-link">
+                <i class="fa-solid fa-circle-notch icon"></i>
+                <span>اعدادات مؤشرات الإداء</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-terms.html" class="sidebar-link">
+                <i class="fa-solid fa-file-signature icon"></i>
+                <span>تعريف المصطلحات</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-message icon"></i>
+                <span>المراسلات</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </aside>
+
+
+
+    <!-- end-menu -->
+
+    <!-- main content -->
+    <div class="main-content p-4 card flex-fill" id="auth-details">
+
+      <!-- header -->
+      <div class="header flex-between flex-wrap mb-5">
+        <h2>
+          الإعدادات > الملف الشخصي
+        </h2>
+        <div class="user d-flex justify-content-between align-items-center">
+          <div class="user-img">
+            <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="btn lang" id="dropdownlang" data-bs-toggle="dropdown" aria-expanded="false">
+              عربي
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownlang">
+              <li><a class="dropdown-item" href="#">En</a></li>
+            </ul>
+          </div>
+          <a href="./notification.html" class="notification">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+          <i class="fa-solid fa-right-from-bracket active"></i>
+        </div>
+      </div>
+
+      <!-- start user header -->
+      <div class="card-box d-flex align-items-center mb-3 p-4 user-details">
+        <div class="image-box" style="width:80px;">
+          <img class="researcher-image " src="./images/avatar.PNG" alt="">
+        </div>
+        <div class="researcher-info">
+          <div class="d-flex align-items-center">
+            <h6 class="user">محمد إبراهيم</h6>
+            <p class="performance rounded-pill">
+              الإداء : ممتاز
+              <i class="fa-solid fa-trophy icon"></i>
+            </p>
+          </div>
+          <div class="details d-flex flex-wrap">
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الرقم المدنى :</p>
+              <p class="data m-0">65656565</p>
+            </div>
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الهاتف :</p>
+              <p class="data m-0">65645464</p>
+            </div>
+            <div class="detail-box d-flex">
+              <p class="m-0 mx-2 name">الصلاحية :</p>
+              <p class="data m-0">مدير</p>
+            </div>
+          </div>
+        </div>
+        <div class="auth-number">
+          <p>عدد مرات دخول النظام : <strong>14</strong></p>
+        </div>
+      </div>
+      <!-- end user header -->
+
+      <div class="mb-3 card-box py-1">
+        <div class="auth-links d-flex gap-2">
+          <a href="auth-details.html" class="active">المهام المنجزة(3)</a>
+          <a href="#">المهام قيد الاجراء (10)</a>
+          <a href="#">المهام المتأخرة (2)</a>
+        </div>
+      </div>
+      <div class="card-box pb-0">
+        <!-- start sub header -->
+        <div class="sub-header flex-between flex-wrap mb-3">
+          <h2>قائمة المهام المنجزة</h2>
+          <div class="d-flex gap-1 flex-wrap">
+            <button type="button" class="btn gray-btn">
+              تنزيل Word
+              <i class="fa-solid fa-file-word icon"></i>
+            </button>
+            <button type="button" class="btn gray-btn">
+              تنزيل Excel
+              <i class="fa-solid fa-file-excel icon"></i>
+            </button>
+            <button type="button" class="btn gray-btn">
+              طباعه PDF
+              <i class="fa-solid fa-file-pdf icon"></i>
+            </button>
+            <button type="button" class="search-field btn gray-btn">
+              بحث متقدم
+              <i class="fa-solid fa-magnifying-glass icon"></i>
+            </button>
+          </div>
+        </div>
+        <!-- end sub header -->
+
+        <!-- start table -->
+        <div class="table-responsive card-box p-0">
+          <table class="table border-less">
+            <thead>
+              <tr>
+                <th class="p-3 t-header" scope="col">اسم المهمه</th>
+                <th class="p-3 t-header" scope="col">رقم الطلب</th>
+                <th class="p-3 t-header" scope="col">التاريخ</th>
+                <th class="p-3 t-header" scope="col">الحالة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="">المهمه</td>
+                <td class="">5454</td>
+                <td class=""> 11:30 2024/04/20
+                </td>
+                <td class=" complete">منجزة</td>
+              </tr>
+              <tr>
+                <td class="">المهمه</td>
+                <td class="">5454</td>
+                <td class=""> 11:30 2024/04/20
+                </td>
+                <td class=" complete">منجزة</td>
+              </tr>
+              <tr>
+                <td class="">المهمه</td>
+                <td class="">5454</td>
+                <td class=""> 11:30 2024/04/20
+                </td>
+                <td class=" complete">منجزة</td>
+              </tr>
+              <tr>
+                <td class="">المهمه</td>
+                <td class="">5454</td>
+                <td class=""> 11:30 2024/04/20
+                </td>
+                <td class=" complete">منجزة</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- end table -->
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!-- sweet alert -->
+  <script src="js/sweetalert2@9.js"></script>
+
+  <!-- jquery -->
+  <script src="js/jquery-3.7.0.min.js"></script>
+
+  <!--  Bootstrap Bundle with Popper -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- font-awesome -->
+  <script src="js/all.min.js"></script>
+  <!-- own js -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
