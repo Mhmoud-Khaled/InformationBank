@@ -1649,6 +1649,45 @@ svg.active {
   border: none !important;
 }
 
+#noti .noti-time {
+  position: relative;
+}
+
+#noti .noti-time .icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.performance {
+  margin-right: 5px;
+  padding: 0px 10px;
+  background: #01A811;
+  font-size: 12px;
+  color: white;
+}
+
+.performance .icon {
+  color: goldenrod;
+}
+
+
+.taf p {
+  display: inline;
+  background: #E85A56;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+}
+
+.message {
+  text-overflow: ellipsis;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media(max-width:1200px) {
 
   .doungut1 .dataOne,

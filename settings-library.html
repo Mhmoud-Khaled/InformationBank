@@ -168,9 +168,21 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-auth.html" class="sidebar-link ">
+              <a href="./settings-kpi.html" class="sidebar-link">
                 <i class="fa-solid fa-circle-notch icon"></i>
                 <span>اعدادات مؤشرات الإداء</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-terms.html" class="sidebar-link">
+                <i class="fa-solid fa-file-signature icon"></i>
+                <span>تعريف المصطلحات</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-message icon"></i>
+                <span>المراسلات</span>
               </a>
             </li>
 
@@ -259,143 +271,6 @@
 
 
 
-    </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="add-auth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header" style="border-bottom: none;">
-          <h3 class="modal-title">أضف صلاحية</h3>
-        </div>
-        <div class="modal-body">
-          <input type="text" class="form-control mb-1" placeholder="الرقم المدنى">
-          <input type="text" class="form-control mb-3" placeholder="اسم الموظف">
-          <h3 class="mb-2">
-            الصلاحيات
-          </h3>
-          <div class="auth p-2">
-            <div class="row mb-2 w-100">
-              <div class="col-4 auth-checkbox">
-                <label for="library">مكتبة الوثائق</label>
-                <input class="form-check-input" type="checkbox" id="library">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="lib-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="lib-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="lib-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="lib-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="lib-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="lib-delete">
-              </div>
-            </div>
-            <div class="row w-100">
-              <div class="col-4 auth-checkbox justify-content-center">
-                <label for="file">الملفات</label>
-                <input class="form-check-input" type="checkbox" id="file">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="file-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="file-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="file-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="file-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="file-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="file-delete">
-              </div>
-            </div>
-            <hr>
-            <div class="row mb-2 w-100">
-              <div class="col-4 auth-checkbox">
-                <label for="reports">التقاير</label>
-                <input class="form-check-input" type="checkbox" id="reports">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="repo-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="repo-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="repo-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="repo-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="repo-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="repo-delete">
-              </div>
-            </div>
-            <div class="row w-100">
-              <div class="col-4 auth-checkbox justify-content-center">
-                <label for="repo-1">تقرير 1</label>
-                <input class="form-check-input" type="checkbox" id="repo-1">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="repo-1-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="repo-1-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="repo-1-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="repo-1-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="repo-1-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="repo-1-delete">
-              </div>
-            </div>
-            <hr>
-            <div class="row mb-2 w-100">
-              <div class="col-4 auth-checkbox">
-                <label for="kpi">مؤشرات الاداء</label>
-                <input class="form-check-input" type="checkbox" id="kpi">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="kpi-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="kpi-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="kpi-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="kpi-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="kpi-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="kpi-delete">
-              </div>
-            </div>
-            <hr>
-            <div class="row mb-2 w-100">
-              <div class="col-4 auth-checkbox">
-                <label for="auth">الصلاحية</label>
-                <input class="form-check-input" type="checkbox" id="auth">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="auth-add"> إضافة</label>
-                <input class="form-check-input" type="checkbox" id="auth-add">
-              </div>
-              <div class="col-3 auth-checkbox">
-                <label for="auth-edit"> تعديل</label>
-                <input class="form-check-input" type="checkbox" id="auth-edit">
-              </div>
-              <div class="col-2 auth-checkbox">
-                <label for="auth-delete"> حذف</label>
-                <input class="form-check-input" type="checkbox" id="auth-delete">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn gray-btn" data-bs-dismiss="modal"
-            style="flex: unset; width: 65px;">إلغاء</button>
-          <button type="button" class="btn red-btn" style="flex: unset; width: 65px;">حفظ</button>
-        </div>
-      </div>
     </div>
   </div>
 
