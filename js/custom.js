@@ -17,17 +17,11 @@ $(document).ready(function () {
 
   function toggleManuPanal() {
     const menuToggle = document.querySelector(".toggle-btn");
-    const search = document.querySelector("#search-icon");
     const setting = document.querySelector("#set-icon");
-
     if (window.innerWidth > 769) {
 
       menuToggle.addEventListener("click", function () {
         document.querySelector("#sidebar").classList.toggle("expand");
-        document.querySelector("#hamburger").classList.toggle("active");
-      });
-      search.addEventListener("click", function () {
-        document.querySelector("#sidebar").classList.add("expand");
         document.querySelector("#hamburger").classList.toggle("active");
       });
       setting.addEventListener("click", function () {
@@ -37,12 +31,9 @@ $(document).ready(function () {
     } else {
       document.querySelector("#sidebar").classList.add("expand");
       document.querySelector("#hamburger").classList.remove("active");
-      document.querySelector("#searchList").classList.add("close-menu");
       document.querySelector(".sidebar-nav").classList.add("close-menu");
       menuToggle.addEventListener("click", function () {
         document.querySelector("#hamburger").classList.toggle("active");
-        document.querySelector("#searchList").classList.toggle("close-menu");
-        document.querySelector("#searchList").classList.toggle("open-menu");
         document.querySelector(".sidebar-nav").classList.toggle("close-menu");
         document.querySelector(".sidebar-nav").classList.toggle("open-menu");
       });
@@ -62,31 +53,10 @@ $(document).ready(function () {
   }));
 
 
-  // delete alert
-  // alert add to favorite
-
-  $(document).on('click', '.trash', function (e) {
-    Swal.fire({
-      title: 'هل انت متأكد؟',
-      text: "لا يمكن التراجع عن هذا",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#2E619E',
-      cancelButtonColor: '#A61D21',
-      confirmButtonText: 'نعم اريد المسح !',
-      cancelButtonText: 'الغاء',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'مسح!',
-          'تم مسح الملف.',
-          'success',
-        )
-      }
-    })
-
-  });
-
+  $('.user-img').click(function (event) {
+    console.log('test');
+    window.location.href = '../settings-personalInfo.html'
+  })
 
   // toggle nav sort
   $('.sort-menu').hide();
@@ -141,5 +111,67 @@ $(document).ready(function () {
     $('.readed').parents('tr').fadeIn('fast');
   })
 
+  //select2
+  // select2
+  $('.form-select').select2({
+    dir: 'rtl',
+  })
+
+  $('.send-company-select').select2({
+    dropdownParent: $('#sendFormCompany')
+  })
+
+  $('.add-company-select').select2({
+    dropdownParent: $('#addCompany')
+  })
+
+  $('.create-table-select').select2({
+    dropdownParent: $('#createQuestion')
+  })
+
+  $('.email-select').select2({
+    dropdownParent: $('#createMail')
+  })
+  $('.requestName').select2({
+    dropdownParent: $('#requestName')
+  })
+
 
 });
+
+$(document).ready(function () {
+
+  $(document).on('click', '.trash', function (e) {
+    Swal.fire({
+      imageUrl: "../images/delete.png",
+      imageWidth: 80,
+      imageHeight: 80,
+      title: 'حذف ملف',
+      text: "لقد انتهى الوقت المسموح والحذف يرجى إرسال طلب الى إدارة النظام",
+      showCancelButton: true,
+      confirmButtonColor: '#E2211C',
+      cancelButtonColor: '#fff',
+      confirmButtonText: 'إرسال طلب',
+      cancelButtonText: 'تراجع',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          text: "حذف ملف : التجارة والصناعة",
+          input: "textarea",
+          inputLabel: "سبب الحذف",
+          inputPlaceholder: "اكتب هنا",
+          inputAttributes: {
+            "aria-label": "Type your message here"
+          },
+          showCancelButton: true,
+          confirmButtonText: 'إرسال طلب',
+          cancelButtonText: 'تراجع',
+          confirmButtonColor: '#E2211C',
+          cancelButtonColor: '#fff',
+        }
+        )
+      }
+    })
+
+  });
+})

@@ -17,7 +17,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-
   <!-- aweet alert CSS -->
   <link href="css/sweetalert2.css" rel="stylesheet">
 
@@ -32,9 +31,6 @@
 </head>
 
 <body>
-  <!-- <div class="spinner-border text-primary loader" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> -->
 
   <div class="d-flex flex-nowrap home main">
 
@@ -47,7 +43,7 @@
       </div>
       <div class="flex-between">
         <div class="menu-title flex-center">
-          <i class="fa-solid fa-city"></i>
+          <i class="fa-solid fa-city icon"></i>
           <h3>بنك المعلومات</h3>
         </div>
         <button class="toggle-btn">
@@ -70,7 +66,7 @@
           </div>
         </li>
 
-        <li class="sidebar-item ">
+        <li class="sidebar-item">
           <a href="./home.html" class="sidebar-link ">
             <i class="fa-solid fa-home icon"></i>
             <span class="">الصفحة الرئيسية</span>
@@ -91,17 +87,17 @@
           </a>
         </li>
 
-        <li class="sidebar-item">
+        <li class="sidebar-item border-active">
           <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#kpis" aria-expanded="false"
             aria-controls="kpis">
-            <a class="sidebar-link " id="kpis-icon">
+            <a class="sidebar-link active" id="kpis-icon">
               <i class="fa-solid fa-gear icon"></i>
               <span class="">مؤشرات الاداء</span>
             </a>
-            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse" data-bs-target="#kpis"
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed " data-bs-toggle="collapse" data-bs-target="#kpis"
               aria-expanded="false" aria-controls="kpis"></i>
           </div>
-          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
             <li class="sidebar-item">
               <a href="kpis-employees.html" class="sidebar-link ">
                 <i class="fa-solid fa-users icon"></i>
@@ -109,7 +105,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="kpis-actions.html" class="sidebar-link ">
+              <a href="kpis-actions.html" class="sidebar-link active">
                 <i class="fa-solid fa-calculator icon"></i>
                 <span>المعاملات</span>
               </a>
@@ -124,10 +120,10 @@
             <span>التقارير</span>
           </a>
         </li>
-        <li class="sidebar-item border-active">
-          <div class="has-dropdown collapsed " data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
+        <li class="sidebar-item">
+          <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
             aria-controls="setting">
-            <a class="sidebar-link active" id="set-icon">
+            <a class="sidebar-link " id="set-icon">
               <i class="fa-solid fa-gear icon"></i>
               <span class="">الإعدادات</span>
             </a>
@@ -135,7 +131,7 @@
             <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
               data-bs-target="#setting" aria-expanded="false" aria-controls="setting"></i>
           </div>
-          <ul id="setting" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
+          <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
             <li class="sidebar-item">
               <a href="./settings-messages.html" class="sidebar-link ">
                 <i class="fa-solid fa-envelope icon"></i>
@@ -151,13 +147,13 @@
             </li>
 
             <li class="sidebar-item">
-              <a href="./settings-auth.html" class="sidebar-link">
+              <a href="./settings-auth.html" class="sidebar-link ">
                 <i class="fa-solid fa-file-pen icon"></i>
                 <span>اعدادات الصلاحيات</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-library.html" class="sidebar-link active">
+              <a href="./settings-auth.html" class="sidebar-link ">
                 <i class="fa-regular fa-pen-to-square icon"></i>
                 <span>اعدادات مكتبة الوثائق</span>
               </a>
@@ -191,12 +187,12 @@
     <!-- end-menu -->
 
     <!-- main content -->
-    <div class="main-content p-4 card flex-fill" id="message">
+    <div class="main-content p-4 card flex-fill">
 
       <!-- header -->
-      <div class="header flex-between flex-wrap mb-4">
+      <div class="header flex-between flex-wrap">
         <h2>
-          الإعدادات > اعدادات مكتبة الوثائق
+          مؤشرات الاداء > المعاملات > لوحة المعلومات
         </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
@@ -218,54 +214,133 @@
           <i class="fa-solid fa-right-from-bracket active"></i>
         </div>
       </div>
-      <!-- start sub header -->
-      <div class="sub-header d-flex align-items-center justify-content-end gap-2 mb-3">
 
-        <div class="search-field flex-grow-0" style="width: 115px; flex: unset;">
-          <input type="search" class="form-control" placeholder="بحث">
-          <i class="fa-solid fa-magnifying-glass icon"></i>
+      <div class="sub-header flex-between flex-wrap mb-3 card-box py-1 my-3">
+        <div class="report-links flex-between gap-2">
+          <a href="kpis-actions.html" class="active">لوحة المعلومات</a>
+          <a href="kpis-orders.html">الطلبات</a>
+          <a href="kpis-tasks.html">المهام</a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <div class="search-field flex-grow-0" style="width: 115px; flex: unset;">
+            <input type="search" class="form-control" placeholder="بحث" id="search-report">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+          </div>
+          <input type="date" class="form-control kpi-date" value="25/04/2024">
         </div>
 
       </div>
-      <!-- end sub header -->
 
-      <div class="card-box p-4 mb-4">
-        <h2 class="mb-3">وقت التعديل</h2>
+
+      <!-- charts -->
+      <div class="charts">
         <div class="row">
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الايام">
+          <div class="col-lg-6 col-sm-12 mb-3">
+            <div class="card card-box">
+              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 py-2">
+                <h4 class="title">
+                  الطلبات
+                </h4>
+                <div class="icon">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+              </div>
+              <hr class="m-0 p-0">
+              <div class="card-chart p-2">
+                <canvas id="myChart1"></canvas>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الساعات">
+          <div class="col-lg-6 col-md-12 mb-3">
+            <div class="card  card-box">
+              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 py-2">
+                <h4 class="title">
+                  التقارير
+                </h4>
+                <div class="icon">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+              </div>
+              <hr class="m-0 p-0">
+              <div class="card-chart p-2">
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الدقائق">
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="card card-box">
+              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 py-2">
+                <h4 class="title">
+                  المهام
+                </h4>
+                <div class="icon">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+              </div>
+              <hr class="m-0 p-0">
+              <div class="card-chart doungut1 flex-center p-2">
+                <canvas id="myChart3"></canvas>
+                <span class="dataOne">
+                  <div class="data">40</div>
+                </span>
+                <span class="dataTwo">
+                  <div class="data">60</div>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الثوانى">
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="card card-box">
+              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 py-2">
+                <h4 class="title">
+                  المكتبة
+                </h4>
+                <div class="icon">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+              </div>
+              <hr class="m-0 p-0">
+              <div class="card-chart doungut2 flex-center p-2">
+                <canvas id="myChart4"></canvas>
+                <span class="dataOne">
+                  <div class="data">20%</div>
+                </span>
+                <span class="dataTwo">
+                  <div class="data">20%</div>
+                </span>
+                <span class="dataThree">
+                  <div class="data">15%</div>
+                </span>
+                <span class="dataFour">
+                  <div class="data">15%</div>
+                </span>
+                <span class="dataFive">
+                  <div class="data">10%</div>
+                </span>
+                <span class="dataSix">
+                  <div class="data">20%</div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-3">
+            <div class="card card-box">
+              <div class="card-title d-flex justify-content-between align-items-center m-0 px-3 py-2">
+                <h4 class="title">
+                  المستخدمين
+                </h4>
+                <div class="icon">
+                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+              </div>
+              <hr class="m-0 p-0">
+              <div class="card-chart p-2">
+                <canvas id="myChart5"></canvas>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="card-box p-3 mb-2">
-        <h2 class="mb-3">وقت الحذف</h2>
-        <div class="row">
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الايام">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الساعات">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الدقائق">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الثوانى">
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
   </div>
 
@@ -287,6 +362,12 @@
   <script src="js/all.min.js"></script>
   <!-- own js -->
   <script src="js/custom.js"></script>
+  <script src="js/charts.js"></script>
+  <script>
+    $(window).on('load', function () {
+      $(".main-loading").fadeOut().css("display", "none")
+    });
+  </script>
 </body>
 
 </html>

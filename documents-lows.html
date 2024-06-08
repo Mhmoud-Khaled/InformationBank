@@ -17,18 +17,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <!-- google icon -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-    rel="stylesheet">
   <link rel="shortcut icon" href="images/indexLogo.png" />
 
   <!-- aweet alert CSS -->
@@ -208,8 +196,8 @@
 
       <!-- header -->
       <div class="header flex-between flex-wrap">
-        <h2>
-          مكتبة الوثائق </h2>
+
+        <h2>مكتبة الوثائق > دائرة الشؤون القانونية > الآراء القانونية</h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
             <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
@@ -233,36 +221,22 @@
       <!-- start table header  -->
       <section class="table-header d-flex justify-content-between ">
         <div class="right-btns d-flex">
-          <form action="" class="box-shadow-white search-form smart-search" data-bs-toggle="modal"
-            data-bs-target="#smart-search">
-            <input type="text" placeholder="بحث متقدم" readonly>
+          <form action="" class="box-shadow-white search-form">
+            <input type="text" placeholder="بحث متقدم">
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
-          <div class="box-shadow-white store-by dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="box-shadow-white store-by ">
             <span class="d-block">ترتيب حسب</span>
             <i class="fa-solid fa-arrow-down-wide-short"></i>
-            <ul class="dropdown-menu text-end">
-              <li><a class="dropdown-item" href="#">الاقسام</a></li>
-              <li><a class="dropdown-item" href="#">اسم الملف
-                </a></li>
-              <li><a class="dropdown-item" href="#">حجم الملف
-                </a></li>
-              <li><a class="dropdown-item" href="#">مرات التنزيل
-                </a></li>
-            </ul>
           </div>
-        </div>
-        <div class="left-btns">
           <button class="view-files btn white-btn">
             <a href="documents-folder.html">مشاهدة جميع الاملفات</a>
             <i class="fa-regular fa-folder"></i>
           </button>
-          <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-dept">
-            <span>إنشاء قسم</span>
-            <i class="fa-solid fa-plus"></i>
-          </button>
-          <button class="sub-department btn gray-btn" style="background-color: rgb(103, 103, 103); color: white;">
-            <span>إنشاء قسم فرعى</span>
+        </div>
+        <div class="left-btns">
+          <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-file">
+            <span>إنشاء ملف</span>
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
@@ -270,28 +244,47 @@
       <!-- End table header  -->
 
       <!-- start table -->
-      <div class="table-responsive  card-box p-0">
-        <table class="table table-bordered">
+      <div class="table-responsive  p-0">
+        <table class="table border-space  table-hover table-borderless">
           <thead>
             <tr>
-              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
-              <th class="t-header" scope="col" style="min-width: 15px;">الاقسام</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">عدد الأقسام الفرعية</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">عدد الملفات
+              <th class="t-header t-trans" scope="col">اسم الملف</th>
+              <th class="text-center t-header t-trans" scope="col">تم الرفع بواسطة</th>
+              <th class="text-center t-header t-trans" scope="col">نوع الملف
               </th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">الحالة</th>
+              <th class="text-center t-header t-trans" scope="col">التاريخ</th>
+              <th class="text-center t-header t-trans" scope="col">الحجم</th>
+              <th class="text-center t-header t-trans" scope="col">عدد المشاهدات</th>
+              <th class="text-center t-header t-trans" scope="col">مرات التحميل</th>
+              <th class="text-center t-header t-trans" scope="col">الحالة</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="py-3 cell first-cell">
+                <img class="file" src="./images/pdf.png" alt="">
+                التجارة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="py-3 cell  text-center">محمد الوهيبى
               </td>
-              <td class="text-center">5 ملفات
+              <td class="py-3 cell  text-center">pdf
               </td>
-              <td class="text-center">
+              <td class="py-3 cell  text-center">24 فبراير 2024
+              </td>
+              <td class="py-3 cell  text-center">4.7 MB
+              </td>
+              <td class="py-3 cell  text-center">7
+              </td>
+              <td class="py-3 cell  text-center">5
+              </td>
+              <td class="py-3 cell last-cell text-center">
+
+                <button class="btn transparent-btn px-0 pt-0">
+                  <i class="fa-regular fa-eye icon"></i>
+                </button>
+                <button class="btn transparent-btn px-0 pt-0">
+                  <i class="fa-solid fa-download icon"></i>
+                </button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -299,104 +292,30 @@
               </td>
             </tr>
             <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="py-3 cell first-cell">
+                <img class="file" src="./images/word.png" alt="">
+                الصناعة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="py-3 cell  text-center">محمد الوهيبى
               </td>
-              <td class="text-center">5 ملفات
+              <td class="py-3 cell  text-center">pdf
               </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
+              <td class="py-3 cell  text-center">24 فبراير 2024
+              </td>
+              <td class="py-3 cell  text-center">4.7 MB
+              </td>
+              <td class="py-3 cell  text-center">7
+              </td>
+              <td class="py-3 cell  text-center">5
+              </td>
+              <td class="py-3 cell last-cell text-center">
+
+                <button class="btn transparent-btn px-0 pt-0">
+                  <i class="fa-regular fa-eye icon"></i>
                 </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
+                <button class="btn transparent-btn px-0 pt-0">
+                  <i class="fa-solid fa-download icon"></i>
                 </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
-              </td>
-              <td class="text-center">5 أقسام فرعية
-              </td>
-              <td class="text-center">5 ملفات
-              </td>
-              <td class="text-center">
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -411,14 +330,61 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="add-dept" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
+  <div class="modal fade" id="add-file" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header" style="border-bottom: none;">
-          <h3 class="modal-title">إنشاء قسم</h3>
+        <div class="modal-header justify-content-center" style="border-bottom: none;">
+          <h3 class="modal-title">إنشاء ملف</h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-1" placeholder="اسم القسم">
+          <div class="row">
+            <div class="col-sm-6 col-12 mb-2">
+              <select class="form-select">
+                <option selected>نوع الوثيقة</option>
+                <option>Jul 2023 - Aug 2023</option>
+                <option>Jul 2023 - Aug 2023</option>
+              </select>
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="*اسم الوسيلة الاعلامية">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="*اسم المنصة الإلكترونية">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="number" class="form-control" placeholder="الرقم المرجعى للوثيفة">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="موضوع الوثيقة">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="تاريخ الوثيقة" onfocus="(this.type='date')">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="سنة الوثيقة" onfocus="(this.type='date')">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="اسم الملف">
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <input type="text" class="form-control" placeholder="*اسم المؤرشف" disabled>
+            </div>
+            <div class="col-sm-6 col-12 mb-2">
+              <select class="form-select">
+                <option selected>التصنيف</option>
+                <option>عادى</option>
+                <option>عادى</option>
+                <option>عادى</option>
+              </select>
+            </div>
+            <div class="col-12 mb-2">
+              <input type="text" class="form-control" placeholder="ملاحظات">
+            </div>
+            <h6 class="mb-2">اسم الملف</h6>
+            <div class="col-12">
+              <input type="file" class="form-control">
+            </div>
+          </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
@@ -428,30 +394,6 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="smart-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header justify-content-center" style="border-bottom: none;">
-          <h3 class="modal-title ">بحث متقدم</h3>
-        </div>
-        <div class="modal-body">
-          <input type="text" class="form-control mb-2" placeholder="القسم">
-          <input type="text" class="form-control mb-2" placeholder="اسم الملف">
-          <select class="form-select mb-2">
-            <option selected>نوع الملف</option>
-            <option>pdf</option>
-            <option>pdf</option>
-          </select>
-          <input type="date" class="form-control mb-1" placeholder="من">
-        </div>
-        <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">ارسال طلب</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <!-- charts -->

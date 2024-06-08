@@ -63,15 +63,10 @@
 
       <!-- menu list -->
       <ul class="sidebar-nav">
-        <li class="sidebar-item mb-3" id="searchList">
-          <div class="d-flex justify-content-between align-items-center flex-nowrap">
-            <div class="sidebar-link d-flex justify-content-between" id="navSearch">
-              <input class="form-control" type="text" placeholder="البحث">
-              <i class="fa-solid fa-magnifying-glass icon" id="search-icon"></i>
-            </div>
-            <button class="filter text-center">
-              <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
-            </button>
+        <li class="sidebar-item">
+          <div class="d-flex justify-content-between align-items-center flex-nowrap px-3 date-menu">
+            <p>التاريخ: 02/05/24</p>
+            <p>10:24 صباحا</p>
           </div>
         </li>
 
@@ -108,15 +103,15 @@
           </div>
           <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link ">
+              <a href="kpis-employees.html" class="sidebar-link ">
                 <i class="fa-solid fa-users icon"></i>
                 <span>الموظفين</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link ">
+              <a href="kpis-actions.html" class="sidebar-link ">
                 <i class="fa-solid fa-calculator icon"></i>
-                <span><a href="#">المعاملات</a></span>
+                <span>المعاملات</span>
               </a>
             </li>
 
@@ -283,9 +278,10 @@
               طباعه PDF
               <i class="fa-solid fa-file-pdf icon"></i>
             </button>
-            <button type="button" class="search-field btn gray-btn">
+            <button type="button" class="search-field btn gray-btn" data-bs-toggle="modal"
+              data-bs-target="#smart-search">
               بحث متقدم
-              <i class="fa-solid fa-magnifying-glass icon"></i>
+              <i class=" fa-solid fa-magnifying-glass icon"></i>
             </button>
           </div>
         </div>
@@ -336,8 +332,26 @@
         </div>
         <!-- end table -->
       </div>
+    </div>
+  </div>
 
-
+  <!-- Modal -->
+  <div class="modal fade" id="smart-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center" style="border-bottom: none;">
+          <h3 class="modal-title ">بحث متقدم</h3>
+        </div>
+        <div class="modal-body">
+          <h6 class="mb-1">الفترة</h6>
+          <input type="date" class="form-control mb-1" placeholder="من">
+          <input type="date" class="form-control mb-1" placeholder="الى">
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+          <button type="button" class="btn red-btn">حفظ</button>
+        </div>
+      </div>
     </div>
   </div>
 

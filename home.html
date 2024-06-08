@@ -20,6 +20,9 @@
   <!-- aweet alert CSS -->
   <link href="css/sweetalert2.css" rel="stylesheet">
 
+  <!-- select2 -->
+  <link href="css/select2.min.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- font-awesome -->
@@ -31,9 +34,6 @@
 </head>
 
 <body>
-  <!-- <div class="spinner-border text-primary loader" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> -->
 
   <div class="d-flex flex-nowrap home main">
 
@@ -62,15 +62,10 @@
 
       <!-- menu list -->
       <ul class="sidebar-nav">
-        <li class="sidebar-item mb-3" id="searchList">
-          <div class="d-flex justify-content-between align-items-center flex-nowrap">
-            <div class="sidebar-link d-flex justify-content-between" id="navSearch">
-              <input class="form-control" type="text" placeholder="البحث">
-              <i class="fa-solid fa-magnifying-glass icon" id="search-icon"></i>
-            </div>
-            <button class="filter text-center">
-              <i class="fa-solid fa-sliders fa-rotate-90 icon" id="filter-icon"></i>
-            </button>
+        <li class="sidebar-item">
+          <div class="d-flex justify-content-between align-items-center flex-nowrap px-3 date-menu">
+            <p>التاريخ: 02/05/24</p>
+            <p>10:24 صباحا</p>
           </div>
         </li>
 
@@ -107,13 +102,13 @@
           </div>
           <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link ">
+              <a href="kpis-employees.html" class="sidebar-link ">
                 <i class="fa-solid fa-users icon"></i>
                 <span>الموظفين</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="#" class="sidebar-link ">
+              <a href="kpis-actions.html" class="sidebar-link ">
                 <i class="fa-solid fa-calculator icon"></i>
                 <span>المعاملات</span>
               </a>
@@ -225,15 +220,11 @@
 
       <div class="sub-header flex-between flex-wrap mb-3">
         <div class="btn-group">
-          <button type="button" class="btn white-btn dropdown-toggle manager-btn" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            الإدارة
-          </button>
-          <ul class="dropdown-menu text-end">
-            <li><a class="dropdown-item" href="#">الادارة 1</a></li>
-            <li><a class="dropdown-item" href="#">الادارة 2</a></li>
-            <li><a class="dropdown-item" href="#">الادارة 3</a></li>
-          </ul>
+          <select class="form-select form-select-sm" aria-label="Small select example">
+            <option selected>الإدارة</option>
+            <option>الادارة1</option>
+            <option>الادارة2</option>
+          </select>
         </div>
 
         <div class="date-nightMood flex-between">
@@ -367,6 +358,8 @@
   </div>
 
 
+
+
   <!-- charts -->
   <script src="js/chart.min.js"></script>
 
@@ -379,7 +372,8 @@
   <!--  Bootstrap Bundle with Popper -->
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
+  <!-- select2 -->
+  <script src="js/select2.min.js"></script>
   <!-- font-awesome -->
   <script src="js/all.min.js"></script>
   <!-- own js -->

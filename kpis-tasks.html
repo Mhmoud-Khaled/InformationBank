@@ -17,20 +17,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <!-- google icon -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="shortcut icon" href="images/indexLogo.png" />
-
   <!-- aweet alert CSS -->
   <link href="css/sweetalert2.css" rel="stylesheet">
 
@@ -40,14 +26,11 @@
   <link rel="stylesheet" href="css/all.min.css">
   <!-- own css -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="shortcut icon" href="images/indexLogo.png" />
 
 </head>
 
 <body>
-  <!-- <div class="spinner-border text-primary loader" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> -->
 
   <div class="d-flex flex-nowrap home main">
 
@@ -60,7 +43,7 @@
       </div>
       <div class="flex-between">
         <div class="menu-title flex-center">
-          <i class="fa-solid fa-city"></i>
+          <i class="fa-solid fa-city icon"></i>
           <h3>بنك المعلومات</h3>
         </div>
         <button class="toggle-btn">
@@ -83,7 +66,7 @@
           </div>
         </li>
 
-        <li class="sidebar-item ">
+        <li class="sidebar-item">
           <a href="./home.html" class="sidebar-link ">
             <i class="fa-solid fa-home icon"></i>
             <span class="">الصفحة الرئيسية</span>
@@ -97,24 +80,24 @@
           </a>
         </li>
 
-        <li class="sidebar-item active">
+        <li class="sidebar-item">
           <a href="./documentsLibrary.html" class="sidebar-link">
             <i class="fa-solid fa-book icon"></i>
             <span>مكتبة الوثائق</span>
           </a>
         </li>
 
-        <li class="sidebar-item">
+        <li class="sidebar-item border-active">
           <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#kpis" aria-expanded="false"
             aria-controls="kpis">
-            <a class="sidebar-link " id="kpis-icon">
+            <a class="sidebar-link active" id="kpis-icon">
               <i class="fa-solid fa-gear icon"></i>
               <span class="">مؤشرات الاداء</span>
             </a>
-            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse" data-bs-target="#kpis"
+            <i class="fa-solid fa-caret-down drop-dowm-icon collapsed " data-bs-toggle="collapse" data-bs-target="#kpis"
               aria-expanded="false" aria-controls="kpis"></i>
           </div>
-          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+          <ul id="kpis" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
             <li class="sidebar-item">
               <a href="kpis-employees.html" class="sidebar-link ">
                 <i class="fa-solid fa-users icon"></i>
@@ -122,7 +105,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="kpis-actions.html" class="sidebar-link ">
+              <a href="kpis-actions.html" class="sidebar-link active">
                 <i class="fa-solid fa-calculator icon"></i>
                 <span>المعاملات</span>
               </a>
@@ -209,7 +192,8 @@
       <!-- header -->
       <div class="header flex-between flex-wrap">
         <h2>
-          مكتبة الوثائق </h2>
+          مؤشرات الاداء > المعاملات > لوحة المعلومات
+        </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
             <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
@@ -230,232 +214,237 @@
           <i class="fa-solid fa-right-from-bracket active"></i>
         </div>
       </div>
-      <!-- start table header  -->
-      <section class="table-header d-flex justify-content-between ">
-        <div class="right-btns d-flex">
-          <form action="" class="box-shadow-white search-form smart-search" data-bs-toggle="modal"
-            data-bs-target="#smart-search">
-            <input type="text" placeholder="بحث متقدم" readonly>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </form>
-          <div class="box-shadow-white store-by dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="d-block">ترتيب حسب</span>
-            <i class="fa-solid fa-arrow-down-wide-short"></i>
-            <ul class="dropdown-menu text-end">
-              <li><a class="dropdown-item" href="#">الاقسام</a></li>
-              <li><a class="dropdown-item" href="#">اسم الملف
-                </a></li>
-              <li><a class="dropdown-item" href="#">حجم الملف
-                </a></li>
-              <li><a class="dropdown-item" href="#">مرات التنزيل
-                </a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="left-btns">
-          <button class="view-files btn white-btn">
-            <a href="documents-folder.html">مشاهدة جميع الاملفات</a>
-            <i class="fa-regular fa-folder"></i>
-          </button>
-          <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-dept">
-            <span>إنشاء قسم</span>
-            <i class="fa-solid fa-plus"></i>
-          </button>
-          <button class="sub-department btn gray-btn" style="background-color: rgb(103, 103, 103); color: white;">
-            <span>إنشاء قسم فرعى</span>
-            <i class="fa-solid fa-plus"></i>
-          </button>
-        </div>
-      </section>
-      <!-- End table header  -->
 
-      <!-- start table -->
+      <div class="sub-header flex-between flex-wrap mb-3 card-box py-1 my-3">
+        <div class="report-links flex-between gap-2">
+          <a href="kpis-actions.html" class="">لوحة المعلومات</a>
+          <a href="kpis-orders.html">الطلبات</a>
+          <a href="kpis-tasks.html" class="active">المهام</a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+
+          <button type="button" class="btn gray-btn">
+            تنزيل Word
+            <i class="fa-solid fa-file-word icon"></i>
+          </button>
+          <button type="button" class="btn gray-btn">
+            تنزيل Excel
+            <i class="fa-solid fa-file-excel icon"></i>
+          </button>
+          <button type="button" class="btn gray-btn">
+            طباعه PDF
+            <i class="fa-solid fa-file-pdf icon"></i>
+          </button>
+          <button type="button" class="search-field btn gray-btn text-end" data-bs-toggle="modal"
+            data-bs-target="#smart-search-task">
+            بحث متقدم
+            <i class=" fa-solid fa-magnifying-glass icon"></i>
+          </button>
+          <select class="form-select" style="font-size: 13px; width: 100px;">
+            <option selected>حالة الطلب</option>
+            <option>مكتمل</option>
+            <option>غير مكتمل</option>
+          </select>
+        </div>
+      </div>
+
       <div class="table-responsive  card-box p-0">
         <table class="table table-bordered">
           <thead>
             <tr>
               <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
-              <th class="t-header" scope="col" style="min-width: 15px;">الاقسام</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">عدد الأقسام الفرعية</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">عدد الملفات
+              <th class="t-header" scope="col" style="min-width: 100px;">المهمة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 100px;">رقم الطلب
               </th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">الحالة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 100px;">تفاصيل المهمة
+              </th>
+              <th class="text-center t-header" scope="col" style="min-width: 100px;">وقت البدء
+
+              </th>
+              <th class="text-center t-header" scope="col" style="min-width: 100px;">وقت الإنتهاء</th>
+              <th class="text-center t-header" scope="col" style="min-width: 100px;">الحالة</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="incomplete">غير مكتملة</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="complete-kpi">مكتملة</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="pendding">يتم العمل عليها</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="incomplete">غير مكتملة</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="complete-kpi">مكتملة</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="pendding">يتم العمل عليها</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="incomplete">غير مكتملة</p>
               </td>
             </tr>
             <tr>
               <td style="text-align: center;" style="border-right: none;">1</td>
-              <td class="">دائرة الشؤون القانونية
+              <td class="">اسم المهمة
               </td>
-              <td class="text-center">5 أقسام فرعية
+              <td class="text-center">52245
               </td>
-              <td class="text-center">5 ملفات
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
               </td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-pen icon"></button>
-                <button class="btn transparent-btn px-0 pt-0 trash">
-                  <i class="fa-regular fa-trash-can icon"></i>
-                </button>
+                <p class="complete-kpi">مكتملة</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;" style="border-right: none;">1</td>
+              <td class="">اسم المهمة
+              </td>
+              <td class="text-center">52245
+              </td>
+              <td class="text-center">تفاصيل المهمة
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">2024/04/20
+              </td>
+              <td class="text-center">
+                <p class="pendding">يتم العمل عليها</p>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <!-- end table -->
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="add-dept" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header" style="border-bottom: none;">
-          <h3 class="modal-title">إنشاء قسم</h3>
-        </div>
-        <div class="modal-body">
-          <input type="text" class="form-control mb-1" placeholder="اسم القسم">
-        </div>
-        <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">إضافة</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="smart-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- modal -->
+  <div class="modal fade" id="smart-search-task" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header justify-content-center" style="border-bottom: none;">
           <h3 class="modal-title ">بحث متقدم</h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-2" placeholder="القسم">
-          <input type="text" class="form-control mb-2" placeholder="اسم الملف">
-          <select class="form-select mb-2">
-            <option selected>نوع الملف</option>
-            <option>pdf</option>
-            <option>pdf</option>
+          <input type="number" class="form-control mb-2" placeholder="رقم الطلب">
+          <select class="form-select mb-2" style="font-size: 13px;">
+            <option selected>المكتب</option>
+            <option>مكتمل</option>
+            <option>غير مكتمل</option>
           </select>
-          <input type="date" class="form-control mb-1" placeholder="من">
+          <input type="text" class="form-control mb-2" placeholder="اسم الموظف">
+          <select class="form-select mb-2" style="font-size: 13px;">
+            <option selected>حالة المهمه</option>
+            <option>مكتمل</option>
+            <option>غير مكتمل</option>
+          </select>
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">ارسال طلب</button>
+          <button type="button" class="btn red-btn">حفظ</button>
         </div>
       </div>
     </div>
   </div>
 
-
-  <!-- charts -->
-  <script src="js/chart.min.js"></script>
 
   <!-- sweet alert -->
   <script src="js/sweetalert2@9.js"></script>
@@ -471,6 +460,11 @@
   <script src="js/all.min.js"></script>
   <!-- own js -->
   <script src="js/custom.js"></script>
+  <script>
+    $(window).on('load', function () {
+      $(".main-loading").fadeOut().css("display", "none")
+    });
+  </script>
 </body>
 
 </html>

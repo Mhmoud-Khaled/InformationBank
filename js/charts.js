@@ -206,7 +206,7 @@ $(document).ready(function () {
 
     function chart5() {
         let refrenceId = $('#myChart5')
-        var xValues = ['يناير 2024', 'فبراير 2024', 'مارس 2024', 'إبريل 2024'].reverse()
+        var xValues = [['يناير', '2024'], ['فبراير', '2024'], ['مارس', '2024'], ['ابريل', '2024']].reverse()
         new Chart(refrenceId, {
             type: 'line',
             data: {
