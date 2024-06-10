@@ -34,6 +34,9 @@
   <!-- aweet alert CSS -->
   <link href="css/sweetalert2.css" rel="stylesheet">
 
+  <!-- select2 -->
+  <link href="css/select2.min.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- font-awesome -->
@@ -231,20 +234,20 @@
         </div>
       </div>
 
-      <section class="table-header d-flex justify-content-between ">
+      <section class="table-header d-flex justify-content-between flex-wrap gap-2">
         <h2>دائرة الشؤون القانونية</h2>
-        <div class="left-btns">
+        <div class="btns flex-between float-left-sm">
           <button class="view-files btn white-btn">
             <a href="documents-folder.html">مشاهدة جميع الاملفات</a>
-            <i class="fa-regular fa-folder"></i>
+            <i class="fa-regular fa-folder icon"></i>
           </button>
           <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-dept">
             <span>إنشاء قسم</span>
-            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-plus icon"></i>
           </button>
           <button class="sub-department btn gray-btn" style="background-color: rgb(103, 103, 103); color: white;">
             <span>إنشاء قسم فرعى</span>
-            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-plus icon"></i>
           </button>
         </div>
       </section>
@@ -321,6 +324,8 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
+  <!-- select2 -->
+  <script src="js/select2.min.js"></script>
   <!-- font-awesome -->
   <script src="js/all.min.js"></script>
   <!-- own js -->

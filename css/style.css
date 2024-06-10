@@ -240,6 +240,7 @@ p {
   background-color: #fff;
   border: 1px solid #fff;
   border-radius: 4px;
+  -webkit-filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 0.16));
   height: 31px
 }
@@ -301,6 +302,7 @@ select {
 
 .swal2-styled.swal2-cancel {
   color: #646464 !important;
+  -webkit-filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
 }
 
@@ -559,6 +561,7 @@ textarea::placeholder {
 .search-field input {
   border: none;
   padding-left: 35px;
+  min-width: 120px;
 }
 
 .search-field .icon {
@@ -572,6 +575,7 @@ textarea::placeholder {
   background-color: var(--red-color) !important;
   color: white !important;
   text-wrap: nowrap !important;
+  padding: 15px 5px !important;
 }
 
 tbody tr td {
@@ -2080,6 +2084,7 @@ span.percentage-3:after {
 
 .low-btn {
   transition: 0.3s;
+  -webkit-filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   min-width: 200px;
 }
@@ -2093,6 +2098,7 @@ span.percentage-3:after {
 }
 
 .view-files {
+  -webkit-filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
 
 }
@@ -2115,6 +2121,7 @@ table .last-cell {
 }
 
 table .cell {
+  -webkit-filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(0px 3px 1.5px rgba(0, 0, 0, 0.16));
   border: 1px solid white !important;
   font-size: 15px;
@@ -2173,6 +2180,17 @@ table .file {
   background: #e9e9e9
 }
 
+.float-left-sm {
+  width: unset;
+  display: flex;
+
+}
+
+.btn .icon {
+  width: 20px !important;
+}
+
+
 /* ........................Responsive.........................  */
 /*small screen*/
 
@@ -2205,7 +2223,7 @@ table .file {
   }
 }
 
-@media(max-width:1200px) {
+@media(max-width:1201px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2240,7 +2258,7 @@ table .file {
   }
 }
 
-@media(max-width:1024px) {
+@media(max-width:1025px) {
 
   .doungut1 .dataTwo {
     left: 2%;
@@ -2278,7 +2296,7 @@ table .file {
   }
 }
 
-@media(max-width:992px) {
+@media(max-width:993px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2330,9 +2348,11 @@ table .file {
   h2 {
     font-size: 18px;
   }
+
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2408,7 +2428,7 @@ table .file {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 601px) {
   .login-logo {
     width: 70%;
   }
@@ -2421,9 +2441,16 @@ table .file {
     font-size: 12px;
   }
 
+  .float-left-sm {
+    width: 100%;
+    display: block;
+    text-align: end;
+    flex: unset !important;
+  }
+
 }
 
-@media(max-width:575px) {
+@media(max-width:576px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2455,7 +2482,7 @@ table .file {
   }
 }
 
-@media(max-width:500px) {
+@media(max-width:501px) {
   #report-parts .btns {
     flex: none;
   }
@@ -2548,7 +2575,7 @@ table .file {
 
 
 
-@media(max-width:499px) {
+@media(max-width:500px) {
   .background .title {
     font-size: 20px !important;
     margin-bottom: 15px !important;
@@ -2593,7 +2620,7 @@ table .file {
 
 }
 
-@media(max-width:426px) {
+@media(max-width:427px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2622,10 +2649,14 @@ table .file {
     left: 17%;
     bottom: 30%;
   }
+
+  .btn {
+    font-size: 10px;
+  }
 }
 
 
-@media(max-width:400px) {
+@media(max-width:401px) {
   #logo img {
     left: 46%;
     top: 13px;
@@ -2637,7 +2668,7 @@ table .file {
   }
 }
 
-@media(max-width:375px) {
+@media(max-width:377px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2671,9 +2702,24 @@ table .file {
     left: 40%;
     top: 15px;
   }
+
+  .company .card-box .icon {
+    width: 50px;
+    height: 60px;
+  }
+
+  .company .card-box a h2 {
+    font-size: 12px !important;
+  }
+
+  .btns button {
+    font-size: 10px;
+    width: auto;
+
+  }
 }
 
-@media(max-width:320px) {
+@media(max-width:321px) {
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
