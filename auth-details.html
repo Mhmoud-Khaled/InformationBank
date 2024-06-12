@@ -48,7 +48,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -183,7 +183,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -233,14 +238,14 @@
           <img class="researcher-image " src="./images/avatar.PNG" alt="">
         </div>
         <div class="researcher-info">
-          <div class="d-flex align-items-center">
+          <div class="d-flex flex-wrap align-items-center">
             <h6 class="user">محمد إبراهيم</h6>
             <p class="performance rounded-pill">
               الإداء : ممتاز
               <i class="fa-solid fa-trophy icon"></i>
             </p>
           </div>
-          <div class="details d-flex flex-wrap">
+          <div class="details-auth d-flex flex-wrap">
             <div class="detail-box d-flex">
               <p class="m-0 mx-2 name">الرقم المدنى :</p>
               <p class="data m-0">65656565</p>
@@ -272,22 +277,25 @@
         <!-- start sub header -->
         <div class="sub-header flex-between flex-wrap mb-3">
           <h2>قائمة المهام المنجزة</h2>
-          <div class="d-flex gap-1 flex-wrap">
-            <button type="button" class="btn white-btn">
-              تنزيل Word
-              <i class="fa-solid fa-file-word icon"></i>
-            </button>
-            <button type="button" class="btn white-btn">
-              تنزيل Excel
-              <i class="fa-solid fa-file-excel icon"></i>
-            </button>
-            <button type="button" class="btn white-btn">
-              طباعه PDF
-              <i class="fa-solid fa-file-pdf icon"></i>
-            </button>
-            <div class="search-field">
-              <input type="search" class="form-control" placeholder="بحث متقدم">
-              <i class="fa-solid fa-magnifying-glass icon"></i>
+          <div class="auth-btns">
+            <div class="d-flex gap-1 flex-wrap justify-content-end">
+              <button type="button" class="btn gray-btn">
+                تنزيل Word
+                <i class="fa-solid fa-file-word icon"></i>
+              </button>
+              <button type="button" class="btn gray-btn">
+                تنزيل Excel
+                <i class="fa-solid fa-file-excel icon"></i>
+              </button>
+              <button type="button" class="btn gray-btn">
+                طباعه PDF
+                <i class="fa-solid fa-file-pdf icon"></i>
+              </button>
+              <div class="search-field">
+                <input type="search" class="form-control" placeholder="بحث متقدم"
+                  style="background-color: rgb(239 239 239);">
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -298,10 +306,10 @@
           <table class="table border-less">
             <thead>
               <tr>
-                <th class="p-3 t-header" scope="col">اسم المهمه</th>
-                <th class="p-3 t-header" scope="col">رقم الطلب</th>
-                <th class="p-3 t-header" scope="col">التاريخ</th>
-                <th class="p-3 t-header" scope="col">الحالة</th>
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">اسم المهمه</th>
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">رقم الطلب</th>
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">التاريخ</th>
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">الحالة</th>
               </tr>
             </thead>
             <tbody>

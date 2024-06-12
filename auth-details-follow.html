@@ -48,7 +48,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -183,6 +183,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
+            <li class="sidebar-item">
+              <a href="./settings-leaves.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
 
           </ul>
         </li>
@@ -234,14 +240,14 @@
           <img class="researcher-image " src="./images/avatar.PNG" alt="">
         </div>
         <div class="researcher-info">
-          <div class="d-flex align-items-center">
+          <div class="d-flex flex-wrap align-items-center">
             <h6 class="user">محمد إبراهيم</h6>
             <p class="performance rounded-pill">
               الإداء : ممتاز
               <i class="fa-solid fa-trophy icon"></i>
             </p>
           </div>
-          <div class="details d-flex flex-wrap">
+          <div class="details-auth d-flex flex-wrap">
             <div class="detail-box d-flex">
               <p class="m-0 mx-2 name">الرقم المدنى :</p>
               <p class="data m-0">65656565</p>
@@ -267,22 +273,24 @@
         <div class="sub-header flex-between flex-wrap mb-3">
           <h2>قائمة التفوضات السابقة
           </h2>
-          <div class="d-flex gap-1 flex-wrap">
-            <button type="button" class="btn white-btn">
-              تنزيل Word
-              <i class="fa-solid fa-file-word icon"></i>
-            </button>
-            <button type="button" class="btn white-btn">
-              تنزيل Excel
-              <i class="fa-solid fa-file-excel icon"></i>
-            </button>
-            <button type="button" class="btn white-btn">
-              طباعه PDF
-              <i class="fa-solid fa-file-pdf icon"></i>
-            </button>
-            <div class="search-field">
-              <input type="search" class="form-control" placeholder="بحث متقدم">
-              <i class="fa-solid fa-magnifying-glass icon"></i>
+          <div class="auth-btns">
+            <div class="d-flex gap-1 flex-wrap">
+              <button type="button" class="btn white-btn">
+                تنزيل Word
+                <i class="fa-solid fa-file-word icon"></i>
+              </button>
+              <button type="button" class="btn white-btn">
+                تنزيل Excel
+                <i class="fa-solid fa-file-excel icon"></i>
+              </button>
+              <button type="button" class="btn white-btn">
+                طباعه PDF
+                <i class="fa-solid fa-file-pdf icon"></i>
+              </button>
+              <div class="search-field">
+                <input type="search" class="form-control" placeholder="بحث متقدم">
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -293,14 +301,14 @@
           <table class="table border-less">
             <thead>
               <tr>
-                <th class="p-3 t-header" scope="col">مفوض إلى
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">مفوض إلى
                 </th>
-                <th class="p-3 t-header" scope="col">الوقت من
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">الوقت من
                 </th>
-                <th class="p-3 t-header" scope="col">الوقت إلى
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">الوقت إلى
                 </th>
-                <th class="p-3 t-header" scope="col">الصلاحيات</th>
-                <th class="p-3 t-header" scope="col">الحالة</th>
+                <th class="p-3 t-header" style="min-width: 100px;" scope="col">الصلاحيات</th>
+                <th class="p-3 text-center t-header" style="min-width: 100px;" scope="col">الحالة</th>
               </tr>
             </thead>
             <tbody>
@@ -311,8 +319,9 @@
                 </td>
                 <td class="">مكتبة الوثائق
                 </td>
-                <td class=" complete">سارى
-                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                <td class="apply text-center ">
+                  <button type="button" class="btn green-btn">سارى</button>
+                  <button type="button" class="btn gray-btn" id="cancel">إلغاء</button>
                 </td>
               </tr>
               <tr>
@@ -322,8 +331,21 @@
                 </td>
                 <td class="">مكتبة الوثائق
                 </td>
-                <td class=" complete">سارى
-                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                <td class="apply text-center">
+                  <button type="button" class="btn green-btn">سارى</button>
+                  <button type="button" class="btn gray-btn" id="cancel">إلغاء</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="">احمد النبهانى</td>
+                <td class="">10:30</td>
+                <td class=""> 11:30
+                </td>
+                <td class="">مكتبة الوثائق
+                </td>
+                <td class="apply text-center ">
+                  <button type="button" class="btn green-btn">سارى</button>
+                  <button type="button" class="btn gray-btn" id="cancel">إلغاء</button>
                 </td>
               </tr>
               <tr>
@@ -332,17 +354,9 @@
                 <td class=""> 11:30
                 </td>
                 <td class="">التقارير</td>
-                <td class=" complete">سارى
-                  <button type="button" class="btn transparent-btn" id="cancel">إلغاء</button>
+                <td class="apply text-center">
+                  <button type="button" class="btn red-btn">تم الإلغاء</button>
                 </td>
-              </tr>
-              <tr>
-                <td class="">احمد النبهانى</td>
-                <td class="">10:30</td>
-                <td class=""> 11:30
-                </td>
-                <td class="">التقارير</td>
-                <td class=" active">تم الالغاء</td>
               </tr>
             </tbody>
           </table>
@@ -364,7 +378,7 @@
         </div>
         <div class="modal-body">
           <input type="text" class="form-control mb-1" placeholder="الرقم المدنى">
-          <input type="text" class="form-control mb-3" placeholder="اسم الموظف" disabled>
+          <input type="text" class="form-control mb-3" placeholder="اسم الموظف">
           <h3 class="mb-2">
             الصلاحيات المفوض عليها
 
@@ -486,14 +500,14 @@
           <h3 class="mb-3">الوقت</h3>
           <div class="row">
             <div class="col-6">
-              <select class="form-select">
+              <select class="form-select add-auth" style="width: 100%;">
                 <option selected>من</option>
                 <option>Jul 2023 - Aug 2023</option>
                 <option>Jul 2023 - Aug 2023</option>
               </select>
             </div>
             <div class="col-6">
-              <select class="form-select">
+              <select class="form-select add-auth" style="width: 100%;">
                 <option selected>الى</option>
                 <option>Jul 2023 - Aug 2023</option>
                 <option>Jul 2023 - Aug 2023</option>

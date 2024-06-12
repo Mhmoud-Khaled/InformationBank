@@ -17,7 +17,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#FFB636">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <link rel="shortcut icon" href="images/indexLogo.png" />
 
   <!-- aweet alert CSS -->
   <link href="css/sweetalert2.css" rel="stylesheet">
@@ -31,7 +30,7 @@
   <link rel="stylesheet" href="css/all.min.css">
   <!-- own css -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="shortcut icon" href="images/indexLogo.png" />
 
 </head>
 
@@ -88,7 +87,7 @@
           </a>
         </li>
 
-        <li class="sidebar-item active">
+        <li class="sidebar-item">
           <a href="./documentsLibrary.html" class="sidebar-link">
             <i class="fa-solid fa-book icon"></i>
             <span>مكتبة الوثائق</span>
@@ -128,10 +127,10 @@
             <span>التقارير</span>
           </a>
         </li>
-        <li class="sidebar-item">
-          <div class="has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
+        <li class="sidebar-item border-active">
+          <div class="has-dropdown collapsed " data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false"
             aria-controls="setting">
-            <a class="sidebar-link " id="set-icon">
+            <a class="sidebar-link active" id="set-icon">
               <i class="fa-solid fa-gear icon"></i>
               <span class="">الإعدادات</span>
             </a>
@@ -139,7 +138,7 @@
             <i class="fa-solid fa-caret-down drop-dowm-icon collapsed" data-bs-toggle="collapse"
               data-bs-target="#setting" aria-expanded="false" aria-controls="setting"></i>
           </div>
-          <ul id="setting" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+          <ul id="setting" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
             <li class="sidebar-item">
               <a href="./settings-messages.html" class="sidebar-link ">
                 <i class="fa-solid fa-envelope icon"></i>
@@ -155,13 +154,13 @@
             </li>
 
             <li class="sidebar-item">
-              <a href="./settings-auth.html" class="sidebar-link ">
+              <a href="./settings-auth.html" class="sidebar-link">
                 <i class="fa-solid fa-file-pen icon"></i>
                 <span>اعدادات الصلاحيات</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-auth.html" class="sidebar-link ">
+              <a href="./settings-library.html" class="sidebar-link ">
                 <i class="fa-regular fa-pen-to-square icon"></i>
                 <span>اعدادات مكتبة الوثائق</span>
               </a>
@@ -173,7 +172,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-terms.html" class="sidebar-link">
+              <a href="./settings-terms.html" class="sidebar-link ">
                 <i class="fa-solid fa-file-signature icon"></i>
                 <span>تعريف المصطلحات</span>
               </a>
@@ -185,11 +184,12 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a href="./settings-sendings.html" class="sidebar-link">
+              <a href="./settings-sendings.html" class="sidebar-link active">
                 <i class="fa-solid fa-building-user icon"></i>
                 <span>ايام الاجازات</span>
               </a>
             </li>
+
           </ul>
         </li>
 
@@ -197,15 +197,17 @@
     </aside>
 
 
+
     <!-- end-menu -->
 
     <!-- main content -->
-    <div class="main-content p-4 card flex-fill">
+    <div class="main-content p-4 card flex-fill" id="auth-details-table">
 
       <!-- header -->
       <div class="header flex-between flex-wrap mb-5">
         <h2>
-          مكتبة الوثائق </h2>
+          الإعدادات > ايام الأجازات
+        </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
             <img src="./images/avatar.PNG" class="img-fluid rounded-circle">
@@ -227,89 +229,154 @@
         </div>
       </div>
 
-      <section class="table-header d-flex justify-content-between flex-wrap gap-2 mb-3">
-        <h2>دائرة الشؤون القانونية</h2>
-        <div class="docs-btns">
-          <div class="btns flex-between float-left-sm flex-wrap">
-            <button class="view-files btn white-btn">
-              <a href="documents-folder.html">مشاهدة جميع الاملفات</a>
-              <i class="fa-regular fa-folder icon"></i>
-            </button>
-            <div class="last-btn">
-              <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-dept">
-                <span>إنشاء قسم</span>
-                <i class="fa-solid fa-plus icon"></i>
-              </button>
-              <button class="sub-department btn gray-btn" style="background-color: rgb(103, 103, 103); color: white;">
-                <span>إنشاء قسم فرعى</span>
-                <i class="fa-solid fa-plus icon"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- start sub header -->
+      <div class="sub-header d-flex align-items-center justify-content-between gap-2 mb-3">
 
-      <section class="d-flex align-items-center flex-wrap gap-3">
-        <div class="folder">
-          <a href="#" class=" flex-between card-box btn white-btn w-100 low-btn">
-            <div class="text text-end">
-              <h5>اللوائح</h5>
-              <p style="font-size: 12px;">3 ملفات</p>
-            </div>
-            <div class="image">
-              <img src="./images/folder.png" height="40" width="40" alt="">
-            </div>
-          </a>
+        <div class="search-field flex-grow-0" style="width: 115px; flex: unset;">
+          <input type="search" class="form-control" placeholder="بحث">
+          <i class="fa-solid fa-magnifying-glass icon"></i>
         </div>
-        <div class="folder">
-          <a href="#" class=" flex-between card-box btn white-btn w-100 low-btn">
-            <div class="text text-end">
-              <h5>القرارات</h5>
-              <p style="font-size: 12px;">3 ملفات</p>
-            </div>
-            <div class="image">
-              <img src="./images/folder.png" height="40" width="40" alt="">
-            </div>
-          </a>
+        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal" id="add-leaves-btn"
+          data-bs-target="#add-leaves">
+          إنشاء اجازة
+          <i class="fa-solid fa-plus icon"></i>
+        </button>
+
+      </div>
+      <!-- end sub header -->
+
+      <div class="card-box pb-0">
+        <!-- start sub header -->
+        <div class="sub-header mb-3 px-4 pt-2">
+          <h2>قائمة أيام الأجازات
+          </h2>
         </div>
-        <div class="folder">
-          <a href="documents-lows.html" class=" flex-between card-box btn white-btn w-100 low-btn">
-            <div class="text text-end">
-              <h5>الآراء القانونية
-              </h5>
-              <p style="font-size: 12px;">3 ملفات</p>
-            </div>
-            <div class="image">
-              <img src="./images/folder.png" height="40" width="40" alt="">
-            </div>
-          </a>
+        <!-- end sub header -->
+
+        <!-- start table -->
+        <div class="table-responsive card-box p-0">
+          <table class="table border-less">
+            <thead>
+              <tr>
+                <th class="p-3 t-header" style="min-width: 120px;" scope="col">اسم الموظف
+
+                </th>
+                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">عدد أيام الاجازات
+                </th>
+                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">التاريخ
+                </th>
+                <th class=" p-3 text-center t-header" style="min-width: 120px;" scope="col">الحالة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 d-flex align-items-center gap-2">
+                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
+                  <p class="text-nowrap">احمد النبهانهى</p>
+                </td>
+                <td class="p-3 text-center text-nowrap">25 يوم </td>
+                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                </td>
+                <td class="p-3 text-center">
+                  <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
+                  <button class="btn transparent-btn px-0 pt-0 trash">
+                    <i class="fa-regular fa-trash-can icon"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 d-flex align-items-center gap-2">
+                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
+                  <p class="text-nowrap">احمد النبهانهى</p>
+                </td>
+                <td class="p-3 text-center text-nowrap">25 يوم </td>
+                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                </td>
+                <td class="p-3 text-center">
+                  <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
+                  <button class="btn transparent-btn px-0 pt-0 trash">
+                    <i class="fa-regular fa-trash-can icon"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 d-flex align-items-center gap-2">
+                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
+                  <p class="text-nowrap">احمد النبهانهى</p>
+                </td>
+                <td class="p-3 text-center text-nowrap">25 يوم </td>
+                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                </td>
+                <td class="p-3 text-center">
+                  <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
+                  <button class="btn transparent-btn px-0 pt-0 trash">
+                    <i class="fa-regular fa-trash-can icon"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 d-flex align-items-center gap-2">
+                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
+                  <p class="text-nowrap">احمد النبهانهى</p>
+                </td>
+                <td class="p-3 text-center text-nowrap">25 يوم </td>
+                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                </td>
+                <td class="p-3 text-center">
+                  <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
+                  <button class="btn transparent-btn px-0 pt-0 trash">
+                    <i class="fa-regular fa-trash-can icon"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
+        <!-- end table -->
+      </div>
+
+
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="add-dept" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="modal fade" id="add-leaves" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header" style="border-bottom: none;">
-          <h3 class="modal-title">إنشاء قسم</h3>
+          <h3 class="modal-title ">إنشاء اجازة</h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-1" placeholder="اسم القسم">
+          <div class="row">
+            <div class="col-12 mb-1">
+              <select class="form-select add-leaves" style="width: 100%;">
+                <option selected>اسم الموظف</option>
+                <option>محمد البيانى</option>
+                <option>محمد البيانى</option>
+              </select>
+            </div>
+            <div class="col-12 mb-1">
+              <input type="number" class="form-control " placeholder="عدد الايام">
+            </div>
+            <div class="col-12 mb-1">
+              <h6 class="">التاريخ</h6>
+            </div>
+            <div class="col-6 mb-1">
+              <input type="text" class="form-control" placeholder="من" onfocus="(this.type='date')">
+            </div>
+            <div class="col-6 mb-1">
+              <input type="text" class="form-control mb-1" placeholder="الى" onfocus="(this.type='date')">
+            </div>
+          </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">إضافة</button>
+          <button type="button" style="flex: unset;" class="btn white-btn" data-bs-dismiss="modal">إلغاء</button>
+          <button type="button" style="flex: unset;" class="btn red-btn">حفظ</button>
         </div>
       </div>
     </div>
   </div>
 
-
-
-  <!-- charts -->
-  <script src="js/chart.min.js"></script>
 
   <!-- sweet alert -->
   <script src="js/sweetalert2@9.js"></script>

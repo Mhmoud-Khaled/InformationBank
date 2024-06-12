@@ -52,7 +52,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -187,7 +187,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -430,7 +435,7 @@
           <div class="form-group">
             <input type="text" class="form-control mb-3" placeholder="اسم الجزء">
             <div class=" input-floating-label mb-3">
-              <select class="form-select" name="state">
+              <select class="form-select create-part" name="state" style="width: 100%;">
                 <option selected value="0">
                   الطلبات</option>
                 <option value="1">جدول 2</option>
@@ -438,7 +443,7 @@
               <label for="user">الجدول</label>
             </div>
             <div class=" input-floating-label mb-3">
-              <select class="form-select" name="state">
+              <select class="form-select create-part" name="state" style="width: 100%;">
                 <option selected value="0">
                   اختر القالب</option>
                 <option value="1">قالب 1</option>

@@ -50,7 +50,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -185,7 +185,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -231,16 +236,16 @@
         </div>
         <div>
           <div class="btns flex-between flex-wrap">
-            <button type="button" class="btn white-btn">
+            <button type="button" class="btn gray-btn">
               تنزيل Excel
               <i class="fa-solid fa-file-excel icon"></i>
             </button>
-            <button type="button" class="btn white-btn">
+            <button type="button" class="btn gray-btn">
               طباعه PDF
               <i class="fa-solid fa-file-pdf icon"></i>
             </button>
             <div class="search-field">
-              <input type="search" class="form-control" placeholder="بحث">
+              <input type="search" class="form-control" placeholder="بحث" style="background-color: #ececec;">
               <i class="fa-solid fa-magnifying-glass icon"></i>
             </div>
           </div>
@@ -254,9 +259,9 @@
           <thead>
             <tr>
               <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
-              <th class="text-center t-header" scope="col">تفاصيل الشكل القانونى</th>
-              <th class="text-center t-header" scope="col">الجنسية</th>
-              <th class="text-center t-header" scope="col" colspan="6">التفاصيل</th>
+              <th class="text-center t-header" style="min-width: 120px;" scope="col">تفاصيل الشكل القانونى</th>
+              <th class="text-center t-header" style="min-width: 120px;" scope="col">الجنسية</th>
+              <th class="text-center t-header" style="min-width: 720px;" scope="col" colspan="6">التفاصيل</th>
             </tr>
           </thead>
           <tbody>

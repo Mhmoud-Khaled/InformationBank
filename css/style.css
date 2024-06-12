@@ -59,6 +59,57 @@ body {
   font-family: "main font";
 }
 
+#sidebar.dark {
+  background-color: var(--dark-gray-color) !important;
+}
+
+#sidebar.dark p,
+#sidebar.dark h1,
+#sidebar.dark h2,
+#sidebar.dark h3,
+#sidebar.dark h4,
+#sidebar.dark h5,
+#sidebar.dark h6,
+#sidebar.dark .icon,
+#sidebar.dark span {
+  color: white !important;
+}
+
+#sidebar.dark .sidebar-item {
+  background-color: #000;
+}
+
+.main-content.card.dark {
+  background-color: #434343 !important;
+}
+
+.main-content.card.dark p,
+.main-content.card.dark h1,
+.main-content.card.dark h2,
+.main-content.card.dark h3,
+.main-content.card.dark h4,
+.main-content.card.dark h5,
+.main-content.card.dark h6,
+.main-content.card.dark .icon,
+.main-content.card.dark span,
+.main-content.card.dark button,
+.main-content.card.dark a,
+.main-content.card.dark button,
+.main-content.card.dark hr {
+  color: white !important;
+}
+
+.main-content.card.dark .select2-container--default .select2-selection--single,
+.main-content.card.dark button,
+.main-content.card.dark ul {
+  background-color: #000;
+  border-color: #000;
+}
+
+.main-content.card.dark .card-box {
+  background-color: #1d1d1d;
+}
+
 
 *,
 :before,
@@ -1104,6 +1155,8 @@ svg.active {
 
 .home .header .user {
   gap: 2px;
+  flex: 1;
+  justify-content: flex-end !important;
 }
 
 .home .header .user .lang {
@@ -1564,7 +1617,7 @@ svg.active {
   font-weight: 100 !important;
 }
 
-#add-template .attached {
+.attached {
   position: relative;
 }
 
@@ -1617,7 +1670,7 @@ svg.active {
   font-size: 13px;
 }
 
-#add-template .attached .icon {
+.attached .icon {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -1670,7 +1723,6 @@ svg.active {
 }
 
 #user-notification .image {
-  height: 50px;
   width: 50px;
   border-radius: 50%;
   overflow: hidden;
@@ -2106,7 +2158,6 @@ span.percentage-3:after {
 table .t-trans {
   background-color: transparent !important;
   color: #000 !important;
-  min-width: 120px !important;
 }
 
 table .first-cell {
@@ -2160,9 +2211,10 @@ table .file {
   font-size: 14px;
   border-radius: 15px;
   color: white;
-  background-color: #EBB215;
+  background-color: #1587eb;
   display: inline;
   padding: 3px 10px;
+  text-wrap: nowrap;
 }
 
 .details {
@@ -2190,9 +2242,93 @@ table .file {
   width: 20px !important;
 }
 
+.right-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+
+.left-btns {
+  text-align: end;
+  flex: 1;
+}
+
+.select2-container {
+  height: 37px;
+}
+
+.select2-container--default .select2-selection--single {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  height: 100% !important;
+  font-size: 15px;
+}
+
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+  font-size: 12px;
+}
+
+#sub-header-reports {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#send-report .select2-container {
+  margin-bottom: 10px;
+}
+
+#send-report .image {
+  display: inline-block;
+  padding: 5px 8px;
+  background: gainsboro;
+  border-radius: 25px;
+}
+
+.green-btn {
+  background-color: #01A811;
+}
+
+.apply button {
+  font-size: 12px;
+  padding: 0px 15px;
+  color: white;
+}
+
+.apply .gray-btn {
+  background-color: #9c9c9c;
+}
+
+.file-name {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 50%;
+  background: gainsboro;
+  border-radius: 8px;
+  padding-right: 10px;
+}
+
+
+.file-name p {
+  font-size: 12px;
+  height: 20px;
+}
+
+.file-name .size {
+  font-size: 9px;
+  color: var(--gray-color);
+  height: 30px;
+}
 
 /* ........................Responsive.........................  */
 /*small screen*/
+
+@media(min-width:574px) {
+  #view-files {
+    flex: unset !important;
+  }
+}
 
 @media(max-width:2057px) {
 
@@ -2222,6 +2358,37 @@ table .file {
     left: 20%;
   }
 }
+
+
+@media(max-width:1600px) {
+
+  .doungut1 .dataOne,
+  .doungut2 .dataOne {
+    right: 13%;
+  }
+
+  .doungut1 .dataTwo,
+  .doungut2 .dataTwo {
+    left: 13%;
+  }
+
+  .doungut2 .dataThree {
+    right: 8%;
+  }
+
+  .doungut2 .dataFour {
+    left: 10%;
+  }
+
+  .doungut2 .dataFive {
+    right: 13%;
+  }
+
+  .doungut2 .dataSix {
+    left: 20%;
+  }
+}
+
 
 @media(max-width:1201px) {
 
@@ -2354,6 +2521,19 @@ table .file {
 
 @media (max-width: 769px) {
 
+  #logo-header {
+    height: 95px;
+  }
+
+  .menu-title {
+    align-self: end;
+    margin-bottom: 6px;
+  }
+
+  .home .toggle-btn {
+    align-self: baseline;
+  }
+
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 26%;
@@ -2392,10 +2572,10 @@ table .file {
 
   #logo img {
     position: absolute;
-    width: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 50%;
+    right: 10px;
     top: 7px;
+    height: 50px;
   }
 
   .home {
@@ -2442,10 +2622,26 @@ table .file {
   }
 
   .float-left-sm {
+    display: flex;
+    justify-content: flex-end
+  }
+
+  .float-left-sm .btn {
+    flex: unset;
+  }
+
+  .right-btns {
     width: 100%;
-    display: block;
-    text-align: end;
-    flex: unset !important;
+  }
+
+  .docs-btns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .auth-btns {
+    width: 100%;
   }
 
 }
@@ -2480,6 +2676,8 @@ table .file {
     left: 20%;
     bottom: 22%;
   }
+
+
 }
 
 @media(max-width:501px) {
@@ -2576,6 +2774,15 @@ table .file {
 
 
 @media(max-width:500px) {
+  .user-details {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  #auth-details .auth-btns .btn {
+    flex: 1;
+  }
+
   .background .title {
     font-size: 20px !important;
     margin-bottom: 15px !important;
@@ -2618,6 +2825,10 @@ table .file {
     font-size: 12px;
   }
 
+  .float-left-sm .btn {
+    flex: 1;
+  }
+
 }
 
 @media(max-width:427px) {
@@ -2652,15 +2863,28 @@ table .file {
 
   .btn {
     font-size: 10px;
+    flex: 1;
+  }
+
+  .float-left-sm .btn {
+    flex: 1;
+  }
+
+  .left-btns {
+    display: flex;
+  }
+
+  .file-name {
+    width: 100%;
+  }
+
+  #logo img {
+    width: 75% !important;
   }
 }
 
 
 @media(max-width:401px) {
-  #logo img {
-    left: 46%;
-    top: 13px;
-  }
 
   .background .title {
     font-size: 16px !important;
@@ -2698,11 +2922,6 @@ table .file {
     bottom: 30%;
   }
 
-  #logo img {
-    left: 40%;
-    top: 15px;
-  }
-
   .company .card-box .icon {
     width: 50px;
     height: 60px;
@@ -2716,6 +2935,16 @@ table .file {
     font-size: 10px;
     width: auto;
 
+  }
+
+  .last-btn {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+  }
+
+  .folder {
+    width: 100%;
   }
 }
 
@@ -2749,8 +2978,20 @@ table .file {
     bottom: 30%;
   }
 
-  #logo img {
-    left: 40%;
-    top: 15px;
+
+  #add-message-btn {
+    flex: 1 !important;
+  }
+
+
+
+  #sub-header-reports div,
+  #sub-header-reports button {
+    flex: 1 !important;
+  }
+
+  #send-report-button div,
+  #send-report-button button {
+    flex: 1 !important;
   }
 }

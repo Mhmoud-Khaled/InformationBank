@@ -49,7 +49,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -184,7 +184,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -198,7 +203,7 @@
     <div class="main-content p-4 card flex-fill">
 
       <!-- header -->
-      <div class="header flex-between flex-wrap">
+      <div class="header flex-between flex-wrap mb-5">
 
         <h2>مكتبة الوثائق > دائرة الشؤون القانونية > الآراء القانونية</h2>
         <div class="user d-flex justify-content-between align-items-center">
@@ -222,26 +227,26 @@
         </div>
       </div>
       <!-- start table header  -->
-      <section class="table-header d-flex justify-content-between ">
-        <div class="right-btns d-flex">
+      <section class="table-header d-flex justify-content-between flex-wrap gap-2 mb-3">
+        <div class="right-btns d-flex flex-wrap gap-2 w-100">
           <form action="" class="box-shadow-white search-form">
             <input type="text" placeholder="بحث متقدم">
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
           <div class="box-shadow-white store-by ">
-            <span class="d-block">ترتيب حسب</span>
+            <span class="d-block text-nowrap">ترتيب حسب</span>
             <i class="fa-solid fa-arrow-down-wide-short"></i>
           </div>
-          <button class="view-files btn white-btn">
+          <button class="view-files btn white-btn" id="view-files">
             <a href="documents-folder.html">مشاهدة جميع الاملفات</a>
             <i class="fa-regular fa-folder"></i>
           </button>
-        </div>
-        <div class="left-btns">
-          <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-file">
-            <span>إنشاء ملف</span>
-            <i class="fa-solid fa-plus"></i>
-          </button>
+          <div class="left-btns">
+            <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-file">
+              <span>إنشاء ملف</span>
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
         </div>
       </section>
       <!-- End table header  -->
@@ -251,15 +256,15 @@
         <table class="table border-space  table-hover table-borderless">
           <thead>
             <tr>
-              <th class="t-header t-trans" scope="col">اسم الملف</th>
-              <th class="text-center t-header t-trans" scope="col">تم الرفع بواسطة</th>
-              <th class="text-center t-header t-trans" scope="col">نوع الملف
+              <th class="t-header t-trans" style="min-width: 120px;" scope="col">اسم الملف</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">تم الرفع بواسطة</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">نوع الملف
               </th>
-              <th class="text-center t-header t-trans" scope="col">التاريخ</th>
-              <th class="text-center t-header t-trans" scope="col">الحجم</th>
-              <th class="text-center t-header t-trans" scope="col">عدد المشاهدات</th>
-              <th class="text-center t-header t-trans" scope="col">مرات التحميل</th>
-              <th class="text-center t-header t-trans" scope="col">الحالة</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">التاريخ</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">الحجم</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">عدد المشاهدات</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">مرات التحميل</th>
+              <th class="text-center t-header t-trans" style="min-width: 130px;" scope="col">الحالة</th>
             </tr>
           </thead>
           <tbody>
@@ -370,7 +375,7 @@
               <input type="text" class="form-control" placeholder="اسم الملف">
             </div>
             <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="*اسم المؤرشف" disabled>
+              <input type="text" class="form-control" placeholder="*اسم المؤرشف">
             </div>
             <div class="col-sm-6 col-12 mb-2">
               <select class="form-select">

@@ -117,23 +117,38 @@ $(document).ready(function () {
     dir: 'rtl',
   })
 
-  $('.send-company-select').select2({
-    dropdownParent: $('#sendFormCompany')
+  $('.smart-search-lib').select2({
+    dropdownParent: $('#smart-search-lib')
   })
 
-  $('.add-company-select').select2({
-    dropdownParent: $('#addCompany')
+  $('.request-status-select').select2({
+    dropdownParent: $('#smart-search-order')
   })
 
-  $('.create-table-select').select2({
-    dropdownParent: $('#createQuestion')
+  $('.smart-search-task').select2({
+    dropdownParent: $('#smart-search-task')
   })
 
-  $('.email-select').select2({
-    dropdownParent: $('#createMail')
+  $('.create-part').select2({
+    dropdownParent: $('#create-part')
   })
-  $('.requestName').select2({
-    dropdownParent: $('#requestName')
+  $('.send-report').select2({
+    dropdownParent: $('#send-report')
+  })
+  $('.add-auth').select2({
+    dropdownParent: $('#add-auth')
+  })
+  $('.noti-auth').select2({
+    dropdownParent: $('#noti-auth')
+  })
+  $('.add-leaves').select2({
+    dropdownParent: $('#add-leaves')
+  })
+
+  $('#mood').click(function () {
+    $(this).toggleClass('dark');
+    $('#sidebar').toggleClass('dark');
+    $('.main-content').toggleClass('dark');
   })
 
 

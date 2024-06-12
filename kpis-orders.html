@@ -179,7 +179,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -224,7 +229,7 @@
           <a href="kpis-orders.html" class="active">الطلبات</a>
           <a href="kpis-tasks.html">المهام</a>
         </div>
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-2 flex-wrap">
           <button type="button" class="search-field btn gray-btn text-end" data-bs-toggle="modal"
             data-bs-target="#smart-search-order">
             بحث متقدم
@@ -425,7 +430,7 @@
         <div class="modal-body">
           <input type="number" class="form-control mb-1" placeholder="رقم الطلب">
           <input type="text" class="form-control mb-1" placeholder="التاريخ" onfocus="(this.type='date')">
-          <select class="form-select" style="font-size: 13px;">
+          <select class="form-select request-status-select" style="font-size: 13px; width: 100%;">
             <option selected>حالة الطلب</option>
             <option>مكتمل</option>
             <option>غير مكتمل</option>

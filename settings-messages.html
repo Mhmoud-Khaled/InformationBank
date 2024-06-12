@@ -48,7 +48,7 @@
       <div class="sidebar-logo" id="logo">
         <img src="./images/menu-logo.png" class="img-fluid" alt="">
       </div>
-      <div class="flex-between">
+      <div class="flex-between" id="logo-header">
         <div class="menu-title flex-center">
           <i class="fa-solid fa-city"></i>
           <h3>بنك المعلومات</h3>
@@ -183,7 +183,12 @@
                 <span>المراسلات</span>
               </a>
             </li>
-
+            <li class="sidebar-item">
+              <a href="./settings-sendings.html" class="sidebar-link">
+                <i class="fa-solid fa-building-user icon"></i>
+                <span>ايام الاجازات</span>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -228,7 +233,8 @@
           <input type="search" class="form-control" placeholder="بحث">
           <i class="fa-solid fa-magnifying-glass icon"></i>
         </div>
-        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal" data-bs-target="#add-">
+        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal" id="add-message-btn"
+          data-bs-target="#add-message">
           أضف رسالة
           <i class="fa-solid fa-plus icon"></i>
         </button>
@@ -242,12 +248,12 @@
           <thead>
             <tr>
               <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">عنوان الرسالة</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">توع الرسالة</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">تفاصيل الرسالة
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">عنوان الرسالة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">توع الرسالة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">تفاصيل الرسالة
               </th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">التاريخ</th>
-              <th class="text-center t-header" scope="col" style="min-width: 15px;">الحالة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">التاريخ</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">الحالة</th>
             </tr>
           </thead>
           <tbody>
@@ -258,7 +264,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -272,7 +277,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -286,7 +290,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -300,7 +303,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -314,7 +316,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -328,7 +329,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -342,7 +342,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -356,7 +355,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -370,7 +368,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -384,7 +381,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -398,7 +394,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -412,7 +407,6 @@
               <td class="text-center">تفاصيل الرسالة</td>
               <td class="text-center">التاريخ</td>
               <td class="text-center">
-                <button type="button" class="fa-solid fa-download icon"></button>
                 <button type="button" class="fa-solid fa-pen icon"></button>
                 <button class="btn transparent-btn px-0 pt-0 trash">
                   <i class="fa-regular fa-trash-can icon"></i>
@@ -433,7 +427,7 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="add-" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="add-message" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header" style="border-bottom: none;">
