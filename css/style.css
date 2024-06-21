@@ -384,7 +384,10 @@ form.smart-search {
   display: none;
 }
 
-
+#mood {
+  text-align: right;
+  height: 35px;
+}
 
 .active {
   color: var(--red-color) !important;
@@ -2853,6 +2856,14 @@ table .file {
 
 @media(max-width:427px) {
 
+  .select2-container {
+    height: 30px;
+  }
+
+  #mood {
+    height: 29px;
+  }
+
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 8%;
@@ -2913,6 +2924,10 @@ table .file {
 }
 
 @media(max-width:377px) {
+
+  .date-nightMood {
+    flex: 1;
+  }
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
