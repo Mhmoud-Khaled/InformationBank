@@ -1176,7 +1176,9 @@ svg.active {
 
 .home .header .user #dropdownlang {
   cursor: pointer;
-  width: 70px;
+  width: 45px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .home .header .user .dropdown-menu {
@@ -2344,6 +2346,11 @@ table .file {
   border-radius: 25px;
 }
 
+.notification {
+  width: 20px;
+  display: flex;
+}
+
 /* ........................Responsive.........................  */
 /*small screen*/
 
@@ -2548,13 +2555,17 @@ table .file {
     height: 95px;
   }
 
+  .main-content.card {
+    padding-top: 7px !important;
+  }
+
   .menu-title {
     align-self: end;
     margin-bottom: 6px;
   }
 
   .home .toggle-btn {
-    align-self: baseline;
+    align-self: center;
   }
 
   .doungut1 .dataOne,
@@ -2797,6 +2808,9 @@ table .file {
 
 
 @media(max-width:500px) {
+
+
+
   .user-details {
     flex-direction: column;
     align-items: flex-start !important;
