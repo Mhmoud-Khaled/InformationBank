@@ -547,7 +547,12 @@ textarea::placeholder {
   font-weight: 500;
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   flex: 1;
+}
+
+button {
+  text-wrap: nowrap;
 }
 
 .btn .icon {
@@ -633,6 +638,7 @@ textarea::placeholder {
   background-color: var(--red-color) !important;
   color: white !important;
   text-wrap: nowrap !important;
+  white-space: nowrap !important;
   padding: 15px 5px !important;
 }
 
@@ -2551,6 +2557,11 @@ table .file {
 
 @media (max-width: 769px) {
 
+  .t-header {
+    padding: 8px 5px !important;
+    font-size: 12px;
+  }
+
   #logo-header {
     height: 95px;
   }
@@ -2681,6 +2692,14 @@ table .file {
 }
 
 @media(max-width:576px) {
+
+  .modal.show .modal-dialog {
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 70%;
+  }
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -2870,6 +2889,10 @@ table .file {
 
 @media(max-width:427px) {
 
+  .view-files {
+    font-size: 12px !important;
+  }
+
   .select2-container {
     height: 30px;
   }
@@ -2939,8 +2962,21 @@ table .file {
 
 @media(max-width:377px) {
 
+  .modal.show .modal-dialog {
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
   .date-nightMood {
     flex: 1;
+  }
+
+  .modal-footer .btn {
+    width: 100px;
+    flex: unset;
   }
 
   .doungut1 .dataOne,
