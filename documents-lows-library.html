@@ -228,24 +228,14 @@
       </div>
       <!-- start table header  -->
       <section class="table-header d-flex justify-content-between flex-wrap gap-2 mb-3">
-        <div class="right-btns d-flex flex-wrap gap-2 w-100">
+        <div class="d-flex align-items-center flex-wrap gap-2 w-100">
           <form action="" class="box-shadow-white search-form">
             <input type="text" placeholder="بحث متقدم">
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
-          <div class="box-shadow-white store-by ">
+          <div class="box-shadow-white store-by" id="sort-by">
             <span class="d-block text-nowrap">ترتيب حسب</span>
             <i class="fa-solid fa-arrow-down-wide-short"></i>
-          </div>
-          <button class="view-files btn white-btn" id="view-files">
-            <a href="documents-lows-library.html">مشاهدة جميع الملفات</a>
-            <i class="fa-regular fa-folder"></i>
-          </button>
-          <div class="left-btns">
-            <button class="main-department btn red-btn" data-bs-toggle="modal" data-bs-target="#add-file">
-              <span>إنشاء ملف</span>
-              <i class="fa-solid fa-plus"></i>
-            </button>
           </div>
         </div>
       </section>
@@ -256,7 +246,9 @@
         <table class="table border-space  table-hover table-borderless">
           <thead>
             <tr>
-              <th class="t-header t-trans" style="min-width: 120px;" scope="col">اسم الملف</th>
+              <th class="t-header t-trans" style="min-width: 120px;" scope="col">القسم</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">القسم الفرعي</th>
+              <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">اسم الملف</th>
               <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">تم الرفع بواسطة</th>
               <th class="text-center t-header t-trans" style="min-width: 120px;" scope="col">نوع الملف
               </th>
@@ -269,7 +261,9 @@
           </thead>
           <tbody>
             <tr>
-              <td class="py-3 cell first-cell">
+              <td class="py-3 cell first-cell text-center message">دائرة الشؤون</td>
+              <td class="py-3 cell  text-center message">دائرة الشؤون</td>
+              <td class="py-3 cell text-center">
                 <img class="file" src="./images/pdf.png" alt="">
                 التجارة
               </td>
@@ -300,7 +294,9 @@
               </td>
             </tr>
             <tr>
-              <td class="py-3 cell first-cell">
+              <td class="py-3 cell first-cell  text-center message">دائرة الشؤون</td>
+              <td class="py-3 cell  text-center message">دائرة الشؤون</td>
+              <td class="py-3 cell text-center">
                 <img class="file" src="./images/word.png" alt="">
                 الصناعة
               </td>
@@ -336,72 +332,6 @@
       <!-- end table -->
     </div>
   </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="add-file" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header justify-content-center" style="border-bottom: none;">
-          <h3 class="modal-title">إنشاء ملف</h3>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-6 col-12 mb-2">
-              <select class="form-select add-file" style="width: 100%;">
-                <option selected>نوع الوثيقة</option>
-                <option>Jul 2023 - Aug 2023</option>
-                <option>Jul 2023 - Aug 2023</option>
-              </select>
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="*اسم الوسيلة الاعلامية">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="*اسم المنصة الإلكترونية">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="number" class="form-control" placeholder="الرقم المرجعى للوثيفة">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="موضوع الوثيقة">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="تاريخ الوثيقة" onfocus="(this.type='date')">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="سنة الوثيقة" onfocus="(this.type='date')">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="اسم الملف">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <input type="text" class="form-control" placeholder="*اسم المؤرشف">
-            </div>
-            <div class="col-sm-6 col-12 mb-2">
-              <select class="form-select add-file" style="width: 100%;">
-                <option selected>التصنيف</option>
-                <option>عادى</option>
-                <option>عادى</option>
-                <option>عادى</option>
-              </select>
-            </div>
-            <div class="col-12 mb-2">
-              <input type="text" class="form-control" placeholder="ملاحظات">
-            </div>
-            <h6 class="mb-2">اسم الملف</h6>
-            <div class="col-12">
-              <input type="file" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">إنشاء</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
   <!-- charts -->

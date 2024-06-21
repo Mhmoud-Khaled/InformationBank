@@ -559,6 +559,7 @@ textarea::placeholder {
 
 button {
   text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .btn .icon {
@@ -721,6 +722,7 @@ tbody tr td {
 #login-btn {
   font-size: 14px;
   text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 /* end index */
@@ -1260,6 +1262,7 @@ svg.active {
 .doungut1 .dataOne .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -1307,6 +1310,7 @@ svg.active {
 
 .doungut1 .dataTwo .data {
   font-size: 12px;
+  white-space: nowrap;
   text-wrap: nowrap;
   margin-top: 10px;
   font-weight: bold;
@@ -1365,6 +1369,7 @@ svg.active {
 .doungut2 .dataOne .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -1410,6 +1415,7 @@ svg.active {
 .doungut2 .dataTwo .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -1455,6 +1461,7 @@ svg.active {
 .doungut2 .dataThree .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -1488,6 +1495,7 @@ svg.active {
 .doungut2 .dataFour .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
 }
@@ -1523,6 +1531,7 @@ svg.active {
 .doungut2 .dataFive .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
   transform: translate(33px, -20px);
@@ -1572,6 +1581,7 @@ svg.active {
 .doungut2 .dataSix .data {
   font-size: 12px;
   text-wrap: nowrap;
+  white-space: nowrap;
   margin-top: 10px;
   font-weight: bold;
   transform: translate(-12px, -20px);
@@ -1668,6 +1678,7 @@ svg.active {
   font-weight: normal;
   color: #7b7890;
   text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .researcher-info .data {
@@ -2241,6 +2252,7 @@ table .file {
   display: inline;
   padding: 3px 10px;
   text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .details {
@@ -3049,6 +3061,10 @@ table .file {
 }
 
 @media(max-width:321px) {
+
+  #sort-by {
+    flex: 1;
+  }
 
   .doungut1 .dataOne,
   .doungut2 .dataOne {

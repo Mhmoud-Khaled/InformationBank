@@ -144,6 +144,9 @@ $(document).ready(function () {
   $('.add-leaves').select2({
     dropdownParent: $('#add-leaves')
   })
+  $('.add-file').select2({
+    dropdownParent: $('#add-file')
+  })
 
   $('#mood').click(function () {
     $(this).toggleClass('dark');
@@ -158,7 +161,7 @@ $(document).ready(function () {
 
   $(document).on('click', '.trash', function (e) {
     Swal.fire({
-      imageUrl: "../images/delete.png",
+      imageUrl: "images/delete.png",
       imageWidth: 80,
       imageHeight: 80,
       title: 'حذف ملف',
