@@ -190,6 +190,10 @@ input::placeholder {
   font-size: 12px;
 }
 
+input[type=date] {
+  font-size: 12px;
+}
+
 *:focus {
   outline: none;
 
@@ -1162,6 +1166,8 @@ svg.active {
 .home .header .user .lang {
   font-weight: 600;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .home .header .user #dropdownlang {
@@ -2289,6 +2295,12 @@ table .file {
   background-color: #01A811;
 }
 
+.green-btn:hover {
+  background-color: #01A811;
+  color: white;
+  cursor: none;
+}
+
 .apply button {
   font-size: 12px;
   padding: 0px 15px;
@@ -2319,6 +2331,13 @@ table .file {
   font-size: 9px;
   color: var(--gray-color);
   height: 30px;
+}
+
+.rounded-green {
+  padding: 5px 17px;
+  background: #01A811;
+  color: white;
+  border-radius: 25px;
 }
 
 /* ........................Responsive.........................  */
@@ -2905,7 +2924,7 @@ table .file {
   }
 
   .doungut2 .dataThree {
-    right: 10%;
+    right: 0%;
   }
 
   .doungut2 .dataFour {
