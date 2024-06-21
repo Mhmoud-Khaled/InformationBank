@@ -247,8 +247,8 @@
             طباعه PDF
             <i class="fa-solid fa-file-pdf icon"></i>
           </button>
-          <div class="search-field flex-grow-0" style="width: 115px; flex: unset;">
-            <input type="search" class="form-control" placeholder="بحث" id="search-report" style="width: 115px;">
+          <div class="search-field flex-grow-0" style="width: 103px; flex: unset;" id="kpi-order-serach">
+            <input type="search" class="form-control" placeholder="بحث" id="search-report" style="width: 103px;">
             <i class="fa-solid fa-magnifying-glass icon"></i>
           </div>
           <select class="form-select" style="font-size: 13px; width: 100px;">
@@ -429,7 +429,8 @@
         </div>
         <div class="modal-body">
           <input type="number" class="form-control mb-1" placeholder="رقم الطلب">
-          <input type="text" class="form-control mb-1" placeholder="التاريخ" onfocus="(this.type='date')">
+          <input type="text" class="form-control mb-1" placeholder="التاريخ" onfocus="(this.type='date')"
+            onblur="(this.type='text')">
           <select class="form-select request-status-select" style="font-size: 13px; width: 100%;">
             <option selected>حالة الطلب</option>
             <option>مكتمل</option>

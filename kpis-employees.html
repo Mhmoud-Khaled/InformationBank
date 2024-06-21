@@ -558,16 +558,18 @@
               <h6 class="">الفترة</h6>
             </div>
             <div class="col-6 mb-1">
-              <input type="text" class="form-control" placeholder="من" onfocus="(this.type='date')">
+              <input type="text" class="form-control" placeholder="من" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
             </div>
             <div class="col-6 mb-1">
-              <input type="text" class="form-control mb-1" placeholder="الى" onfocus="(this.type='date')">
+              <input type="text" class="form-control mb-1" placeholder="الى" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
             </div>
           </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
-          <button type="button" class="btn red-btn">ارسال طلب</button>
+          <button type="button" class="btn red-btn">حفظ</button>
         </div>
       </div>
     </div>

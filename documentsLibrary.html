@@ -444,7 +444,8 @@
             <option>pdf</option>
             <option>pdf</option>
           </select>
-          <input type="date" class="form-control mb-1 mt-2" placeholder="من">
+          <input type="text" class="form-control mb-1 mt-2" placeholder="من" onfocus="(this.type='date')"
+            onblur="(this.type='text')">
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
