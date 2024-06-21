@@ -704,7 +704,8 @@ tbody tr td {
 }
 
 #login-btn {
-  font-size: 14px
+  font-size: 14px;
+  text-wrap: nowrap;
 }
 
 /* end index */
