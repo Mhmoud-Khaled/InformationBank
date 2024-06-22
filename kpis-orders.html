@@ -428,17 +428,26 @@
           <h3 class="modal-title ">بحث متقدم</h3>
         </div>
         <div class="modal-body">
-          <input type="number" class="form-control mb-1" placeholder="رقم الطلب">
-          <input type="text" class="form-control mb-1" placeholder="التاريخ" onfocus="(this.type='date')"
-            onblur="(this.type='text')">
-          <select class="form-select request-status-select" style="font-size: 13px; width: 100%;">
-            <option selected>حالة الطلب</option>
-            <option>مكتمل</option>
-            <option>غير مكتمل</option>
-          </select>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <input type="number" class="form-control place-black c-border-black mb-1" placeholder="رقم الطلب">
+            </div>
+            <div class="col-12 mb-2 relative">
+              <input type="text" class="form-control place-black c-border-black mb-1" placeholder="التاريخ"
+                onfocus="(this.type='date')" onblur="(this.type='text')">
+              <i class="fa-solid fa-calendar-days absolute-date-icon icon"></i>
+            </div>
+            <div class="col-12 select-black mb-2">
+              <select class="form-select request-status-select" style="font-size: 13px; width: 100%;">
+                <option selected>حالة الطلب</option>
+                <option>مكتمل</option>
+                <option>غير مكتمل</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+          <button type="button" class="btn c-shadow white-btn" data-bs-dismiss="modal">تراجع</button>
           <button type="button" class="btn red-btn">حفظ</button>
         </div>
       </div>

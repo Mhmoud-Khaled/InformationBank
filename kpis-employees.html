@@ -37,10 +37,6 @@
 </head>
 
 <body>
-  <!-- <div class="spinner-border text-primary loader" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> -->
-
   <div class="d-flex flex-nowrap home main">
 
     <!-- menu -->
@@ -230,12 +226,13 @@
       <!-- start table header  -->
       <section class="table-header d-flex justify-content-between flex-wrap gap-2 mb-3">
         <div class="right-btns d-flex">
-          <form action="" class="box-shadow-white search-form smart-search" data-bs-toggle="modal"
+          <form action="" class="box-shadow-white w-100px c-shadow search-form smart-search" data-bs-toggle="modal"
             data-bs-target="#smart-search-kpi">
             <input type="text" placeholder="بحث متقدم" readonly>
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
-          <div class="box-shadow-white store-by dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="box-shadow-white store-by w-100px c-shadow dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
             <span class="d-block">ترتيب حسب</span>
             <i class="fa-solid fa-arrow-down-wide-short"></i>
             <ul class="dropdown-menu text-end">
@@ -551,24 +548,26 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-12 mb-1">
-              <input type="text" class="form-control " placeholder="اسم الموظف">
+            <div class="col-12 mb-2">
+              <input type="text" class="form-control c-border-black place-black" placeholder="اسم الموظف">
             </div>
-            <div class="col-12 mb-1">
+            <div class="col-12 mb-2">
               <h6 class="">الفترة</h6>
             </div>
-            <div class="col-6 mb-1">
-              <input type="text" class="form-control" placeholder="من" onfocus="(this.type='date')"
-                onblur="(this.type='text')">
+            <div class="col-6 mb-1 relative">
+              <input type="text" class="form-control c-border-black place-black" placeholder="من"
+                onfocus="(this.type='date')" onblur="(this.type='text')">
+              <i class="fa-solid fa-calendar-days absolute-date-icon icon"></i>
             </div>
-            <div class="col-6 mb-1">
-              <input type="text" class="form-control mb-1" placeholder="الى" onfocus="(this.type='date')"
-                onblur="(this.type='text')">
+            <div class="col-6 mb-1 relative">
+              <input type="text" class="form-control c-border-black place-black mb-1" placeholder="الى"
+                onfocus="(this.type='date')" onblur="(this.type='text')">
+              <i class="fa-solid fa-calendar-days absolute-date-icon icon"></i>
             </div>
           </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+          <button type="button" class="btn white-btn c-shadow" data-bs-dismiss="modal">تراجع</button>
           <button type="button" class="btn red-btn">حفظ</button>
         </div>
       </div>
