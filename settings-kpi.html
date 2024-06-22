@@ -204,7 +204,7 @@
       <!-- header -->
       <div class="header flex-between flex-wrap mb-4">
         <h2>
-          الإعدادات > اعدادات مكتبة الوثائق
+          الإعدادات > اعدادات مؤشرات الإداء
         </h2>
         <div class="user d-flex justify-content-between align-items-center">
           <div class="user-img">
@@ -227,43 +227,139 @@
         </div>
       </div>
 
+      <!-- start sub header -->
+      <div class="sub-header d-flex align-items-center justify-content-end gap-2 mb-3">
+        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal"
+          data-bs-target="#add-achieve">
+          أضف وقت الانجاز
+          <i class="fa-solid fa-plus icon"></i>
+        </button>
 
-      <div class="card-box p-4 mb-4">
-        <h2 class="mb-3">وقت التاخير</h2>
-        <div class="row">
-          <div class="col-sm-6 mb-2">
-            <select class="form-select">
-              <option selected>رقم المهمة</option>
-              <option>Jul 2023 - Aug 2023</option>
-              <option>Jul 2023 - Aug 2023</option>
-            </select>
+      </div>
+      <!-- end sub header -->
+
+      <!-- start table -->
+      <div class="table-responsive  card-box p-0" id="tasks-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">رقم المهمة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">اسم المهمة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">الحالة</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">معدل الوقت</th>
+              <th class="text-center t-header" scope="col" style="min-width: 120px;">الحالة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-center">546545</td>
+              <td class="text-center">اسم المهمة</td>
+              <td class="text-center">
+                <span class="incomplete">بطئ</span>
+              </td>
+              <td class="text-center">يومين</td>
+              <td class="text-center">
+                <button type="button" class="fa-solid fa-pen icon"></button>
+                <button class="btn transparent-btn px-0 pt-0 trash">
+                  <i class="fa-regular fa-trash-can icon"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">1</td>
+              <td class="text-center">546545</td>
+              <td class="text-center">اسم المهمة</td>
+              <td class="text-center">
+                <span class="complete-kpi">سريع</span>
+              </td>
+              <td class="text-center">يومين</td>
+              <td class="text-center">
+                <button type="button" class="fa-solid fa-pen icon"></button>
+                <button class="btn transparent-btn px-0 pt-0 trash">
+                  <i class="fa-regular fa-trash-can icon"></i>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <!-- end table -->
+
+
+    </div>
+  </div>
+
+
+  <div class="modal blur-background fade" id="add-achieve" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom: none;">
+          <h3 class="modal-title">أضف وقت الإنجاز</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 mb-2">
+              <select class="form-select add-achieve mb-1"
+                style="background-color:#f0f0f0 ; width: 100%; margin-bottom: 10px;">
+                <option selected>رقم المهمة</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-12 mb-2">
+              <select class="form-select add-achieve mb-1"
+                style="background-color:#f0f0f0 ; width: 100%; margin-bottom: 10px;">
+                <option selected>اسم المهمة</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-12 mb-2">
+              <select class="form-select add-achieve mb-1"
+                style="background-color:#f0f0f0 ; width: 100%; margin-bottom: 10px;">
+                <option selected>سريع</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-4 mb-2">
+              <input type="number" class="form-control" placeholder="الحد الادنى">
+            </div>
+            <div class="col-4 mb-2">
+              <select class="form-select add-achieve mb-1"
+                style="background-color:#f0f0f0 ; width: 100%; margin-bottom: 10px;">
+                <option selected>المدة</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-4 mb-2">
+              <input type="number" class="form-control" placeholder="العدد">
+            </div>
+            <div class="col-4 mb-2">
+              <input type="number" class="form-control" placeholder="الحد الاعلى">
+            </div>
+            <div class="col-4 mb-2">
+              <select class="form-select add-achieve mb-1"
+                style="background-color:#f0f0f0 ; width: 100%; margin-bottom: 10px;">
+                <option selected>المدة</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="col-4 mb-2">
+              <input type="number" class="form-control" placeholder="العدد">
+            </div>
           </div>
-          <div class="col-sm-6 mb-2">
-            <select class="form-select">
-              <option selected>اسم المهمه</option>
-              <option>Jul 2023 - Aug 2023</option>
-              <option>Jul 2023 - Aug 2023</option>
-            </select>
-          </div>
-          <div class="col-sm-6 mb-2">
-            <select class="form-select">
-              <option selected>سريع</option>
-              <option>Jul 2023 - Aug 2023</option>
-              <option>Jul 2023 - Aug 2023</option>
-            </select>
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="يوم">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الساعات">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الدقائق">
-          </div>
-          <div class="col-sm-6 mb-2">
-            <input type="number" class="form-control" placeholder="عدد الثوانى">
-          </div>
+
+        </div>
+        <div class="modal-footer" style="border-top: none;">
+          <button type="button" class="btn gray-btn w-100px flex-unset" data-bs-dismiss="modal">إلغاء</button>
+          <button type="button" class="btn red-btn w-100px flex-unset">إرسال</button>
         </div>
       </div>
     </div>

@@ -419,7 +419,7 @@
           <h3 class="modal-title">إنشاء قسم</h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-1" placeholder="اسم القسم">
+          <input type="text" class="form-control place-black mb-1" placeholder="اسم القسم">
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
@@ -437,15 +437,27 @@
           <h3 class="modal-title ">بحث متقدم</h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-2" placeholder="القسم">
-          <input type="text" class="form-control mb-2" placeholder="اسم الملف">
-          <select class="form-select mb-2 smart-search-lib" style="width: 100%;">
-            <option selected>نوع الملف</option>
-            <option>pdf</option>
-            <option>pdf</option>
-          </select>
-          <input type="text" class="form-control mb-1 mt-2" placeholder="من" onfocus="(this.type='date')"
-            onblur="(this.type='text')">
+          <div class="row">
+            <div class="col-12 mb-2">
+              <input type="text" class="form-control c-border-black place-black mb-2" placeholder="القسم">
+            </div>
+            <div class="col-12 mb-2">
+              <input type="text" class="form-control c-border-black place-black mb-2" placeholder="اسم الملف">
+            </div>
+            <div class="col-12 mb-2 select-black">
+              <select class="form-select mb-2 smart-search-lib" style="width: 100%;">
+                <option selected>نوع الملف</option>
+                <option>pdf</option>
+                <option>pdf</option>
+              </select>
+            </div>
+            <div class="col-12 relative">
+              <input type="text" class="form-control c-border-black place-black mb-1 mt-2" placeholder="من"
+                onfocus="(this.type='date')" onblur="(this.type='text')">
+              <i class="fa-solid fa-calendar-days absolute-date-icon icon" style="top: 17px;"></i>
+            </div>
+          </div>
+
         </div>
         <div class="modal-footer" style="border-top: none;">
           <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>

@@ -297,6 +297,13 @@ p {
   font-size: 12px;
 }
 
+.select-black .select2-container--default .select2-selection--single {
+  border: 1px solid darkgrey !important;
+  filter: unset;
+}
+
+
+
 .select2-container--default .select2-selection--single {
   background-color: #fff;
   border: 1px solid #fff;
@@ -570,6 +577,7 @@ button {
 
 .btn .icon {
   font-size: 13px;
+  width: 12px;
 }
 
 
@@ -2251,6 +2259,31 @@ table .file {
   padding: 3px 10px;
 }
 
+#tasks-table .complete-kpi,
+#tasks-table .incomplete {
+  padding: 3px 14px;
+}
+
+.w-120 {
+  width: 120px;
+}
+
+.w-100px {
+  width: 100px;
+}
+
+.flex-unset {
+  flex: unset;
+}
+
+.blur-background {
+  backdrop-filter: blur(5px);
+}
+
+input.place-black::placeholder {
+  color: black !important;
+}
+
 .pendding {
   font-size: 14px;
   border-radius: 15px;
@@ -2288,9 +2321,7 @@ table .file {
 
 }
 
-.btn .icon {
-  width: 20px !important;
-}
+
 
 .right-btns {
   display: flex;
@@ -2388,6 +2419,31 @@ table .file {
 .notification {
   width: 20px;
   display: flex;
+}
+
+.modal-content {
+  border-radius: 15px !important;
+}
+
+input[type="date"] {
+  direction: rtl;
+  text-align: right;
+  height: 37px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute-date-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #cecece;
+}
+
+.c-border-black {
+  border: 1px solid darkgrey;
 }
 
 /* ........................Responsive.........................  */

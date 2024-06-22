@@ -147,6 +147,9 @@ $(document).ready(function () {
   $('.add-file').select2({
     dropdownParent: $('#add-file')
   })
+  $('.add-achieve').select2({
+    dropdownParent: $('#add-achieve')
+  })
 
   $('#mood').click(function () {
     $(this).toggleClass('dark');
