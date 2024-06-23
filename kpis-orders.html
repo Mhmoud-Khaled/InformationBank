@@ -251,11 +251,13 @@
             <input type="search" class="form-control" placeholder="بحث" id="search-report" style="width: 103px;">
             <i class="fa-solid fa-magnifying-glass icon"></i>
           </div>
-          <select class="form-select" style="font-size: 13px; width: 100px;">
-            <option selected>حالة الطلب</option>
-            <option>مكتمل</option>
-            <option>غير مكتمل</option>
-          </select>
+          <div id="request-order">
+            <select class="form-select" style="font-size: 13px; width: 100px;">
+              <option selected>حالة الطلب</option>
+              <option>مكتمل</option>
+              <option>غير مكتمل</option>
+            </select>
+          </div>
         </div>
 
       </div>
@@ -462,14 +464,15 @@
             <table class="table table-bordered" style="font-size:14px;">
               <thead style="border-top: 1px solid red">
                 <tr>
-                  <th class="t-header" style="width: 30px;" scope="col"><i class="fa-solid fa-square"></i></th>
+                  <th class="t-header border-red-right" style="width: 30px;" scope="col"><i
+                      class="fa-solid fa-square"></i></th>
                   <th class="t-header" scope="col" style="min-width: 100px;">المهام</th>
                   <th class="text-center t-header" scope="col" style="min-width: 100px;">تفاصيل المهمة
                   </th>
                   <th class="text-center t-header" scope="col" style="min-width: 100px;">التاريخ
 
                   </th>
-                  <th class="text-center t-header" scope="col" style="min-width: 100px;">الحالة</th>
+                  <th class="text-center border-red-left t-header" scope="col" style="min-width: 100px;">الحالة</th>
                 </tr>
               </thead>
               <tbody>

@@ -248,11 +248,13 @@
             بحث متقدم
             <i class=" fa-solid fa-magnifying-glass icon"></i>
           </button>
-          <select class="form-select" style="font-size: 13px; width: 100px;">
-            <option selected>حالة الطلب</option>
-            <option>مكتمل</option>
-            <option>غير مكتمل</option>
-          </select>
+          <div id="request-order">
+            <select class="form-select" style="font-size: 13px; width: 100px;">
+              <option selected>حالة الطلب</option>
+              <option>مكتمل</option>
+              <option>غير مكتمل</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -432,21 +434,31 @@
           <h3 class="modal-title ">بحث متقدم</h3>
         </div>
         <div class="modal-body">
-          <input type="number" class="form-control mb-2" placeholder="رقم الطلب">
-          <select class="form-select mb-2 smart-search-task" style="font-size: 13px; width: 100%;">
-            <option selected>المكتب</option>
-            <option>مكتمل</option>
-            <option>غير مكتمل</option>
-          </select>
-          <input type="text" class="form-control mb-2 mt-2" placeholder="اسم الموظف">
-          <select class="form-select mb-2 smart-search-task" style="font-size: 13px; width: 100%;">
-            <option selected>حالة المهمه</option>
-            <option>مكتمل</option>
-            <option>غير مكتمل</option>
-          </select>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <input type="number" class="form-control c-border-black place-black mb-2" placeholder="رقم الطلب">
+            </div>
+            <div class="col-12 select-black  mb-2">
+              <select class="form-select smart-search-task" style="font-size: 13px; width: 100%;">
+                <option selected>المكتب</option>
+                <option>مكتمل</option>
+                <option>غير مكتمل</option>
+              </select>
+            </div>
+            <div class="col-12 mb-2">
+              <input type="text" class="form-control c-border-black place-black mb-2 mt-2" placeholder="اسم الموظف">
+            </div>
+            <div class="col-12 select-black  mb-2">
+              <select class="form-select smart-search-task" style="font-size: 13px; width: 100%;">
+                <option selected>حالة المهمه</option>
+                <option>مكتمل</option>
+                <option>غير مكتمل</option>
+              </select>
+            </div>
+          </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn white-btn" data-bs-dismiss="modal">تراجع</button>
+          <button type="button" class="btn c-shadow white-btn" data-bs-dismiss="modal">تراجع</button>
           <button type="button" class="btn red-btn">حفظ</button>
         </div>
       </div>

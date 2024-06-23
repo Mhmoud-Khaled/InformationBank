@@ -302,6 +302,10 @@ p {
   filter: unset;
 }
 
+.icon.small-w {
+  width: 20px;
+  display: inline-block;
+}
 
 
 .select2-container--default .select2-selection--single {
@@ -2365,6 +2369,34 @@ input.place-black::placeholder {
   margin-top: 0px;
 }
 
+#request-order .select2-container {
+  height: 31px;
+}
+
+#request-order .select2-container--default .select2-selection--single {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  height: 31px !important;
+  font-size: 15px;
+  background: #e9e9e9;
+}
+
+#request-order .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  margin-top: 0px;
+}
+
+#request-order .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+  padding-top: 1px;
+}
+
+
+.border-red-left {
+  border-left: 1px solid var(--red-color);
+}
+
+.border-red-right {
+  border-right: 1px solid var(--red-color);
+}
 
 #sub-header-reports {
   flex: 1;
@@ -3069,13 +3101,13 @@ input[type="date"] {
 }
 
 @media(max-width:377px) {
-  .kpi-date {
+  /* .kpi-date {
     width: 100% !important;
-  }
+  } */
 
-  #kpi-search {
+  /* #kpi-search {
     width: 100% !important;
-  }
+  } */
 
   .modal.show .modal-dialog {
     justify-content: center;
