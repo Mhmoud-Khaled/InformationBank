@@ -243,7 +243,7 @@
           <h2>قائمة الصادرات
           </h2>
 
-          <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal"
+          <button type="button" class="btn red-btn text-center flex-unset w-120" data-bs-toggle="modal"
             data-bs-target="#export">
             ارسال رسالة
           </button>
@@ -255,11 +255,12 @@
           <table class="table border-less">
             <thead>
               <tr>
-                <th class="p-3 t-header" style="min-width: 120px;" scope="col">المرسل
+                <th class="p-3 t-header" style="min-width: 120px; padding-right: 20px !important" scope="col">مرسل الى
                 </th>
-                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">عنوان الرسالة
+                <th class="p-3 t-header" style="min-width: 120px;  padding-right: 20px !important" scope="col">عنوان
+                  الرسالة
                 </th>
-                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">الوقت
+                <th class="p-3 t-header" style="min-width: 120px;  padding-right: 20px !important" scope="col">الوقت
                 </th>
                 <th class=" p-3 text-center t-header" style="min-width: 120px;" scope="col">الحالة</th>
               </tr>
@@ -270,12 +271,31 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
-                <td class="p-3 text-center">11:30 صباحاً
+                <td class="p-3  text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
+                <td class="p-3 ">11:30 صباحاً
                 </td>
                 <td class="p-3 text-center">
-                  <a href="#"><i class="fa-solid fa-eye icon"></i>
+                  <a href="#"><i class="fa-solid fa-eye icon small-w"></i>
                   </a>
+                  <button class="btn fa-solid fa-pen icon px-0 pt-0 "></button>
+                  <button class="btn transparent-btn px-0 pt-0 trash">
+                    <i class="fa-regular fa-trash-can icon"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="p-3 d-flex align-items-center gap-2">
+                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
+                  <p class="text-nowrap">احمد النبهانهى</p>
+                </td>
+                <td class="p-3  text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
+                <td class="p-3 ">الخميس 8:00 صباحاً
+                </td>
+                <td class="p-3 text-center">
+                  <a href="#"><i class="fa-solid fa-eye icon small-w"></i>
+                  </a>
+                  <button class="btn fa-solid fa-pen icon px-0 pt-0 "></button>
                   <button class="btn transparent-btn px-0 pt-0 trash">
                     <i class="fa-regular fa-trash-can icon"></i>
                   </button>
@@ -286,44 +306,13 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
-                <td class="p-3 text-center">11:30 صباحاً
+                <td class="p-3  text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
+                <td class="p-3 ">الخميس 8:00 صباحاً
                 </td>
                 <td class="p-3 text-center">
-                  <a href="#"><i class="fa-solid fa-eye icon"></i>
+                  <a href="#"><i class="fa-solid fa-eye icon small-w"></i>
                   </a>
-                  <button class="btn transparent-btn px-0 pt-0 trash">
-                    <i class="fa-regular fa-trash-can icon"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="p-3 d-flex align-items-center gap-2">
-                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
-                  <p class="text-nowrap">احمد النبهانهى</p>
-                </td>
-                <td class="p-3 text-center text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
-                <td class="p-3 text-center">11:30 صباحاً
-                </td>
-                <td class="p-3 text-center">
-                  <a href="#"><i class="fa-solid fa-eye icon"></i>
-                  </a>
-                  <button class="btn transparent-btn px-0 pt-0 trash">
-                    <i class="fa-regular fa-trash-can icon"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="p-3 d-flex align-items-center gap-2">
-                  <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
-                  <p class="text-nowrap">احمد النبهانهى</p>
-                </td>
-                <td class="p-3 text-center text-nowrap message">مرحبا محمد، لقد حاولت الاتصال بك اليوم ولكن... </td>
-                <td class="p-3 text-center">11:30 صباحاً
-                </td>
-                <td class="p-3 text-center">
-                  <a href="#"><i class="fa-solid fa-eye icon"></i>
-                  </a>
+                  <button class="btn fa-solid fa-pen icon px-0 pt-0 "></button>
                   <button class="btn transparent-btn px-0 pt-0 trash">
                     <i class="fa-regular fa-trash-can icon"></i>
                   </button>
@@ -349,13 +338,13 @@
           </h3>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control mb-2" placeholder="إلى">
-          <input type="text" class="form-control mb-2" placeholder="عنوان الرسالة">
+          <input type="text" class="form-control place-black mb-2" placeholder="إلى">
+          <input type="text" class="form-control place-black mb-2" placeholder="عنوان الرسالة">
           <h3 class="pt-2 pb-1">الرسالة</h3>
-          <textarea class="form-control mb-2" rows="4" placeholder="اكتب هنا..."></textarea>
+          <textarea class="form-control place-black mb-2" rows="7" placeholder="اكتب هنا..."></textarea>
           <h3 class="pt-2 pb-1">المرفقات</h3>
           <div class="attached mb-2">
-            <input type="text" class="form-control mb-1" placeholder="القالب">
+            <input type="text" class="form-control mb-1" placeholder="ارفاق ملف">
             <button type="button" class="transparent-btn fa-solid fa-paperclip icon">
             </button>
           </div>
@@ -369,11 +358,12 @@
 
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" class="btn gray-btn" style="flex: unset; background-color: #666464; color: white;">إعادة
+          <button type="button" class="btn gray-btn"
+            style="flex: unset; background-color: #666464; color: white; width: 90px;">إعادة
             ارسال</button>
           <button type="button" class="btn gray-btn" data-bs-dismiss="modal"
-            style="flex: unset; width: 65px;">إلغاء</button>
-          <button type="button" class="btn red-btn" style="flex: unset; width: 65px;">ارسال</button>
+            style="flex: unset; width: 90px;">إلغاء</button>
+          <button type="button" class="btn red-btn" style="flex: unset; width: 90px;">ارسال</button>
         </div>
       </div>
     </div>

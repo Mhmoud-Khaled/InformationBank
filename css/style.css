@@ -1721,6 +1721,7 @@ svg.active {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   padding-left: 10px;
+  padding-right: 5px;
 }
 
 .user-details .auth-number p {
@@ -2277,8 +2278,20 @@ table .file {
   padding: 3px 14px;
 }
 
+.gray-clr {
+  color: #6D7893;
+}
+
+.h-28 {
+  height: 28px;
+}
+
 .w-120 {
   width: 120px;
+}
+
+.w-67 {
+  width: 67px;
 }
 
 .w-100px {
@@ -2828,6 +2841,16 @@ input[type="date"] {
 }
 
 @media(max-width:576px) {
+
+  .user-details .auth-number {
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+  .user-details .auth-number p {
+    font-size: 11px;
+  }
 
   .modal.show .modal-dialog {
     justify-content: center;

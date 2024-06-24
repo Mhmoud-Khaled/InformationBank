@@ -236,9 +236,11 @@
           <input type="search" class="form-control" placeholder="بحث">
           <i class="fa-solid fa-magnifying-glass icon"></i>
         </div>
-        <button type="button" class="btn red-btn text-center flex-grow-0" data-bs-toggle="modal" id="add-leaves-btn"
-          data-bs-target="#add-leaves">
-          إنشاء اجازة
+        <button type="button" class="btn red-btn text-center flex-between flex-unset w-100px" data-bs-toggle="modal"
+          id="add-leaves-btn" data-bs-target="#add-leaves">
+          <span>
+            إنشاء اجازة
+          </span>
           <i class="fa-solid fa-plus icon"></i>
         </button>
 
@@ -258,12 +260,13 @@
           <table class="table border-less">
             <thead>
               <tr>
-                <th class="p-3 t-header" style="min-width: 120px;" scope="col">اسم الموظف
+                <th class="p-3 t-header" style="min-width: 120px; padding-right: 20px !important" scope="col">اسم الموظف
 
                 </th>
-                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">عدد أيام الاجازات
+                <th class="p-3 t-header" style="min-width: 120px; padding-right: 20px !important" scope="col">عدد أيام
+                  الاجازات
                 </th>
-                <th class="p-3 text-center t-header" style="min-width: 120px;" scope="col">التاريخ
+                <th class="p-3 t-header" style="min-width: 120px; padding-right: 20px !important" scope="col">التاريخ
                 </th>
                 <th class=" p-3 text-center t-header" style="min-width: 120px;" scope="col">الحالة</th>
               </tr>
@@ -274,8 +277,8 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap">25 يوم </td>
-                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                <td class="p-3 text-nowrap">25 يوم </td>
+                <td class="p-3">28/02/2024 الى 28/02/2024
                 </td>
                 <td class="p-3 text-center">
                   <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
@@ -289,8 +292,8 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap">25 يوم </td>
-                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                <td class="p-3  text-nowrap">25 يوم </td>
+                <td class="p-3 ">28/02/2024 الى 28/02/2024
                 </td>
                 <td class="p-3 text-center">
                   <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
@@ -304,8 +307,8 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap">25 يوم </td>
-                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                <td class="p-3  text-nowrap">25 يوم </td>
+                <td class="p-3 ">28/02/2024 الى 28/02/2024
                 </td>
                 <td class="p-3 text-center">
                   <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
@@ -319,8 +322,8 @@
                   <img class="rounded-circle" src="./images/avatar.PNG" alt="" height="30" width="30">
                   <p class="text-nowrap">احمد النبهانهى</p>
                 </td>
-                <td class="p-3 text-center text-nowrap">25 يوم </td>
-                <td class="p-3 text-center">28/02/2024 الى 28/02/2024
+                <td class="p-3  text-nowrap">25 يوم </td>
+                <td class="p-3 ">28/02/2024 الى 28/02/2024
                 </td>
                 <td class="p-3 text-center">
                   <button type="button" class="btn fa-solid fa-pen transparent-btn px-0 pt-0"></button>
@@ -349,32 +352,32 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-12 mb-1">
+            <div class="col-12 mb-2">
               <select class="form-select add-leaves" style="width: 100%;">
                 <option selected>اسم الموظف</option>
                 <option>محمد البيانى</option>
                 <option>محمد البيانى</option>
               </select>
             </div>
-            <div class="col-12 mb-1">
-              <input type="number" class="form-control " placeholder="عدد الايام">
+            <div class="col-12 mb-2">
+              <input type="number" class="form-control place-black" placeholder="عدد الايام">
             </div>
-            <div class="col-12 mb-1">
-              <h6 class="">التاريخ</h6>
+            <div class="col-12 mb-2">
+              <h3 class="">التاريخ</h3>
             </div>
-            <div class="col-6 mb-1">
-              <input type="text" class="form-control" placeholder="من" onfocus="(this.type='date')"
+            <div class="col-6 mb-2">
+              <input type="text" class="form-control place-black" placeholder="من" onfocus="(this.type='date')"
                 onblur="(this.type='text')">
             </div>
-            <div class="col-6 mb-1">
-              <input type="text" class="form-control mb-1" placeholder="الى" onfocus="(this.type='date')"
+            <div class="col-6 mb-2">
+              <input type="text" class="form-control place-black" placeholder="الى" onfocus="(this.type='date')"
                 onblur="(this.type='text')">
             </div>
           </div>
         </div>
         <div class="modal-footer" style="border-top: none;">
-          <button type="button" style="flex: unset;" class="btn white-btn" data-bs-dismiss="modal">إلغاء</button>
-          <button type="button" style="flex: unset;" class="btn red-btn">حفظ</button>
+          <button type="button" style="flex: unset;" class="btn gray-btn w-100px" data-bs-dismiss="modal">إلغاء</button>
+          <button type="button" style="flex: unset;" class="btn red-btn w-100px">حفظ</button>
         </div>
       </div>
     </div>
