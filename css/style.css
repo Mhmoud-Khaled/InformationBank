@@ -2502,6 +2502,11 @@ input[type="date"] {
   color: #cecece;
 }
 
+.login-logo {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
 .c-border-black {
   border: 1px solid darkgrey;
 }
