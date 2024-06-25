@@ -1257,6 +1257,11 @@ svg.active {
   height: 30px;
   border-radius: var(--border-radius);
   cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.header .user .dropdown {
+  margin-left: 0.3rem;
 }
 
 
@@ -2644,6 +2649,14 @@ input[type="file"] {
   border-color: #9a9a9a;
 }
 
+.swal2-content {
+  padding: 0px !important;
+}
+
+.hr-block {
+  display: none;
+}
+
 /* ........................Responsive.........................  */
 /*small screen*/
 
@@ -2844,26 +2857,52 @@ input[type="file"] {
 
 @media (max-width: 769px) {
 
+
+
   .t-header {
     padding: 8px 5px !important;
     font-size: 12px;
   }
 
-  #logo-header {
+  /* #logo-header {
     height: 95px;
+  } */
+
+  .home .header {
+    margin-bottom: 1rem !important;
   }
 
   .main-content.card {
-    padding-top: 7px !important;
+    padding-top: 1rem !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
-  .menu-title {
-    align-self: end;
-    margin-bottom: 6px;
+  .cards.company {
+    margin-top: 0px !important;
+  }
+
+  .menu-title .icon {
+    /* align-self: end;
+    margin-bottom: 6px; */
+    width: 20px;
+  }
+
+  #logo {
+    margin-bottom: 15px;
+  }
+
+  #logo-header {
+    border-top: 1px solid #9c9c9c;
   }
 
   .home .toggle-btn {
-    align-self: center;
+    /* align-self: center; */
+    padding-left: 0px;
+  }
+
+  .hr-block {
+    display: block;
   }
 
   /* 
@@ -2904,11 +2943,11 @@ input[type="file"] {
   } */
 
   #logo img {
-    position: absolute;
-    width: 50%;
-    right: 10px;
-    top: 7px;
-    height: 50px;
+    /* position: absolute; */
+    /* width: 50%; */
+    /* right: 10px;
+    top: 7px; */
+    max-height: 50px;
   }
 
   .home {
@@ -3252,7 +3291,7 @@ input[type="file"] {
   }
 
   #logo img {
-    width: 75% !important;
+    width: 100% !important;
   }
 }
 
