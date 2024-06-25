@@ -125,6 +125,14 @@ $(document).ready(function () {
             "#E2211C",
             "#949191",
         ];
+
+        var sliceThickness = {
+            id: 'myChart3',
+            beforeDraw(chart, plugins) {
+                console.log('chart', chart);
+                chart.getDatasetMeta(0).data[1].outerRadius = 100
+            }
+        }
         const ctx = document.getElementById('myChart3').getContext('2d');
         var mychart = new Chart(ctx, {
             type: "doughnut",
@@ -137,7 +145,7 @@ $(document).ready(function () {
                 }]
             },
             options: {
-                // cutoutPercentage: 65,
+                // cutout: 50,
                 maintainAspectRatio: false,
                 responsive: true,
                 plugins: {
@@ -156,8 +164,10 @@ $(document).ready(function () {
                             padding: 40,
                         }
                     }
-                }
-            }
+                },
+                // plugins: [sliceThickness]
+            },
+            plugins: [sliceThickness]
         });
     }
 
@@ -171,6 +181,18 @@ $(document).ready(function () {
             '#C1636C',
             '#2C2B2B',
         ]
+        var sliceThickness = {
+            id: 'myChart4',
+            beforeDraw(chart, plugins) {
+                console.log('chart', chart);
+                chart.getDatasetMeta(0).data[0].outerRadius = 95
+                chart.getDatasetMeta(0).data[1].outerRadius = 115
+                chart.getDatasetMeta(0).data[2].outerRadius = 95
+                chart.getDatasetMeta(0).data[3].outerRadius = 105
+                chart.getDatasetMeta(0).data[4].outerRadius = 115
+                chart.getDatasetMeta(0).data[5].outerRadius = 105
+            }
+        }
         const ctx = document.getElementById('myChart4').getContext('2d');
         var mychart = new Chart(ctx, {
             type: "doughnut",
@@ -199,7 +221,8 @@ $(document).ready(function () {
                         }
                     }
                 }
-            }
+            },
+            plugins: [sliceThickness]
         });
     }
 

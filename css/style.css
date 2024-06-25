@@ -13,6 +13,33 @@
 
 }
 
+@font-face {
+  font-family: "bold font";
+  src: url("../fonts/Bahij-TheSansArabic-Bold.ttf");
+
+}
+
+@font-face {
+  font-family: "light font";
+  src: url("../fonts/Bahij-TheSansArabic-Light.ttf");
+
+}
+
+@font-face {
+  font-family: "extra bold font";
+  src: url("../fonts/Bahij-TheSansArabic-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "semi bold font";
+  src: url("../fonts/Bahij-TheSansArabic-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "semi light font";
+  src: url("../fonts/Bahij-TheSansArabic-SemiLight.ttf");
+}
+
 /* google icon */
 .material-symbols-outlined {
   font-variation-settings:
@@ -56,7 +83,7 @@ body {
   height: 100%;
   background: var(--background-color);
   overflow-x: hidden !important;
-  font-family: "main font";
+  font-family: "semi light font";
 }
 
 #sidebar.dark {
@@ -255,18 +282,22 @@ h6 {
 
 h1 {
   font-size: 26px;
+  font-family: "extra bold font";
 }
 
 h2 {
   font-size: 20px;
+  font-family: "extra bold font";
 }
 
 h3 {
   font-size: 16px;
+  font-family: "bold font";
 }
 
 h4 {
   font-size: 15px;
+  font-family: "bold font";
 }
 
 h1,
@@ -683,6 +714,7 @@ tbody tr td {
   background-image: url('../images/background.png');
   background-size: cover;
   background-position: center;
+  font-family: "main font";
 }
 
 .overLay {
@@ -1571,13 +1603,13 @@ svg.active {
 
 .doungut2 .dataFive:before {
   content: "";
-  width: 54px;
+  width: 27px;
   height: 0px;
   border: 1px dashed #e85a56;
-  transform: rotate(199deg);
+  transform: rotate(221deg);
   position: absolute;
   top: -4px;
-  right: 34px;
+  right: 36px;
 }
 
 
@@ -1629,6 +1661,36 @@ svg.active {
   top: 0px;
   left: 31px;
 
+}
+
+
+
+.doungut1 .dataOne,
+.doungut2 .dataOne {
+  right: 8% !important;
+}
+
+.doungut1 .dataTwo,
+.doungut2 .dataTwo {
+  left: 14% !important;
+}
+
+.doungut2 .dataThree {
+  right: 3% !important;
+}
+
+.doungut2 .dataFour {
+  left: 9% !important;
+}
+
+.doungut2 .dataFive {
+  right: 15% !important;
+  bottom: 30% !important;
+}
+
+.doungut2 .dataSix {
+  left: 17% !important;
+  bottom: 30% !important;
 }
 
 #search-report {
@@ -2511,6 +2573,77 @@ input[type="date"] {
   border: 1px solid darkgrey;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px dashed #C9CDCF;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  height: 72px;
+  background-color: #EFF0F3;
+  font-size: 15px;
+}
+
+.custom-file-upload .text {
+  font-size: 12px;
+}
+
+.custom-file-upload .text span {
+  color: var(--red-color);
+}
+
+#swal2-content {
+  text-align: center;
+  font-size: 14px;
+}
+
+.swal2-actions {
+  flex-direction: row-reverse;
+  border-radius: 8px;
+}
+
+.swal2-confirm.swal2-styled,
+.swal2-cancel.swal2-styled {
+  font-size: 14px !important;
+  height: 40px;
+  border-radius: 8px !important;
+  width: 125px;
+}
+
+.border-radius-15 {
+  border-radius: 15px !important;
+}
+
+.delete-reason {
+  border-radius: 15px !important;
+}
+
+.delete-reason #header {
+  text-align: start;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete-reason #header span {
+  color: #687777
+}
+
+.delete-reason .swal2-actions {
+  justify-content: end;
+}
+
+.delete-reason .swal2-textarea,
+.delete-reason .swal2-textarea:focus {
+  border-radius: 8px;
+  border-color: #9a9a9a;
+}
+
 /* ........................Responsive.........................  */
 /*small screen*/
 
@@ -2522,7 +2655,7 @@ input[type="date"] {
 
 @media(max-width:2057px) {
 
-  .doungut1 .dataOne,
+  /* .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 20%;
   }
@@ -2546,12 +2679,12 @@ input[type="date"] {
 
   .doungut2 .dataSix {
     left: 20%;
-  }
+  } */
 }
 
 
 @media(max-width:1600px) {
-
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 13%;
@@ -2576,13 +2709,13 @@ input[type="date"] {
 
   .doungut2 .dataSix {
     left: 20%;
-  }
+  } */
 }
 
 
 @media(max-width:1201px) {
 
-  .doungut1 .dataOne,
+  /* .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 0%;
   }
@@ -2612,12 +2745,12 @@ input[type="date"] {
 
   .doungut2 .dataSix {
     left: 12%;
-  }
+  } */
 }
 
 @media(max-width:1025px) {
 
-  .doungut1 .dataTwo {
+  /* .doungut1 .dataTwo {
     left: 2%;
     bottom: 41%;
   }
@@ -2650,11 +2783,11 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 12%;
     bottom: 37%;
-  }
+  } */
 }
 
 @media(max-width:993px) {
-
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 26%;
@@ -2689,7 +2822,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 23%;
     bottom: 22%;
-  }
+  } */
 
   .report-links a {
     font-size: 12px !important;
@@ -2733,6 +2866,7 @@ input[type="date"] {
     align-self: center;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 26%;
@@ -2767,7 +2901,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 30%;
     bottom: 22%;
-  }
+  } */
 
   #logo img {
     position: absolute;
@@ -2865,6 +2999,7 @@ input[type="date"] {
     width: 70%;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 22%;
@@ -2892,7 +3027,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 20%;
     bottom: 22%;
-  }
+  } */
 
 
 }
@@ -2902,6 +3037,7 @@ input[type="date"] {
     flex: none;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 8%;
@@ -2926,7 +3062,7 @@ input[type="date"] {
 
   .doungut2 .dataSix {
     left: 17%;
-  }
+  } */
 
   h3 {
     font-size: 13px !important;
@@ -3069,6 +3205,7 @@ input[type="date"] {
     height: 29px;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 8%;
@@ -3095,7 +3232,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 17%;
     bottom: 30%;
-  }
+  } */
 
   .btn {
     font-size: 10px;
@@ -3154,6 +3291,7 @@ input[type="date"] {
     flex: unset;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 0%;
@@ -3180,7 +3318,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 17%;
     bottom: 30%;
-  }
+  } */
 
   .company .card-box .icon {
     width: 50px;
@@ -3214,6 +3352,7 @@ input[type="date"] {
     flex: 1;
   }
 
+  /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
     right: 0%;
@@ -3240,7 +3379,7 @@ input[type="date"] {
   .doungut2 .dataSix {
     left: 17%;
     bottom: 30%;
-  }
+  } */
 
 
   #add-message-btn {

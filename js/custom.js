@@ -165,22 +165,28 @@ $(document).ready(function () {
   $(document).on('click', '.trash', function (e) {
     Swal.fire({
       imageUrl: "images/delete.png",
-      imageWidth: 80,
-      imageHeight: 80,
-      title: 'حذف ملف',
+      imageWidth: 70,
+      imageHeight: 70,
+      title: `<h4 style="font-size: 15px; border-radius: 10px">حذف الملف</h4>`,
       text: "لقد انتهى الوقت المسموح والحذف يرجى إرسال طلب الى إدارة النظام",
       showCancelButton: true,
       confirmButtonColor: '#E2211C',
       cancelButtonColor: '#fff',
       confirmButtonText: 'إرسال طلب',
       cancelButtonText: 'تراجع',
+      customClass: {
+        popup: 'border-radius-15'
+      },
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          text: "حذف ملف : التجارة والصناعة",
+          text: "",
+          html: `
+            <h3 id="header">حذف ملف : <span>التجارة والصناعة</span></h3>
+            `,
           input: "textarea",
           inputLabel: "سبب الحذف",
-          inputPlaceholder: "اكتب هنا",
+          inputPlaceholder: "اكتب هنا...",
           inputAttributes: {
             "aria-label": "Type your message here"
           },
@@ -189,6 +195,9 @@ $(document).ready(function () {
           cancelButtonText: 'تراجع',
           confirmButtonColor: '#E2211C',
           cancelButtonColor: '#fff',
+          customClass: {
+            popup: 'delete-reason'
+          },
         }
         )
       }
