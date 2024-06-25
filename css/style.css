@@ -2366,7 +2366,7 @@ table .file {
 }
 
 .flex-unset {
-  flex: unset;
+  flex: unset !important;
 }
 
 .blur-background {
