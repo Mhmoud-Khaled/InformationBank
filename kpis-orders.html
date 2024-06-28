@@ -7,6 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta name="description" content="" />
+  <meta name="format-detection" content="telephone=no">
   <meta name="keywords" content="" />
   <meta name="author" content="" />
   <!-- Chrome, Firefox OS and Opera -->
@@ -223,40 +224,58 @@
         </div>
       </div>
 
-      <div class="sub-header flex-between flex-wrap mb-3 card-box py-1 my-3">
+      <div class="sub-header flex-between flex-wrap mb-3 gap-3 card-box py-1 my-3">
         <div class="report-links flex-between gap-2">
           <a href="kpis-actions.html" class="">لوحة المعلومات</a>
           <a href="kpis-orders.html" class="active">الطلبات</a>
           <a href="kpis-tasks.html">المهام</a>
         </div>
         <div class="d-flex align-items-center gap-2 flex-wrap">
-          <button type="button" class="search-field btn gray-btn text-end" data-bs-toggle="modal"
-            data-bs-target="#smart-search-order">
-            بحث متقدم
-            <i class=" fa-solid fa-magnifying-glass icon"></i>
-          </button>
-          <button type="button" class="btn gray-btn">
-            تنزيل Word
-            <i class="fa-solid fa-file-word icon"></i>
-          </button>
-          <button type="button" class="btn gray-btn">
-            تنزيل Excel
-            <i class="fa-solid fa-file-excel icon"></i>
-          </button>
-          <button type="button" class="btn gray-btn">
-            طباعه PDF
-            <i class="fa-solid fa-file-pdf icon"></i>
-          </button>
-          <div class="search-field flex-grow-0" style="width: 103px; flex: unset;" id="kpi-order-serach">
-            <input type="search" class="form-control" placeholder="بحث" id="search-report" style="width: 103px;">
-            <i class="fa-solid fa-magnifying-glass icon"></i>
+
+          <div style="flex:1">
+            <button type="button" class="search-field btn gray-btn text-end w-100" data-bs-toggle="modal"
+              data-bs-target="#smart-search-order">
+              بحث متقدم
+              <i class=" fa-solid fa-magnifying-glass icon"></i>
+            </button>
           </div>
-          <div id="request-order">
-            <select class="form-select" style="font-size: 13px; width: 100px;">
-              <option selected>حالة الطلب</option>
-              <option>مكتمل</option>
-              <option>غير مكتمل</option>
-            </select>
+
+          <div style="flex:1">
+            <button type="button" class="btn gray-btn w-100">
+              تنزيل Word
+              <i class="fa-solid fa-file-word icon"></i>
+            </button>
+          </div>
+
+          <div style="flex:1">
+            <button type="button" class="btn gray-btn w-100">
+              تنزيل Excel
+              <i class="fa-solid fa-file-excel icon"></i>
+            </button>
+          </div>
+
+          <div style="flex:1">
+            <button type="button" class="btn gray-btn w-100">
+              طباعه PDF
+              <i class="fa-solid fa-file-pdf icon"></i>
+            </button>
+          </div>
+
+          <div style="flex:1">
+            <div id="kpi-order-serach" class="w-100">
+              <input type="search" class="form-control" placeholder="بحث" id="search-report">
+              <i class="fa-solid fa-magnifying-glass icon"></i>
+            </div>
+          </div>
+
+          <div style="flex:1">
+            <div id="request-order" class="w-100" style="flex: 1;">
+              <select class="form-select" style="font-size: 13px; width: 100%">
+                <option selected>حالة الطلب</option>
+                <option>مكتمل</option>
+                <option>غير مكتمل</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -500,7 +519,7 @@
                   <td class="text-center">2024/04/20
                   </td>
                   <td class="text-center">
-                    <p class="incomplete">غير مكتملة</p>
+                    <p class="incomplete text-nowrap">غير مكتملة</p>
                   </td>
                 </tr>
 

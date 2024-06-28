@@ -330,6 +330,7 @@ p {
 
 .select-black .select2-container--default .select2-selection--single {
   border: 1px solid darkgrey !important;
+  -webkit-filter: unset;
   filter: unset;
 }
 
@@ -1706,6 +1707,12 @@ svg.active {
 
 }
 
+.background-gray {
+  background-color: #e9e9e9 !important;
+}
+
+
+
 .auth-links a,
 .report-links a {
   padding: 5px;
@@ -2355,6 +2362,10 @@ table .file {
   height: 28px;
 }
 
+.h-31 {
+  height: 31px;
+}
+
 .w-120 {
   width: 120px;
 }
@@ -2372,7 +2383,24 @@ table .file {
 }
 
 .blur-background {
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+}
+
+input.place-black::-webkit-input-placeholder {
+  color: black !important;
+}
+
+input.place-black::-moz-placeholder {
+  color: black !important;
+}
+
+input.place-black:-ms-input-placeholder {
+  color: black !important;
+}
+
+input.place-black::-ms-input-placeholder {
+  color: black !important;
 }
 
 input.place-black::placeholder {
@@ -2412,8 +2440,17 @@ input.place-black::placeholder {
   height: 30px;
 }
 
-#kpi-order-serach input {
+#kpi-order-serach {
   min-width: 103px;
+  position: relative;
+  flex: 1;
+}
+
+#kpi-order-serach .icon {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: var(--gray-color);
 }
 
 .float-left-sm {
@@ -2510,6 +2547,11 @@ input.place-black::placeholder {
   font-size: 12px;
   padding: 0px 15px;
   color: white;
+  max-width: 70px;
+}
+
+.w-78px {
+  max-width: 78px !important;
 }
 
 .apply .gray-btn {
@@ -3040,6 +3082,10 @@ input[type="file"] {
     width: 70%;
   }
 
+  .apply button {
+    max-width: 78px !important;
+  }
+
   /* 
   .doungut1 .dataOne,
   .doungut2 .dataOne {
@@ -3076,6 +3122,10 @@ input[type="file"] {
 @media(max-width:501px) {
   #report-parts .btns {
     flex: none;
+  }
+
+  .details-auth {
+    flex-direction: column;
   }
 
   /* 
@@ -3226,6 +3276,18 @@ input[type="file"] {
     flex: 1;
   }
 
+  #sub-header-reports {
+    justify-content: space-between;
+  }
+
+  #send-report-button {
+    justify-content: space-between !important;
+  }
+
+  #settings-auth-subheader {
+    justify-content: space-between !important;
+  }
+
 }
 
 @media(max-width:427px) {
@@ -3246,6 +3308,10 @@ input[type="file"] {
     height: 30px;
   }
 
+  .auth-links {
+    overflow-x: scroll;
+    height: 37px;
+  }
 
   .btn-group .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
     padding-top: 2px !important;
@@ -3317,6 +3383,8 @@ input[type="file"] {
   #logo img {
     width: 100% !important;
   }
+
+
 }
 
 
